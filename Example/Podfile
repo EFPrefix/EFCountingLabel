@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EFCountingLabel_Example' do
+  pod 'EFCountingLabel', :path => '../'
+
+  target 'EFCountingLabel_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

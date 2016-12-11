@@ -1,5 +1,13 @@
+//
+//  ViewController.swift
+//  EFCountingLabel
+//
+//  Created by eyrefree on 12/11/2016.
+//  Copyright (c) 2016 eyrefree. All rights reserved.
+//
 
 import UIKit
+import EFCountingLabel
 
 class ViewController: UIViewController {
 
