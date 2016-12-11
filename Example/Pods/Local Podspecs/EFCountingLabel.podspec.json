@@ -2,7 +2,7 @@
   "name": "EFCountingLabel",
   "version": "1.0.0",
   "summary": "A label which can show number change animated.",
-  "description": "TODO: Add long description of the pod here.",
+  "description": "A label which can show number change animated, in Swift.",
   "homepage": "https://github.com/EyreFree/EFCountingLabel",
   "license": {
     "type": "MIT",
@@ -15,7 +15,6 @@
     "git": "https://github.com/EyreFree/EFCountingLabel.git",
     "tag": "1.0.0"
   },
-  "social_media_url": "https://twitter.com/EyreFree777",
   "platforms": {
     "ios": "8.0"
   },

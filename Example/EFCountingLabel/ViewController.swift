@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     func setupLabels() {
         // make one that counts up
         let myLabel = EFCountingLabel(frame: CGRect(x: 10, y: 10, width: 200, height: 40))
-        myLabel.method = .Linear
+        myLabel.method = .linear
         myLabel.format = "%d"
         self.view.addSubview(myLabel)
         self.myLabel = myLabel
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
             (value) in
             return "Score: " + (formatter.string(from: NSNumber(value: Int(value))) ?? "")
         }
-        scoreLabel.method = .EaseOut
+        scoreLabel.method = .easeOut
         self.view.addSubview(scoreLabel)
         self.scoreLabel = scoreLabel
 
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         self.attributedLabel = attributedLabel
 
         //storyboard
-        self.label.method = .EaseInOut
+        self.label.method = .easeInOut
         self.label.format = "%d%%"
         self.label.completionBlock = {
             [weak self] () in
@@ -98,11 +98,11 @@ class ViewController: UIViewController {
     }
 
     func startCount() {
-        myLabel.countFrom(startValue: 1, to: 10, withDuration: 3.0)
-        countPercentageLabel.countFrom(startValue: 5, to: 10)
-        scoreLabel.countFrom(startValue: 0, to: 10000, withDuration: 2.5)
-        attributedLabel.countFrom(startValue: 0, to: 100, withDuration: 2.5)
-        self.label.countFrom(startValue: 0, to: 100)
+        myLabel.countFrom(1, to: 10, withDuration: 3.0)
+        countPercentageLabel.countFrom(5, to: 10)
+        scoreLabel.countFrom(0, to: 10000, withDuration: 2.5)
+        attributedLabel.countFrom(0, to: 100, withDuration: 2.5)
+        self.label.countFrom(0, to: 100)
     }
 }
 

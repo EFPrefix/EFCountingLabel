@@ -25,39 +25,39 @@
 import UIKit
 
 public enum EFLabelCountingMethod: Int {
-    case Linear = 0
-    case EaseIn = 1
-    case EaseOut = 2
-    case EaseInOut = 3
+    case linear = 0
+    case easeIn = 1
+    case easeOut = 2
+    case easeInOut = 3
 }
 
 //MARK: - UILabelCounter
 let kUILabelCounterRate = Float(3.0)
 
 public protocol UILabelCounter {
-    func update(t: CGFloat) -> CGFloat
+    func update(_ t: CGFloat) -> CGFloat
 }
 
-public class UILabelCounterLinear: UILabelCounter {
-    public func update(t: CGFloat) -> CGFloat {
+open class UILabelCounterLinear: UILabelCounter {
+    open func update(_ t: CGFloat) -> CGFloat {
         return t
     }
 }
 
-public class UILabelCounterEaseIn: UILabelCounter {
-    public func update(t: CGFloat) -> CGFloat {
+open class UILabelCounterEaseIn: UILabelCounter {
+    open func update(_ t: CGFloat) -> CGFloat {
         return CGFloat(powf(Float(t), kUILabelCounterRate))
     }
 }
 
-public class UILabelCounterEaseOut: UILabelCounter {
-    public func update(t: CGFloat) -> CGFloat {
+open class UILabelCounterEaseOut: UILabelCounter {
+    open func update(_ t: CGFloat) -> CGFloat {
         return CGFloat(1.0 - powf(Float(1.0 - t), kUILabelCounterRate))
     }
 }
 
-public class UILabelCounterEaseInOut: UILabelCounter {
-    public func update(t: CGFloat) -> CGFloat {
+open class UILabelCounterEaseInOut: UILabelCounter {
+    open func update(_ t: CGFloat) -> CGFloat {
         let newt: CGFloat = 2 * t
         if newt < 1 {
             return CGFloat(0.5 * powf (Float(newt), kUILabelCounterRate))
@@ -68,30 +68,30 @@ public class UILabelCounterEaseInOut: UILabelCounter {
 }
 
 //MARK: - EFCountingLabel
-public class EFCountingLabel: UILabel {
+open class EFCountingLabel: UILabel {
 
-    public var format = "%f"
-    public var method = EFLabelCountingMethod.Linear
-    public var animationDuration = TimeInterval(2)
-    public var formatBlock: ((CGFloat) -> String)?
-    public var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
-    public var completionBlock: (() -> Void)?
+    open var format = "%f"
+    open var method = EFLabelCountingMethod.linear
+    open var animationDuration = TimeInterval(2)
+    open var formatBlock: ((CGFloat) -> String)?
+    open var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
+    open var completionBlock: (() -> Void)?
 
-    private var startingValue: CGFloat!
-    private var destinationValue: CGFloat!
-    private var progress: TimeInterval!
-    private var lastUpdate: TimeInterval!
-    private var totalTime: TimeInterval!
-    private var easingRate: CGFloat!
+    fileprivate var startingValue: CGFloat!
+    fileprivate var destinationValue: CGFloat!
+    fileprivate var progress: TimeInterval!
+    fileprivate var lastUpdate: TimeInterval!
+    fileprivate var totalTime: TimeInterval!
+    fileprivate var easingRate: CGFloat!
 
-    private var timer: CADisplayLink?
-    private var counter: UILabelCounter = UILabelCounterLinear()
+    fileprivate var timer: CADisplayLink?
+    fileprivate var counter: UILabelCounter = UILabelCounterLinear()
 
-    public func countFrom(startValue: CGFloat, to endValue: CGFloat) {
-        self.countFrom(startValue: startValue, to: endValue, withDuration: self.animationDuration)
+    open func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
+        self.countFrom(startValue, to: endValue, withDuration: self.animationDuration)
     }
 
-    public func countFrom(startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
+    open func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
         self.startingValue = startValue
         self.destinationValue = endValue
 
@@ -101,7 +101,7 @@ public class EFCountingLabel: UILabel {
 
         if duration == 0.0 {
             // No animation
-            self.setTextValue(value: endValue)
+            self.setTextValue(endValue)
             self.runCompletionBlock()
             return
         }
@@ -109,60 +109,60 @@ public class EFCountingLabel: UILabel {
         self.easingRate = 3.0
         self.progress = 0
         self.totalTime = duration
-        self.lastUpdate = NSDate.timeIntervalSinceReferenceDate
+        self.lastUpdate = Date.timeIntervalSinceReferenceDate
 
         switch self.method {
-        case .Linear:
+        case .linear:
             self.counter = UILabelCounterLinear()
             break
-        case .EaseIn:
+        case .easeIn:
             self.counter = UILabelCounterEaseIn()
             break
-        case .EaseOut:
+        case .easeOut:
             self.counter = UILabelCounterEaseOut()
             break
-        case .EaseInOut:
+        case .easeInOut:
             self.counter = UILabelCounterEaseInOut()
             break
         }
 
-        let timer = CADisplayLink(target: self, selector: #selector(EFCountingLabel.updateValue(timer:)))
+        let timer = CADisplayLink(target: self, selector: #selector(EFCountingLabel.updateValue(_:)))
         timer.frameInterval = 2
         timer.add(to: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
         timer.add(to: RunLoop.main, forMode: RunLoopMode.UITrackingRunLoopMode)
         self.timer = timer
     }
 
-    public func countFromCurrentValueTo(endValue: CGFloat) {
-        self.countFrom(startValue: self.currentValue(), to: endValue)
+    open func countFromCurrentValueTo(_ endValue: CGFloat) {
+        self.countFrom(self.currentValue(), to: endValue)
     }
 
-    public func countFromCurrentValueTo(endValue: CGFloat, withDuration duration: TimeInterval) {
-        self.countFrom(startValue: self.currentValue(), to: endValue, withDuration: duration)
+    open func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
+        self.countFrom(self.currentValue(), to: endValue, withDuration: duration)
     }
 
-    public func countFromZeroTo(endValue: CGFloat) {
-        self.countFrom(startValue: 0, to: endValue)
+    open func countFromZeroTo(_ endValue: CGFloat) {
+        self.countFrom(0, to: endValue)
     }
 
-    public func countFromZeroTo(endValue: CGFloat, withDuration duration: TimeInterval) {
-        self.countFrom(startValue: 0, to: endValue, withDuration: duration)
+    open func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
+        self.countFrom(0, to: endValue, withDuration: duration)
     }
 
-    public func currentValue() -> CGFloat {
+    open func currentValue() -> CGFloat {
         if self.progress >= self.totalTime {
             return self.destinationValue
         }
 
         let percent = self.progress / self.totalTime
-        let updateVal = self.counter.update(t: CGFloat(percent))
+        let updateVal = self.counter.update(CGFloat(percent))
 
         return self.startingValue + updateVal * (self.destinationValue - self.startingValue)
     }
 
-    public func updateValue(timer: Timer) {
+    open func updateValue(_ timer: Timer) {
         // update progress
-        let now = NSDate.timeIntervalSinceReferenceDate
+        let now = Date.timeIntervalSinceReferenceDate
         self.progress = self.progress + now - self.lastUpdate
         self.lastUpdate = now
 
@@ -172,14 +172,14 @@ public class EFCountingLabel: UILabel {
             self.progress = self.totalTime
         }
 
-        self.setTextValue(value: self.currentValue())
+        self.setTextValue(self.currentValue())
 
         if self.progress == self.totalTime {
             self.runCompletionBlock()
         }
     }
 
-    private func setTextValue(value: CGFloat) {
+    fileprivate func setTextValue(_ value: CGFloat) {
         if let tryAttributedFormatBlock = self.attributedFormatBlock {
             self.attributedText = tryAttributedFormatBlock(value)
         } else if let tryFormatBlock = self.formatBlock {
@@ -195,12 +195,12 @@ public class EFCountingLabel: UILabel {
         }
     }
 
-    private func setFormat(format: String) {
+    fileprivate func setFormat(_ format: String) {
         self.format = format
-        self.setTextValue(value: self.currentValue())
+        self.setTextValue(self.currentValue())
     }
 
-    private func runCompletionBlock() {
+    fileprivate func runCompletionBlock() {
         if let tryCompletionBlock = self.completionBlock {
             tryCompletionBlock()
             
