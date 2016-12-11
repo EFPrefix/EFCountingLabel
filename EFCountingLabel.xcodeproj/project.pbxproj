@@ -12,7 +12,7 @@
 		125E86461DFD2542009BF300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125E86441DFD2542009BF300 /* Main.storyboard */; };
 		125E86481DFD2542009BF300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 125E86471DFD2542009BF300 /* Assets.xcassets */; };
 		125E864B1DFD2542009BF300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125E86491DFD2542009BF300 /* LaunchScreen.storyboard */; };
-		125E86531DFD2558009BF300 /* UICountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125E86521DFD2558009BF300 /* UICountingLabel.swift */; };
+		125E86531DFD2558009BF300 /* EFCountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125E86521DFD2558009BF300 /* EFCountingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		125E86471DFD2542009BF300 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = EFCountingLabel/Assets.xcassets; sourceTree = "<group>"; };
 		125E864A1DFD2542009BF300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		125E864C1DFD2542009BF300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = EFCountingLabel/Info.plist; sourceTree = "<group>"; };
-		125E86521DFD2558009BF300 /* UICountingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICountingLabel.swift; sourceTree = "<group>"; };
+		125E86521DFD2558009BF300 /* EFCountingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFCountingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		125E863F1DFD2542009BF300 /* EFCountingLabel */ = {
 			isa = PBXGroup;
 			children = (
-				125E86521DFD2558009BF300 /* UICountingLabel.swift */,
+				125E86521DFD2558009BF300 /* EFCountingLabel.swift */,
 			);
 			path = EFCountingLabel;
 			sourceTree = "<group>";
@@ -65,14 +65,30 @@
 		125E86541DFD644F009BF300 /* EFCountingLabelDemo */ = {
 			isa = PBXGroup;
 			children = (
+				125E86551DFD76D5009BF300 /* Res */,
 				125E86401DFD2542009BF300 /* AppDelegate.swift */,
 				125E86421DFD2542009BF300 /* ViewController.swift */,
+				125E86561DFD76F0009BF300 /* Supporting Files */,
+			);
+			name = EFCountingLabelDemo;
+			sourceTree = "<group>";
+		};
+		125E86551DFD76D5009BF300 /* Res */ = {
+			isa = PBXGroup;
+			children = (
 				125E86441DFD2542009BF300 /* Main.storyboard */,
 				125E86471DFD2542009BF300 /* Assets.xcassets */,
 				125E86491DFD2542009BF300 /* LaunchScreen.storyboard */,
+			);
+			name = Res;
+			sourceTree = "<group>";
+		};
+		125E86561DFD76F0009BF300 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				125E864C1DFD2542009BF300 /* Info.plist */,
 			);
-			name = EFCountingLabelDemo;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				125E86431DFD2542009BF300 /* ViewController.swift in Sources */,
-				125E86531DFD2558009BF300 /* UICountingLabel.swift in Sources */,
+				125E86531DFD2558009BF300 /* EFCountingLabel.swift in Sources */,
 				125E86411DFD2542009BF300 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +332,7 @@
 				125E86511DFD2542009BF300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
