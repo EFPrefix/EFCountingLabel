@@ -1,7 +1,7 @@
 //
 //  EFCountingLabel.swift
 //
-//  Copyright (c) 2016 EyreFree (https://www.eyrefree.org/)
+//  Copyright (c) 2016 EyreFree (eyrefree@eyrefree.org)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@
 
 import UIKit
 
-enum EFLabelCountingMethod: Int {
+public enum EFLabelCountingMethod: Int {
     case Linear = 0
     case EaseIn = 1
     case EaseOut = 2
@@ -34,30 +34,30 @@ enum EFLabelCountingMethod: Int {
 //MARK: - UILabelCounter
 let kUILabelCounterRate = Float(3.0)
 
-protocol UILabelCounter {
+public protocol UILabelCounter {
     func update(t: CGFloat) -> CGFloat
 }
 
-class UILabelCounterLinear: UILabelCounter {
-    internal func update(t: CGFloat) -> CGFloat {
+public class UILabelCounterLinear: UILabelCounter {
+    public func update(t: CGFloat) -> CGFloat {
         return t
     }
 }
 
-class UILabelCounterEaseIn: UILabelCounter {
-    internal func update(t: CGFloat) -> CGFloat {
+public class UILabelCounterEaseIn: UILabelCounter {
+    public func update(t: CGFloat) -> CGFloat {
         return CGFloat(powf(Float(t), kUILabelCounterRate))
     }
 }
 
-class UILabelCounterEaseOut: UILabelCounter {
-    internal func update(t: CGFloat) -> CGFloat {
+public class UILabelCounterEaseOut: UILabelCounter {
+    public func update(t: CGFloat) -> CGFloat {
         return CGFloat(1.0 - powf(Float(1.0 - t), kUILabelCounterRate))
     }
 }
 
-class UILabelCounterEaseInOut: UILabelCounter {
-    internal func update(t: CGFloat) -> CGFloat {
+public class UILabelCounterEaseInOut: UILabelCounter {
+    public func update(t: CGFloat) -> CGFloat {
         let newt: CGFloat = 2 * t
         if newt < 1 {
             return CGFloat(0.5 * powf (Float(newt), kUILabelCounterRate))
@@ -68,14 +68,14 @@ class UILabelCounterEaseInOut: UILabelCounter {
 }
 
 //MARK: - EFCountingLabel
-class EFCountingLabel: UILabel {
+public class EFCountingLabel: UILabel {
 
-    var format = "%f"
-    var method = EFLabelCountingMethod.Linear
-    var animationDuration = TimeInterval(2)
-    var formatBlock: ((CGFloat) -> String)?
-    var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
-    var completionBlock: (() -> Void)?
+    public var format = "%f"
+    public var method = EFLabelCountingMethod.Linear
+    public var animationDuration = TimeInterval(2)
+    public var formatBlock: ((CGFloat) -> String)?
+    public var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
+    public var completionBlock: (() -> Void)?
 
     private var startingValue: CGFloat!
     private var destinationValue: CGFloat!
@@ -87,11 +87,11 @@ class EFCountingLabel: UILabel {
     private var timer: CADisplayLink?
     private var counter: UILabelCounter = UILabelCounterLinear()
 
-    func countFrom(startValue: CGFloat, to endValue: CGFloat) {
+    public func countFrom(startValue: CGFloat, to endValue: CGFloat) {
         self.countFrom(startValue: startValue, to: endValue, withDuration: self.animationDuration)
     }
 
-    func countFrom(startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
+    public func countFrom(startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
         self.startingValue = startValue
         self.destinationValue = endValue
 
@@ -133,23 +133,23 @@ class EFCountingLabel: UILabel {
         self.timer = timer
     }
 
-    func countFromCurrentValueTo(endValue: CGFloat) {
+    public func countFromCurrentValueTo(endValue: CGFloat) {
         self.countFrom(startValue: self.currentValue(), to: endValue)
     }
 
-    func countFromCurrentValueTo(endValue: CGFloat, withDuration duration: TimeInterval) {
+    public func countFromCurrentValueTo(endValue: CGFloat, withDuration duration: TimeInterval) {
         self.countFrom(startValue: self.currentValue(), to: endValue, withDuration: duration)
     }
 
-    func countFromZeroTo(endValue: CGFloat) {
+    public func countFromZeroTo(endValue: CGFloat) {
         self.countFrom(startValue: 0, to: endValue)
     }
 
-    func countFromZeroTo(endValue: CGFloat, withDuration duration: TimeInterval) {
+    public func countFromZeroTo(endValue: CGFloat, withDuration duration: TimeInterval) {
         self.countFrom(startValue: 0, to: endValue, withDuration: duration)
     }
 
-    func currentValue() -> CGFloat {
+    public func currentValue() -> CGFloat {
         if self.progress >= self.totalTime {
             return self.destinationValue
         }
@@ -160,7 +160,7 @@ class EFCountingLabel: UILabel {
         return self.startingValue + updateVal * (self.destinationValue - self.startingValue)
     }
 
-    func updateValue(timer: Timer) {
+    public func updateValue(timer: Timer) {
         // update progress
         let now = NSDate.timeIntervalSinceReferenceDate
         self.progress = self.progress + now - self.lastUpdate

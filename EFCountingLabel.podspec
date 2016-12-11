@@ -29,14 +29,14 @@ TODO: Add long description of the pod here.
   s.social_media_url = 'https://twitter.com/EyreFree777'
 
   s.ios.deployment_target = '8.0'
+  s.requires_arc = true
 
-  s.source_files = 'EFCountingLabel/Classes/**/*'
+  s.source_files = 'EFCountingLabel/Classes/*.swift'
   
   # s.resource_bundles = {
   #   'EFCountingLabel' => ['EFCountingLabel/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'Foundation', 'UIKit'
 end
