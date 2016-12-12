@@ -7,7 +7,7 @@
 
 A label which can show number change animated.
 
-![](EFCountingLabel/Assets/example.gif)
+![](EFCountingLabel/Assets/example.gif =375x667)
 
 ## Example
 
