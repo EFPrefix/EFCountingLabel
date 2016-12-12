@@ -5,11 +5,18 @@
 [![License](https://img.shields.io/cocoapods/l/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 [![Platform](https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 
+A label which can show number change animated.
+
+![](EFCountingLabel/Assets/example.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+- XCode 8.0
+- Swift 3.0
 
 ## Installation
 
@@ -17,12 +24,8 @@ EFCountingLabel is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "EFCountingLabel"
+pod 'EFCountingLabel', '~> 1.0.0'
 ```
-
-## Author
-
-eyrefree, eyrefree@eyrefree.org
 
 ## License
 
