@@ -30,7 +30,7 @@ pod 'EFCountingLabel', '~> 1.0.0'
 
 Simply initialize a `EFCountingLabel` the same way you set up a regular `UILabel`:
 
-```
+```swift
 let myLabel = EFCountingLabel(frame: CGRect(x: 10, y: 10, width: 200, height: 40))
 self.view.addSubview(myLabel)
 ```
@@ -43,13 +43,13 @@ You can also add it to your `xib` or `storyboard` , just make sure you set the c
 
 Set the format of your label.  This will be filled with a single int or float (depending on how you format it) when it updates:
 
-```
+```swift
 myLabel.format = "%d"
 ```
 
 Alternatively, you can provide a `formatBlock`, which permits greater control over how the text is formatted:
 
-```
+```swift
 myLabel.formatBlock = {
       (value) in
       return "Score: " + (formatter.string(from: NSNumber(value: Int(value))) ?? "")
@@ -60,38 +60,38 @@ There is also a `attributedFormatBlock` to use an attributed string. If the `for
 
 Optionally, set the mode.  The default is `EFLabelCountingMethod.linear`, which will not change speed until it reaches the end.  Other options are described below in the Methods section.
 
-```
+```swift
 myLabel.method = .easeOut
 ```
 
 When you want the label to start counting, just call:
 
-```
+```swift
 myLabel.countFrom(5, to: 100)
 ```
 
 You can also specify the duration.  The default is 2.0 seconds.
 
-```
+```swift
 myLabel.countFrom(1, to: 10, withDuration: 3.0)
 ```
 
 Additionally, there is `animationDuration` property which you can use to override the default animation duration.
 
-```
+```swift
 myLabel.animationDuration = 1.0
 ```
 
 You can use common convinient methods for counting, such as:
 
-```
+```swift
 myLabel.countFromCurrentValueTo(100)
 myLabel.countFromZeroTo(100)
 ```
 
 Behind the scenes, these convinient methods use one base method, which has the following full signature:
 
-```
+```swift
 myLabel.countFrom(
       startValue: CGFloat,
       to: CGFloat,
@@ -101,13 +101,13 @@ myLabel.countFrom(
 
 You can get current value of your label using `currentValue` method (works correctly in the process of animation too):
 
-```
+```swift
 let currentValue = myLabel.currentValue()
 ```
 
 Optionally, you can specify a `completionBlock` to perform an acton when the label has finished counting:
 
-```
+```swift
 myLabel.completionBlock = {
       () in
       print("finish")
