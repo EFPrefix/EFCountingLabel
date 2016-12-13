@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 [![Platform](https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 
-A label which can show number change animated. The first version is converted from [UICountingLabel](https://github.com/dataxpress/UICountingLabel/commit/1aa3d51c1ac4d7b8aef4c5f7ea44a1b1428c7985).
+A label which can show number change animated.
 
 <img src="EFCountingLabel/Assets/example.gif" width = "50%"/>
 
@@ -140,3 +140,7 @@ Ease In/Out starts out slow, speeds up towards the middle, and then slows down a
 ## License
 
 EFCountingLabel is available under the MIT license. See the LICENSE file for more info.
+
+## PS
+
+The first version of [EFCountingLabel](https://github.com/EyreFree/EFCountingLabel/commit/5e5e12d49b84e4eff8f18df68a99b5e3223b579b) is converted from [UICountingLabel](https://github.com/dataxpress/UICountingLabel/commit/1aa3d51c1ac4d7b8aef4c5f7ea44a1b1428c7985).
