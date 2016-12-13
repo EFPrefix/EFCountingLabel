@@ -26,6 +26,116 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'EFCountingLabel', '~> 1.0.0'
 ```
+## Setup
+
+Simply initialize a `EFCountingLabel` the same way you set up a regular `UILabel`:
+
+```
+let myLabel = EFCountingLabel(frame: CGRect(x: 10, y: 10, width: 200, height: 40))
+self.view.addSubview(myLabel)
+```
+
+You can also add it to your `xib` or `storyboard` , just make sure you set the class and module to `EFCountingLabel`.
+
+<img src="EFCountingLabel/Assets/storyboard.png"/>
+
+### Use
+
+Set the format of your label.  This will be filled with a single int or float (depending on how you format it) when it updates:
+
+```
+myLabel.format = "%d"
+```
+
+Alternatively, you can provide a `formatBlock`, which permits greater control over how the text is formatted:
+
+```
+myLabel.formatBlock = {
+      (value) in
+      return "Score: " + (formatter.string(from: NSNumber(value: Int(value))) ?? "")
+}
+```
+
+There is also a `attributedFormatBlock` to use an attributed string. If the `formatBlock` is specified, it takes precedence over the `format`.
+
+Optionally, set the mode.  The default is `EFLabelCountingMethod.linear`, which will not change speed until it reaches the end.  Other options are described below in the Methods section.
+
+```
+myLabel.method = .easeOut
+```
+
+When you want the label to start counting, just call:
+
+```
+myLabel.countFrom(5, to: 100)
+```
+
+You can also specify the duration.  The default is 2.0 seconds.
+
+```
+myLabel.countFrom(1, to: 10, withDuration: 3.0)
+```
+
+Additionally, there is `animationDuration` property which you can use to override the default animation duration.
+
+```
+myLabel.animationDuration = 1.0
+```
+
+You can use common convinient methods for counting, such as:
+
+```
+myLabel.countFromCurrentValueTo(100)
+myLabel.countFromZeroTo(100)
+```
+
+Behind the scenes, these convinient methods use one base method, which has the following full signature:
+
+```
+myLabel.countFrom(
+      startValue: CGFloat,
+      to: CGFloat,
+      withDuration: TimeInterval
+)
+```
+
+You can get current value of your label using `currentValue` method (works correctly in the process of animation too):
+
+```
+let currentValue = myLabel.currentValue()
+```
+
+Optionally, you can specify a `completionBlock` to perform an acton when the label has finished counting:
+
+```
+myLabel.completionBlock = {
+      () in
+      print("finish")
+}
+```
+
+### Formats
+
+When you set the `format` property, the label will look for the presence of `%(.*)d` or `%(.*)i`, and if found, will cast the value to `Int` before formatting the string. Otherwise, it will format it using a `CGFloat`.  
+
+If you're using a `CGFloat` value, it's recommended to limit the number of digits with a format string, such as `"%.1f"` for one decimal place.
+
+Because it uses the standard `String(format: String, arguments: CVarArg...)` method, you can also include arbitrary text in your format, such as `"Points: %i"`.
+
+### Modes
+There are currently four modes of counting.
+
+`EFLabelCountingMethod.linear`
+Counts linearly from the start to the end.  
+
+`EFLabelCountingMethod.easeIn`
+Ease In starts out slow and speeds up counting as it gets to the end, stopping suddenly at the final value.
+
+`EFLabelCountingMethod.easeOut`
+Ease Out starts out fast and slows down as it gets to the destination value.  
+
+`EFLabelCountingMethod.easeInOut`
+Ease In/Out starts out slow, speeds up towards the middle, and then slows down as it approaches the destination.  It is a nice, smooth curve that looks great, and is the default method.
 
 ## License
 
