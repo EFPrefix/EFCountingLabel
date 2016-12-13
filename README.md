@@ -137,10 +137,11 @@ Ease Out starts out fast and slows down as it gets to the destination value.
 `EFLabelCountingMethod.easeInOut`  
 Ease In/Out starts out slow, speeds up towards the middle, and then slows down as it approaches the destination. It is a nice, smooth curve that looks great, and is the default method.
 
+## PS
+
+The first version of [EFCountingLabel](https://github.com/EyreFree/EFCountingLabel/commit/5e5e12d49b84e4eff8f18df68a99b5e3223b579b) is converted from [UICountingLabel](https://github.com/dataxpress/UICountingLabel/commit/1aa3d51c1ac4d7b8aef4c5f7ea44a1b1428c7985).
+
 ## License
 
 EFCountingLabel is available under the MIT license. See the LICENSE file for more info.
 
-## PS
-
-The first version of [EFCountingLabel](https://github.com/EyreFree/EFCountingLabel/commit/5e5e12d49b84e4eff8f18df68a99b5e3223b579b) is converted from [UICountingLabel](https://github.com/dataxpress/UICountingLabel/commit/1aa3d51c1ac4d7b8aef4c5f7ea44a1b1428c7985).
