@@ -5,7 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 [![Platform](https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 [![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/eyrefree/EFCountingLabel)
-[![CocoaPods](https://img.shields.io/cocoapods/v/EFCountingLabel.svg)](https://cocoapods.org/pods/EFCountingLabel)
 
 A label which can show number change animated.
 
