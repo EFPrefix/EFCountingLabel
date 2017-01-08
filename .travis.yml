@@ -2,23 +2,16 @@ language: objective-c
 os: osx
 osx_image: xcode8
 
-env:
-  matrix:
-    - TEST_TYPE=iOS
 -before_install:
  - |
     gem install xcpretty -N --no-ri --no-rdoc
  
 script:
 - |
-    if [ "$TEST_TYPE" = iOS ]; then
-      set -o pipefail
-      xcodebuild clean test -workspace Example/EFCountingLabel.xcworkspace -scheme EFCountingLabel -destination "platform=iOS Simulator,name=iPhone 6 Plus" -enableCodeCoverage YES | xcpretty
-    fi
+    set -o pipefail
+    xcodebuild clean test -workspace Example/EFCountingLabel.xcworkspace -scheme EFCountingLabel -destination "platform=iOS Simulator,name=iPhone 6 Plus" -enableCodeCoverage YES | xcpretty
 after_success:
 - |
-    if [ "$TEST_TYPE" = iOS ]; then
-      bash <(curl -s https://codecov.io/bash)
-    fi
+    bash <(curl -s https://codecov.io/bash)
     sleep 10
     
