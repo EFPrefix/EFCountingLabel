@@ -38,26 +38,26 @@ public protocol UILabelCounter {
     func update(_ t: CGFloat) -> CGFloat
 }
 
-open class UILabelCounterLinear: UILabelCounter {
-    open func update(_ t: CGFloat) -> CGFloat {
+public class UILabelCounterLinear: UILabelCounter {
+    public func update(_ t: CGFloat) -> CGFloat {
         return t
     }
 }
 
-open class UILabelCounterEaseIn: UILabelCounter {
-    open func update(_ t: CGFloat) -> CGFloat {
+public class UILabelCounterEaseIn: UILabelCounter {
+    public func update(_ t: CGFloat) -> CGFloat {
         return CGFloat(powf(Float(t), kUILabelCounterRate))
     }
 }
 
-open class UILabelCounterEaseOut: UILabelCounter {
-    open func update(_ t: CGFloat) -> CGFloat {
+public class UILabelCounterEaseOut: UILabelCounter {
+    public func update(_ t: CGFloat) -> CGFloat {
         return CGFloat(1.0 - powf(Float(1.0 - t), kUILabelCounterRate))
     }
 }
 
-open class UILabelCounterEaseInOut: UILabelCounter {
-    open func update(_ t: CGFloat) -> CGFloat {
+public class UILabelCounterEaseInOut: UILabelCounter {
+    public func update(_ t: CGFloat) -> CGFloat {
         let newt: CGFloat = 2 * t
         if newt < 1 {
             return CGFloat(0.5 * powf (Float(newt), kUILabelCounterRate))
@@ -68,14 +68,14 @@ open class UILabelCounterEaseInOut: UILabelCounter {
 }
 
 //MARK: - EFCountingLabel
-open class EFCountingLabel: UILabel {
+public class EFCountingLabel: UILabel {
 
-    open var format = "%f"
-    open var method = EFLabelCountingMethod.linear
-    open var animationDuration = TimeInterval(2)
-    open var formatBlock: ((CGFloat) -> String)?
-    open var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
-    open var completionBlock: (() -> Void)?
+    public var format = "%f"
+    public var method = EFLabelCountingMethod.linear
+    public var animationDuration = TimeInterval(2)
+    public var formatBlock: ((CGFloat) -> String)?
+    public var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
+    public var completionBlock: (() -> Void)?
 
     fileprivate var startingValue: CGFloat!
     fileprivate var destinationValue: CGFloat!
@@ -87,11 +87,11 @@ open class EFCountingLabel: UILabel {
     fileprivate var timer: CADisplayLink?
     fileprivate var counter: UILabelCounter = UILabelCounterLinear()
 
-    open func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
+    public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
         self.countFrom(startValue, to: endValue, withDuration: self.animationDuration)
     }
 
-    open func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
+    public func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
         self.startingValue = startValue
         self.destinationValue = endValue
 
@@ -133,23 +133,23 @@ open class EFCountingLabel: UILabel {
         self.timer = timer
     }
 
-    open func countFromCurrentValueTo(_ endValue: CGFloat) {
+    public func countFromCurrentValueTo(_ endValue: CGFloat) {
         self.countFrom(self.currentValue(), to: endValue)
     }
 
-    open func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
+    public func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
         self.countFrom(self.currentValue(), to: endValue, withDuration: duration)
     }
 
-    open func countFromZeroTo(_ endValue: CGFloat) {
+    public func countFromZeroTo(_ endValue: CGFloat) {
         self.countFrom(0, to: endValue)
     }
 
-    open func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
+    public func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
         self.countFrom(0, to: endValue, withDuration: duration)
     }
 
-    open func currentValue() -> CGFloat {
+    public func currentValue() -> CGFloat {
         if self.progress >= self.totalTime {
             return self.destinationValue
         }
@@ -160,7 +160,7 @@ open class EFCountingLabel: UILabel {
         return self.startingValue + updateVal * (self.destinationValue - self.startingValue)
     }
 
-    open func updateValue(_ timer: Timer) {
+    public func updateValue(_ timer: Timer) {
         // update progress
         let now = Date.timeIntervalSinceReferenceDate
         self.progress = self.progress + now - self.lastUpdate
