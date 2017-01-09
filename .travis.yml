@@ -6,7 +6,7 @@ cache: cocoapods
 podfile: Example/Podfile
 before_install:
   - gem install xcpretty -N --no-ri --no-rdoc
-  - gem install cocoapods # Since Travis is not always on latest version
+  - gem install cocoapods --pre
   - pod install --project-directory=Example
 script:
   - set -o pipefail && xcodebuild clean test -workspace Example/EFCountingLabel.xcworkspace -scheme EFCountingLabel-Example -destination "platform=iOS Simulator,name=iPhone 6 Plus" | xcpretty
