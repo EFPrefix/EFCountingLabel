@@ -77,15 +77,15 @@ public class EFCountingLabel: UILabel {
     public var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
     public var completionBlock: (() -> Void)?
 
-    fileprivate var startingValue: CGFloat!
-    fileprivate var destinationValue: CGFloat!
-    fileprivate var progress: TimeInterval!
-    fileprivate var lastUpdate: TimeInterval!
-    fileprivate var totalTime: TimeInterval!
-    fileprivate var easingRate: CGFloat!
+    private var startingValue: CGFloat!
+    private var destinationValue: CGFloat!
+    private var progress: TimeInterval!
+    private var lastUpdate: TimeInterval!
+    private var totalTime: TimeInterval!
+    private var easingRate: CGFloat!
 
-    fileprivate var timer: CADisplayLink?
-    fileprivate var counter: UILabelCounter = UILabelCounterLinear()
+    private var timer: CADisplayLink?
+    private var counter: UILabelCounter = UILabelCounterLinear()
 
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
         self.countFrom(startValue, to: endValue, withDuration: self.animationDuration)
@@ -179,7 +179,7 @@ public class EFCountingLabel: UILabel {
         }
     }
 
-    fileprivate func setTextValue(_ value: CGFloat) {
+    private func setTextValue(_ value: CGFloat) {
         if let tryAttributedFormatBlock = self.attributedFormatBlock {
             self.attributedText = tryAttributedFormatBlock(value)
         } else if let tryFormatBlock = self.formatBlock {
@@ -195,12 +195,12 @@ public class EFCountingLabel: UILabel {
         }
     }
 
-    fileprivate func setFormat(_ format: String) {
+    private func setFormat(_ format: String) {
         self.format = format
         self.setTextValue(self.currentValue())
     }
 
-    fileprivate func runCompletionBlock() {
+    private func runCompletionBlock() {
         if let tryCompletionBlock = self.completionBlock {
             tryCompletionBlock()
             
