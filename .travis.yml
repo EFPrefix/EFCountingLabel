@@ -1,3 +1,4 @@
+
 osx_image: xcode8
 language: objective-c
 
@@ -19,7 +20,6 @@ before_install:
 
 script:
   - set -o pipefail
-  #- set -o pipefail && xcodebuild test -workspace Example/EFCountingLabel.xcworkspace -scheme EFCountingLabel-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
   - xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$SCHEME" -configuration Debug clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
   - xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$SCHEME" -configuration Release clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
   - pod lib lint --no-clean
