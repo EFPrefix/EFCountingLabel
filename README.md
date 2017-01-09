@@ -1,10 +1,10 @@
 # EFCountingLabel
 
-[![CI Status](http://img.shields.io/travis/EyreFree/EFCountingLabel.svg?style=flat)](https://travis-ci.org/EyreFree/EFCountingLabel)
+[![CI Status](http://img.shields.io/travis/eyrefree/EFCountingLabel.svg?style=flat)](https://travis-ci.org/eyrefree/EFCountingLabel)
 [![Version](https://img.shields.io/cocoapods/v/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 [![License](https://img.shields.io/cocoapods/l/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 [![Platform](https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
-[![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/EyreFree/EFCountingLabel)
+[![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/eyrefree/EFCountingLabel)
 
 A label which can show number change animated.
 
