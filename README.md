@@ -6,7 +6,9 @@
 [![Platform](https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 [![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/EyreFree/EFCountingLabel)
 
-A label which can show number change animated.
+A label which can show number change animated, in Swift.
+
+## Overview
 
 <img src="EFCountingLabel/Assets/example.gif" width = "50%"/>
 
