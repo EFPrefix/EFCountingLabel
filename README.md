@@ -2,7 +2,7 @@
 
 [![CI Status](http://img.shields.io/travis/EyreFree/EFCountingLabel.svg?style=flat)](https://travis-ci.org/EyreFree/EFCountingLabel)
 [![Version](https://img.shields.io/cocoapods/v/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
-[![License](https://img.shields.io/cocoapods/l/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
+[![License](https://img.shields.io/cocoapods/l/EFCountingLabel.svg?style=flat)](https://github.com/EyreFree/EFCountingLabel/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat)](http://cocoapods.org/pods/EFCountingLabel)
 [![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/EyreFree/EFCountingLabel)
 
