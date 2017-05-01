@@ -79,7 +79,7 @@ public class EFCountingLabel: UILabel {
 
     private var startingValue: CGFloat!
     private var destinationValue: CGFloat!
-    private var progress: TimeInterval!
+    private var progress: TimeInterval = 0
     private var lastUpdate: TimeInterval!
     private var totalTime: TimeInterval!
     private var easingRate: CGFloat!
@@ -154,7 +154,9 @@ public class EFCountingLabel: UILabel {
     }
 
     public func currentValue() -> CGFloat {
-        if self.progress >= self.totalTime {
+        if self.progress == 0 {
+            return 0
+        } else if self.progress >= self.totalTime {
             return self.destinationValue
         }
 
