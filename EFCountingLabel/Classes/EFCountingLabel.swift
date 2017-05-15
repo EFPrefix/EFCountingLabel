@@ -127,7 +127,11 @@ public class EFCountingLabel: UILabel {
         }
 
         let timer = CADisplayLink(target: self, selector: #selector(EFCountingLabel.updateValue(_:)))
-        timer.frameInterval = 2
+        if #available(iOS 10.0, *) {
+            timer.preferredFramesPerSecond = 2
+        } else {
+            timer.frameInterval = 2
+        }
         timer.add(to: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
         timer.add(to: RunLoop.main, forMode: RunLoopMode.UITrackingRunLoopMode)
         self.timer = timer
