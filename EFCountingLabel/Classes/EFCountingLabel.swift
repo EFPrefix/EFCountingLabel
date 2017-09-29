@@ -166,7 +166,7 @@ public class EFCountingLabel: UILabel {
         return self.startingValue + updateVal * (self.destinationValue - self.startingValue)
     }
 
-    public func updateValue(_ timer: Timer) {
+    @objc public func updateValue(_ timer: Timer) {
         // update progress
         let now = Date.timeIntervalSinceReferenceDate
         self.progress = self.progress + now - self.lastUpdate
