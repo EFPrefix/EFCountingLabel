@@ -57,8 +57,8 @@ class ViewController: UIViewController {
         let attributedLabel = EFCountingLabel(frame: CGRect(x: 10, y: 130, width: 200, height: 40))
         attributedLabel.attributedFormatBlock = {
             (value) in
-            let highlight = [NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 20) ?? UIFont.systemFont(ofSize: 20)]
-            let normal = [NSFontAttributeName: UIFont(name: "HelveticaNeue-UltraLight", size: 20) ?? UIFont.systemFont(ofSize: 20)]
+            let highlight = [NSAttributedStringKey.font: UIFont(name: "HelveticaNeue", size: 20) ?? UIFont.systemFont(ofSize: 20)]
+            let normal = [NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-UltraLight", size: 20) ?? UIFont.systemFont(ofSize: 20)]
 
             let prefix = String(format: "%d", Int(value))
             let postfix = String(format: "/%d", 100)
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         self.view.addSubview(button)
     }
 
-    func startCount() {
+    @objc func startCount() {
         myLabel.countFrom(1, to: 10, withDuration: 3.0)
         countPercentageLabel.countFrom(5, to: 10)
         scoreLabel.countFrom(0, to: 10000, withDuration: 2.5)
