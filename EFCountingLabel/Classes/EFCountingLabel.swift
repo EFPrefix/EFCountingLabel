@@ -68,7 +68,7 @@ public class UILabelCounterEaseInOut: UILabelCounter {
 }
 
 //MARK: - EFCountingLabel
-public class EFCountingLabel: UILabel {
+open class EFCountingLabel: UILabel {
 
     public var format = "%f"
     public var method = EFLabelCountingMethod.linear
