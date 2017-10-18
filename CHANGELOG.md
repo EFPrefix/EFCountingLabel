@@ -2,6 +2,14 @@
 
 -----
 
+## [4.0.1](https://github.com/EyreFree/EFCountingLabel/releases/tag/4.0.1) (2017-10-18)
+
+#### Update
+
+* Merge pull request [#7](https://github.com/EyreFree/EFCountingLabel/pull/7).
+
+---
+
 ## [4.0.0](https://github.com/EyreFree/EFCountingLabel/releases/tag/4.0.0) (2017-09-30)
 
 #### Fix
