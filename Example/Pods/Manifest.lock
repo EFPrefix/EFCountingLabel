@@ -1,16 +1,16 @@
 PODS:
-  - EFCountingLabel (1.0.0)
+  - EFCountingLabel (4.0.1)
 
 DEPENDENCIES:
   - EFCountingLabel (from `../`)
 
 EXTERNAL SOURCES:
   EFCountingLabel:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  EFCountingLabel: 6f958baaf3913e46dc02513ff06ddceb77fc990f
+  EFCountingLabel: ae683402eac9904c34a43a24f083ddfdc0d354ae
 
-PODFILE CHECKSUM: 5b22c0b21373c2cd46786f445fa348cb7cf74b28
+PODFILE CHECKSUM: 6bdf89479a37a0887bbec9cc2156b16d0847167b
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.5.3
