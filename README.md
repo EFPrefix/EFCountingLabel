@@ -1,21 +1,35 @@
-![](https://raw.githubusercontent.com/EyreFree/EFCountingLabel/master/assets/EFCountingLabel.png)
+![](https://raw.githubusercontent.com/EFPrefix/EFCountingLabel/master/Assets/EFCountingLabel.png)
 
 <p align="center">
-<a href="https://travis-ci.org/EyreFree/EFCountingLabel"><img src="http://img.shields.io/travis/EyreFree/EFCountingLabel.svg"></a>
-<a href="http://cocoapods.org/pods/EFCountingLabel"><img src="https://img.shields.io/cocoapods/v/EFCountingLabel.svg?style=flat"></a>
-<a href="http://cocoapods.org/pods/EFCountingLabel"><img src="https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat"></a>
-<a href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/language-swift-orange.svg"></a>
-<a href="https://raw.githubusercontent.com/EyreFree/EFCountingLabel/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/EFCountingLabel.svg?style=flat"></a>
-<a href="https://twitter.com/EyreFree777"><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat"></a>
-<a href="http://weibo.com/eyrefree777"><img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat"></a>
-<img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
+    <a href="https://travis-ci.org/EFPrefix/EFCountingLabel">
+    	<img src="http://img.shields.io/travis/EFPrefix/EFCountingLabel.svg">
+    </a>
+    <a href="http://cocoapods.org/pods/EFCountingLabel">
+    	<img src="https://img.shields.io/cocoapods/v/EFCountingLabel.svg?style=flat">
+    </a>
+    <a href="http://cocoapods.org/pods/EFCountingLabel">
+    	<img src="https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat">
+    </a>
+    <a href="https://github.com/apple/swift">
+    	<img src="https://img.shields.io/badge/language-swift-orange.svg">
+    </a>
+    <a href="https://raw.githubusercontent.com/EFPrefix/EFCountingLabel/master/LICENSE">
+    	<img src="https://img.shields.io/cocoapods/l/EFCountingLabel.svg?style=flat">
+    </a>
+    <a href="https://twitter.com/EyreFree777">
+    	<img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat">
+    </a>
+    <a href="http://weibo.com/eyrefree777">
+    	<img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat">
+    </a>
+    <img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
 </p>
 
 A label which can show number change animated, in Swift.
 
 ## Overview
 
-<img src="https://raw.githubusercontent.com/EyreFree/EFCountingLabel/master/assets/example.gif" width = "50%"/>
+<img src="https://raw.githubusercontent.com/EFPrefix/EFCountingLabel/master/Assets/example.gif" width = "50%"/>
 
 ## Example
 
@@ -47,7 +61,7 @@ self.view.addSubview(myLabel)
 
 You can also add it to your `xib` or `storyboard` , just make sure you set the class and module to `EFCountingLabel`.
 
-<img src="https://raw.githubusercontent.com/EyreFree/EFCountingLabel/master/assets/storyboard.png"/>
+<img src="https://raw.githubusercontent.com/EFPrefix/EFCountingLabel/master/Assets/storyboard.png"/>
 
 ### Use
 
@@ -149,7 +163,7 @@ Ease In/Out starts out slow, speeds up towards the middle, and then slows down a
 
 ## PS
 
-The first version of [EFCountingLabel](https://github.com/EyreFree/EFCountingLabel/commit/5e5e12d49b84e4eff8f18df68a99b5e3223b579b) is converted from [UICountingLabel](https://github.com/dataxpress/UICountingLabel/commit/1aa3d51c1ac4d7b8aef4c5f7ea44a1b1428c7985).
+The first version of [EFCountingLabel](https://github.com/EFPrefix/EFCountingLabel/commit/5e5e12d49b84e4eff8f18df68a99b5e3223b579b) is converted from [UICountingLabel](https://github.com/dataxpress/UICountingLabel/commit/1aa3d51c1ac4d7b8aef4c5f7ea44a1b1428c7985).
 
 ## Author
 
