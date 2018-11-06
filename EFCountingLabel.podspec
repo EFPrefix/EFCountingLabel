@@ -1,7 +1,6 @@
-
 Pod::Spec.new do |s|
   s.name             = 'EFCountingLabel'
-  s.version          = '4.0.1'
+  s.version          = '4.1.0'
   s.summary          = 'A label which can show number change animated.'
 
   s.description      = <<-DESC
@@ -16,15 +15,6 @@ A label which can show number change animated, in Swift.
   s.social_media_url = 'https://twitter.com/EyreFree777'
 
   s.ios.deployment_target = '8.0'
-  
   s.requires_arc = true
-
   s.source_files = 'EFCountingLabel/Classes/*.swift'
-  
-  # s.resource_bundles = {
-  #   'EFCountingLabel' => ['EFCountingLabel/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'Foundation', 'UIKit'
 end
