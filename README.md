@@ -23,6 +23,9 @@
     	<img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat">
     </a>
     <img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
+    <a href="http://shang.qq.com/wpa/qunwpa?idkey=d0f732585dcb0c6f2eb26bc9e0327f6305d18260eeba89ed26a201b520c572c0">
+        <img src="http://image.eyrefree.org/QQGroup.png">
+    </a>
 </p>
 
 A label which can show number change animated, in Swift.
