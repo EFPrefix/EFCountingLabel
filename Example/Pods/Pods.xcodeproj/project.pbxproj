@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1440834D96A2922A609C1D6140955332 /* EFCountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD2448248CA07A245C73EC7BF449806 /* EFCountingLabel-dummy.m */; };
-		1C5C626EE7E02508133EC73E97DE10A3 /* Pods-EFCountingLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F0912D77013F8675939976852C90CA /* Pods-EFCountingLabel_Tests-dummy.m */; };
-		3931C56AAE628619E0D036CD92C97AB5 /* Pods-EFCountingLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A977E98F1FB70E97D8D41E424D381B /* Pods-EFCountingLabel_Example-dummy.m */; };
+		1440834D96A2922A609C1D6140955332 /* EFCountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E31D751EA6235BD9A95481BB32A070E /* EFCountingLabel-dummy.m */; };
+		1C5C626EE7E02508133EC73E97DE10A3 /* Pods-EFCountingLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A078540C076A6D39F12B7F02BE84D72 /* Pods-EFCountingLabel_Tests-dummy.m */; };
+		3931C56AAE628619E0D036CD92C97AB5 /* Pods-EFCountingLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F67C952AD21823EFC4E1D4ED9711BB39 /* Pods-EFCountingLabel_Example-dummy.m */; };
 		4672B8EA90F2EA507C85B7488078C172 /* EFCountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FAA44037E20D5A77DADEA3E0B23640 /* EFCountingLabel.swift */; };
-		A859BB5A27E91BED3236EB61DC04C260 /* Pods-EFCountingLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE09AA09FA7651EDA930C95AAD8605E5 /* Pods-EFCountingLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBBFBD8E5FB31E593470C7647E5353D1 /* Pods-EFCountingLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F85C43B98CAFBECB633478449F70D2E4 /* Pods-EFCountingLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A859BB5A27E91BED3236EB61DC04C260 /* Pods-EFCountingLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26DF09F3C3AEBF0C43C316A253B78591 /* Pods-EFCountingLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBBFBD8E5FB31E593470C7647E5353D1 /* Pods-EFCountingLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B4C2D21C0D0C1F21432357C6DA5F91 /* Pods-EFCountingLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0F645E7B84D75F85E477D02846DF3EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		C59E8C34071B1D0BFF384A01C9A8E437 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		E6E86879713160FF28E2E0356B146FDC /* EFCountingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19D19D19BD1E3DAB195925AD8879380A /* EFCountingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6E86879713160FF28E2E0356B146FDC /* EFCountingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1235F61B76E4BC821FAF0851593DAD14 /* EFCountingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FBEF8F0DC8446A4C8889236815AF4B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,38 +37,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0977731AB1CF6F8A5B8CDAF4249ABCCE /* Pods-EFCountingLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
+		0C9F5254F417CDE9D377A3A65DC3A764 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1235F61B76E4BC821FAF0851593DAD14 /* EFCountingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFCountingLabel-umbrella.h"; sourceTree = "<group>"; };
 		127B8EB4241BE24BBF5AED5D2DB1DA8D /* Pods_EFCountingLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFCountingLabel_Tests.framework; path = "Pods-EFCountingLabel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		19D19D19BD1E3DAB195925AD8879380A /* EFCountingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFCountingLabel-umbrella.h"; sourceTree = "<group>"; };
-		1A5F13538F0378F9B854FAC3F7B2EBCA /* EFCountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFCountingLabel-prefix.pch"; sourceTree = "<group>"; };
-		297AFAA0251C52BF10A4FEE5E26632C9 /* EFCountingLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EFCountingLabel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		240B1ACBB56962A56B8C782436A704AF /* Pods-EFCountingLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2516BB44397D76E531AAF36D4F64069A /* Pods-EFCountingLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		26DF09F3C3AEBF0C43C316A253B78591 /* Pods-EFCountingLabel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFCountingLabel_Tests-umbrella.h"; sourceTree = "<group>"; };
+		29729586EF04D14EE4FB1B20269CE0FA /* Pods-EFCountingLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFCountingLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2D5CDC63BC596D6F6E424594DB47A0D0 /* Pods_EFCountingLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFCountingLabel_Example.framework; path = "Pods-EFCountingLabel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CDAC85BC826AE5DEC7E2C55DD7C6651 /* Pods-EFCountingLabel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFCountingLabel_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3D4F78773BE7FABDE1F3A7FE0AFB0201 /* Pods-EFCountingLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		52F0912D77013F8675939976852C90CA /* Pods-EFCountingLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFCountingLabel_Tests-dummy.m"; sourceTree = "<group>"; };
-		64C02EF68C14A770397C1B412D4AE8D1 /* Pods-EFCountingLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFCountingLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		32B4C2D21C0D0C1F21432357C6DA5F91 /* Pods-EFCountingLabel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFCountingLabel_Example-umbrella.h"; sourceTree = "<group>"; };
+		39364051F3B69452AC8C7F7B57876A68 /* Pods-EFCountingLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5D5C37B46075CC509C8372665E6E1617 /* Pods-EFCountingLabel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFCountingLabel_Example-resources.sh"; sourceTree = "<group>"; };
 		64FAA44037E20D5A77DADEA3E0B23640 /* EFCountingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFCountingLabel.swift; path = EFCountingLabel/Classes/EFCountingLabel.swift; sourceTree = "<group>"; };
-		66969064994A188745FE3966701E25C4 /* Pods-EFCountingLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFCountingLabel_Example.modulemap"; sourceTree = "<group>"; };
-		67175E100B00D4A8CB6B7FF58CC928F8 /* Pods-EFCountingLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		717991968090C1C0305CCBABA91A2F51 /* EFCountingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFCountingLabel.modulemap; sourceTree = "<group>"; };
-		73DE4E7F905D5CCB5536F5AEE317DEEC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		79B1B958DCDC39F6CB83C66A978458B3 /* EFCountingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFCountingLabel.framework; path = EFCountingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83913CED33D288DB5BCD801D0C6AA10F /* Pods-EFCountingLabel_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Example-Info.plist"; sourceTree = "<group>"; };
-		A0A6A9A282E713394A7759E7DB2DDB37 /* Pods-EFCountingLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFCountingLabel_Tests.modulemap"; sourceTree = "<group>"; };
-		A35E19E5B1CD3DA615CE0BDB64FE3C59 /* Pods-EFCountingLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFCountingLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AE09AA09FA7651EDA930C95AAD8605E5 /* Pods-EFCountingLabel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFCountingLabel_Tests-umbrella.h"; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C26EEB96207237C157CA517C570056C0 /* Pods-EFCountingLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C2A977E98F1FB70E97D8D41E424D381B /* Pods-EFCountingLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFCountingLabel_Example-dummy.m"; sourceTree = "<group>"; };
-		C61336A85BEFDF3595D85B5719FA9417 /* EFCountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFCountingLabel.xcconfig; sourceTree = "<group>"; };
-		CF07CB4408C068ECD2CCD79E0A573D0D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		CF16DA314307A3F237914AD0BCA970A2 /* Pods-EFCountingLabel_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Tests-Info.plist"; sourceTree = "<group>"; };
-		D009E3B3427890EDCDD0429D88D216A4 /* Pods-EFCountingLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		D372C940959ACEE23508B255808367E9 /* EFCountingLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EFCountingLabel-Info.plist"; sourceTree = "<group>"; };
+		8073D80DA8B39C321785237A0925F273 /* Pods-EFCountingLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		8901D37F93BCBBDA23E8CDB3D1F3C420 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D25F4517287FCAE482FCDAA41874E34 /* Pods-EFCountingLabel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFCountingLabel_Example-frameworks.sh"; sourceTree = "<group>"; };
+		8D8266FF5B2A715ADFC592E8145C1604 /* Pods-EFCountingLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
+		90251CBEF81FCFF39CB65E5BF261A6D8 /* EFCountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFCountingLabel-prefix.pch"; sourceTree = "<group>"; };
+		9345C93066B7EC1456F433B1CB61864B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A078540C076A6D39F12B7F02BE84D72 /* Pods-EFCountingLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFCountingLabel_Tests-dummy.m"; sourceTree = "<group>"; };
+		9E31D751EA6235BD9A95481BB32A070E /* EFCountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFCountingLabel-dummy.m"; sourceTree = "<group>"; };
+		9F41295D5786BAA855E62E3EA850C000 /* EFCountingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFCountingLabel.modulemap; sourceTree = "<group>"; };
+		AEEE2F1A20FB86506C09E8C363916AC3 /* EFCountingLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = EFCountingLabel.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B64B5628600DCEE7E87BF6A06E6AED81 /* Pods-EFCountingLabel_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFCountingLabel_Tests-resources.sh"; sourceTree = "<group>"; };
+		B86952CADB3C8036729FB367C5C8709D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA408F6A658126488B565806A73B658 /* Pods-EFCountingLabel_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFCountingLabel_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		CDE5CD8660284536F38EFD0D27E6B33B /* EFCountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFCountingLabel.xcconfig; sourceTree = "<group>"; };
+		D25E3497E7E319922A4BA064643C318D /* Pods-EFCountingLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFCountingLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DC223A9DBA60C98B20AB07CB6AF39F77 /* Pods-EFCountingLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F85C43B98CAFBECB633478449F70D2E4 /* Pods-EFCountingLabel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFCountingLabel_Example-umbrella.h"; sourceTree = "<group>"; };
-		FCD2448248CA07A245C73EC7BF449806 /* EFCountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFCountingLabel-dummy.m"; sourceTree = "<group>"; };
+		DD6F60AB557877E2C1E77F9C7D1AE2B3 /* Pods-EFCountingLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFCountingLabel_Tests.modulemap"; sourceTree = "<group>"; };
+		ED8B44523C0835C1541C4563CE2BD999 /* Pods-EFCountingLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFCountingLabel_Example.modulemap"; sourceTree = "<group>"; };
+		F088B4CA28D4A9CEACB08953715B2F3E /* Pods-EFCountingLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5944A9D545DD85297CD8CB87053E2B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F67C952AD21823EFC4E1D4ED9711BB39 /* Pods-EFCountingLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFCountingLabel_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,31 +102,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0060DD929BB02ED2404C5C670BD4A42F /* Pod */ = {
+		027B0558238EE62E1254B6BCB7BE8CE0 /* Pods-EFCountingLabel_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				297AFAA0251C52BF10A4FEE5E26632C9 /* EFCountingLabel.podspec */,
-				CF07CB4408C068ECD2CCD79E0A573D0D /* LICENSE */,
-				73DE4E7F905D5CCB5536F5AEE317DEEC /* README.md */,
+				B86952CADB3C8036729FB367C5C8709D /* Info.plist */,
+				DD6F60AB557877E2C1E77F9C7D1AE2B3 /* Pods-EFCountingLabel_Tests.modulemap */,
+				D25E3497E7E319922A4BA064643C318D /* Pods-EFCountingLabel_Tests-acknowledgements.markdown */,
+				39364051F3B69452AC8C7F7B57876A68 /* Pods-EFCountingLabel_Tests-acknowledgements.plist */,
+				9A078540C076A6D39F12B7F02BE84D72 /* Pods-EFCountingLabel_Tests-dummy.m */,
+				BEA408F6A658126488B565806A73B658 /* Pods-EFCountingLabel_Tests-frameworks.sh */,
+				B64B5628600DCEE7E87BF6A06E6AED81 /* Pods-EFCountingLabel_Tests-resources.sh */,
+				26DF09F3C3AEBF0C43C316A253B78591 /* Pods-EFCountingLabel_Tests-umbrella.h */,
+				F088B4CA28D4A9CEACB08953715B2F3E /* Pods-EFCountingLabel_Tests.debug.xcconfig */,
+				240B1ACBB56962A56B8C782436A704AF /* Pods-EFCountingLabel_Tests.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Pods-EFCountingLabel_Tests";
+			path = "Target Support Files/Pods-EFCountingLabel_Tests";
 			sourceTree = "<group>";
 		};
-		06F80870A28174105713BE6492C1B81C /* Pods-EFCountingLabel_Example */ = {
+		0C44A0962969E803B03C5FE61C653B57 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				66969064994A188745FE3966701E25C4 /* Pods-EFCountingLabel_Example.modulemap */,
-				64C02EF68C14A770397C1B412D4AE8D1 /* Pods-EFCountingLabel_Example-acknowledgements.markdown */,
-				D009E3B3427890EDCDD0429D88D216A4 /* Pods-EFCountingLabel_Example-acknowledgements.plist */,
-				C2A977E98F1FB70E97D8D41E424D381B /* Pods-EFCountingLabel_Example-dummy.m */,
-				3CDAC85BC826AE5DEC7E2C55DD7C6651 /* Pods-EFCountingLabel_Example-frameworks.sh */,
-				83913CED33D288DB5BCD801D0C6AA10F /* Pods-EFCountingLabel_Example-Info.plist */,
-				F85C43B98CAFBECB633478449F70D2E4 /* Pods-EFCountingLabel_Example-umbrella.h */,
-				67175E100B00D4A8CB6B7FF58CC928F8 /* Pods-EFCountingLabel_Example.debug.xcconfig */,
-				0977731AB1CF6F8A5B8CDAF4249ABCCE /* Pods-EFCountingLabel_Example.release.xcconfig */,
+				9F41295D5786BAA855E62E3EA850C000 /* EFCountingLabel.modulemap */,
+				CDE5CD8660284536F38EFD0D27E6B33B /* EFCountingLabel.xcconfig */,
+				9E31D751EA6235BD9A95481BB32A070E /* EFCountingLabel-dummy.m */,
+				90251CBEF81FCFF39CB65E5BF261A6D8 /* EFCountingLabel-prefix.pch */,
+				1235F61B76E4BC821FAF0851593DAD14 /* EFCountingLabel-umbrella.h */,
+				8901D37F93BCBBDA23E8CDB3D1F3C420 /* Info.plist */,
 			);
-			name = "Pods-EFCountingLabel_Example";
-			path = "Target Support Files/Pods-EFCountingLabel_Example";
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EFCountingLabel";
 			sourceTree = "<group>";
 		};
 		2406C20EAD1C9FC83E170D2B836EDBC4 /* Products */ = {
@@ -134,6 +142,15 @@
 				127B8EB4241BE24BBF5AED5D2DB1DA8D /* Pods_EFCountingLabel_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		43AD1D75DE8F250E3D7B05D031D93536 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9A4E9DAFB197E3594E1AB8E1D2F614F /* Pods-EFCountingLabel_Example */,
+				027B0558238EE62E1254B6BCB7BE8CE0 /* Pods-EFCountingLabel_Tests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		44D5347904CF754D6785B84253F2574A /* iOS */ = {
@@ -147,12 +164,22 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				83B5D0BB445821C43AF0674E75246DDF /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				2406C20EAD1C9FC83E170D2B836EDBC4 /* Products */,
-				D0B5FD684B353E4C0909EAEA93837B3D /* Targets Support Files */,
+				43AD1D75DE8F250E3D7B05D031D93536 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7F0F7F9D881153AC97EAAF4AD64E33A4 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				AEEE2F1A20FB86506C09E8C363916AC3 /* EFCountingLabel.podspec */,
+				F5944A9D545DD85297CD8CB87053E2B9 /* LICENSE */,
+				0C9F5254F417CDE9D377A3A65DC3A764 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		83B5D0BB445821C43AF0674E75246DDF /* Development Pods */ = {
@@ -167,25 +194,29 @@
 			isa = PBXGroup;
 			children = (
 				64FAA44037E20D5A77DADEA3E0B23640 /* EFCountingLabel.swift */,
-				0060DD929BB02ED2404C5C670BD4A42F /* Pod */,
-				AC8E157AEEE178F0BB0409B2DCA539E3 /* Support Files */,
+				7F0F7F9D881153AC97EAAF4AD64E33A4 /* Pod */,
+				0C44A0962969E803B03C5FE61C653B57 /* Support Files */,
 			);
 			name = EFCountingLabel;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		AC8E157AEEE178F0BB0409B2DCA539E3 /* Support Files */ = {
+		A9A4E9DAFB197E3594E1AB8E1D2F614F /* Pods-EFCountingLabel_Example */ = {
 			isa = PBXGroup;
 			children = (
-				717991968090C1C0305CCBABA91A2F51 /* EFCountingLabel.modulemap */,
-				C61336A85BEFDF3595D85B5719FA9417 /* EFCountingLabel.xcconfig */,
-				FCD2448248CA07A245C73EC7BF449806 /* EFCountingLabel-dummy.m */,
-				D372C940959ACEE23508B255808367E9 /* EFCountingLabel-Info.plist */,
-				1A5F13538F0378F9B854FAC3F7B2EBCA /* EFCountingLabel-prefix.pch */,
-				19D19D19BD1E3DAB195925AD8879380A /* EFCountingLabel-umbrella.h */,
+				9345C93066B7EC1456F433B1CB61864B /* Info.plist */,
+				ED8B44523C0835C1541C4563CE2BD999 /* Pods-EFCountingLabel_Example.modulemap */,
+				29729586EF04D14EE4FB1B20269CE0FA /* Pods-EFCountingLabel_Example-acknowledgements.markdown */,
+				8073D80DA8B39C321785237A0925F273 /* Pods-EFCountingLabel_Example-acknowledgements.plist */,
+				F67C952AD21823EFC4E1D4ED9711BB39 /* Pods-EFCountingLabel_Example-dummy.m */,
+				8D25F4517287FCAE482FCDAA41874E34 /* Pods-EFCountingLabel_Example-frameworks.sh */,
+				5D5C37B46075CC509C8372665E6E1617 /* Pods-EFCountingLabel_Example-resources.sh */,
+				32B4C2D21C0D0C1F21432357C6DA5F91 /* Pods-EFCountingLabel_Example-umbrella.h */,
+				2516BB44397D76E531AAF36D4F64069A /* Pods-EFCountingLabel_Example.debug.xcconfig */,
+				8D8266FF5B2A715ADFC592E8145C1604 /* Pods-EFCountingLabel_Example.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/EFCountingLabel";
+			name = "Pods-EFCountingLabel_Example";
+			path = "Target Support Files/Pods-EFCountingLabel_Example";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -194,31 +225,6 @@
 				44D5347904CF754D6785B84253F2574A /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D0B5FD684B353E4C0909EAEA93837B3D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				06F80870A28174105713BE6492C1B81C /* Pods-EFCountingLabel_Example */,
-				D0F5E0648FF4B84831E58ECDD2782245 /* Pods-EFCountingLabel_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		D0F5E0648FF4B84831E58ECDD2782245 /* Pods-EFCountingLabel_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				A0A6A9A282E713394A7759E7DB2DDB37 /* Pods-EFCountingLabel_Tests.modulemap */,
-				A35E19E5B1CD3DA615CE0BDB64FE3C59 /* Pods-EFCountingLabel_Tests-acknowledgements.markdown */,
-				DC223A9DBA60C98B20AB07CB6AF39F77 /* Pods-EFCountingLabel_Tests-acknowledgements.plist */,
-				52F0912D77013F8675939976852C90CA /* Pods-EFCountingLabel_Tests-dummy.m */,
-				CF16DA314307A3F237914AD0BCA970A2 /* Pods-EFCountingLabel_Tests-Info.plist */,
-				AE09AA09FA7651EDA930C95AAD8605E5 /* Pods-EFCountingLabel_Tests-umbrella.h */,
-				C26EEB96207237C157CA517C570056C0 /* Pods-EFCountingLabel_Tests.debug.xcconfig */,
-				3D4F78773BE7FABDE1F3A7FE0AFB0201 /* Pods-EFCountingLabel_Tests.release.xcconfig */,
-			);
-			name = "Pods-EFCountingLabel_Tests";
-			path = "Target Support Files/Pods-EFCountingLabel_Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,9 +409,40 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0BE643AC4428741BDD71D909B6A6CF69 /* Release */ = {
+		04EB8EACE7B2A973D39E6BE552CEEF4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D4F78773BE7FABDE1F3A7FE0AFB0201 /* Pods-EFCountingLabel_Tests.release.xcconfig */;
+			baseConfigurationReference = CDE5CD8660284536F38EFD0D27E6B33B /* EFCountingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
+				PRODUCT_MODULE_NAME = EFCountingLabel;
+				PRODUCT_NAME = EFCountingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		68848286BB082B4CEDD0C29E8C87C5E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F088B4CA28D4A9CEACB08953715B2F3E /* Pods-EFCountingLabel_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -417,7 +454,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -432,47 +469,12 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		11085E7AB643528FB9C29E3731398F34 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67175E100B00D4A8CB6B7FF58CC928F8 /* Pods-EFCountingLabel_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Pods-EFCountingLabel_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Pods-EFCountingLabel_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		BE01AF5D395AE305A54D518A9B774D2A /* Release */ = {
+		85B95B1234E227C814CCC2C7902D0916 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -504,6 +506,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -532,7 +536,39 @@
 			};
 			name = Release;
 		};
-		CFC8DEA7B5326676BA33093221AAE4F4 /* Debug */ = {
+		8D9B9A8D690B200F42CCE8E24F58054F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDE5CD8660284536F38EFD0D27E6B33B /* EFCountingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
+				PRODUCT_MODULE_NAME = EFCountingLabel;
+				PRODUCT_NAME = EFCountingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A73625DEBD810B78234FA1958C191C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -564,6 +600,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -596,41 +634,9 @@
 			};
 			name = Debug;
 		};
-		DE38A4423988DB2BF2C383A84011119E /* Release */ = {
+		C52DBF1AED2599C0EC0FCFBB3C3B8EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C61336A85BEFDF3595D85B5719FA9417 /* EFCountingLabel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
-				PRODUCT_MODULE_NAME = EFCountingLabel;
-				PRODUCT_NAME = EFCountingLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E5A0F83D66E50908F3A5A12BB033FF18 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C26EEB96207237C157CA517C570056C0 /* Pods-EFCountingLabel_Tests.debug.xcconfig */;
+			baseConfigurationReference = 2516BB44397D76E531AAF36D4F64069A /* Pods-EFCountingLabel_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -642,12 +648,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Pods-EFCountingLabel_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -662,9 +668,9 @@
 			};
 			name = Debug;
 		};
-		E66FF661A4B1E11BD71EED6F60042FAE /* Release */ = {
+		E29285C0B0A56EB8CA67D81B0370F0BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0977731AB1CF6F8A5B8CDAF4249ABCCE /* Pods-EFCountingLabel_Example.release.xcconfig */;
+			baseConfigurationReference = 8D8266FF5B2A715ADFC592E8145C1604 /* Pods-EFCountingLabel_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -676,7 +682,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Pods-EFCountingLabel_Example-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -697,10 +703,11 @@
 			};
 			name = Release;
 		};
-		FC1E30F93CAB94D3EF92DF94757CD52B /* Debug */ = {
+		FCB802664BBC4A49BF97C03A2189FB13 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C61336A85BEFDF3595D85B5719FA9417 /* EFCountingLabel.xcconfig */;
+			baseConfigurationReference = 240B1ACBB56962A56B8C782436A704AF /* Pods-EFCountingLabel_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -710,23 +717,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
-				PRODUCT_MODULE_NAME = EFCountingLabel;
-				PRODUCT_NAME = EFCountingLabel;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -734,8 +744,8 @@
 		0C003B282920392624723E3AF940B33A /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E5A0F83D66E50908F3A5A12BB033FF18 /* Debug */,
-				0BE643AC4428741BDD71D909B6A6CF69 /* Release */,
+				68848286BB082B4CEDD0C29E8C87C5E5 /* Debug */,
+				FCB802664BBC4A49BF97C03A2189FB13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -743,8 +753,8 @@
 		142DB514BA0BF3047D774A0537D95157 /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11085E7AB643528FB9C29E3731398F34 /* Debug */,
-				E66FF661A4B1E11BD71EED6F60042FAE /* Release */,
+				C52DBF1AED2599C0EC0FCFBB3C3B8EB2 /* Debug */,
+				E29285C0B0A56EB8CA67D81B0370F0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -752,8 +762,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFC8DEA7B5326676BA33093221AAE4F4 /* Debug */,
-				BE01AF5D395AE305A54D518A9B774D2A /* Release */,
+				A73625DEBD810B78234FA1958C191C8C /* Debug */,
+				85B95B1234E227C814CCC2C7902D0916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -761,8 +771,8 @@
 		752B2CEC4A94BAA762B32F45C59A7620 /* Build configuration list for PBXNativeTarget "EFCountingLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC1E30F93CAB94D3EF92DF94757CD52B /* Debug */,
-				DE38A4423988DB2BF2C383A84011119E /* Release */,
+				04EB8EACE7B2A973D39E6BE552CEEF4A /* Debug */,
+				8D9B9A8D690B200F42CCE8E24F58054F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EFCountingLabel: 5ebd44fad02bb0d538adbe8ae7a23cdcb0a58bdb
+  EFCountingLabel: 9ef6cbe3a89b9bcb510f25ed7902180cd08a1d29
 
 PODFILE CHECKSUM: c3ac181469d79daa5823856cee38c068e76378d6
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.5.3
