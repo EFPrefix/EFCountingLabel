@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     var countPercentageLabel: EFCountingLabel!
     var scoreLabel: EFCountingLabel!
     var attributedLabel: EFCountingLabel!
+    var countingButton: EFCountingButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,13 +91,22 @@ class ViewController: UIViewController {
         self.view.addSubview(attributedLabel)
         self.attributedLabel = attributedLabel
 
-        //storyboard
+        // storyboard
         self.label.method = .easeInOut
         self.label.format = "%d%%"
         self.label.completionBlock = {
             [weak self] () in
             self?.label.textColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1)
         }
+
+        // button
+        self.countingButton = EFCountingButton(frame: CGRect(x: 10, y: 170, width: 200, height: 40))
+        self.countingButton.setTitle("倒计时按钮", for: UIControl.State.normal)
+        self.countingButton.setTitleColor(UIColor.blue, for: UIControl.State.normal)
+        self.countingButton.addTarget(self, action: #selector(buttonClicked), for: UIControl.Event.touchUpInside)
+        self.countingButton.countingLabel.format = "%d"
+        self.countingButton.countingLabel.method = .linear
+        self.view.addSubview(countingButton)
     }
 
     func setupButton() {
@@ -121,5 +131,13 @@ class ViewController: UIViewController {
         scoreLabel.countFrom(0, to: 10000, withDuration: 2.5)
         attributedLabel.countFrom(0, to: 100, withDuration: 2.5)
         self.label.countFrom(0, to: 100)
+    }
+
+    @objc func buttonClicked(button: EFCountingButton) {
+        self.countingButton.countingLabel.completionBlock = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.countingButton.setTitle("倒计时按钮", for: UIControl.State.normal)
+        }
+        self.countingButton.countingLabel.countFrom(60, to: 0, withDuration: 60)
     }
 }

@@ -26,10 +26,37 @@
 
 import Foundation
 
+public class EFCountingButtonLabel: EFCountingLabel {
+
+    fileprivate weak var parentButton: UIButton?
+
+    public override func setTextValue(_ value: CGFloat) {
+        if let button = parentButton {
+            if let tryAttributedFormatBlock = self.attributedFormatBlock {
+                button.setAttributedTitle(tryAttributedFormatBlock(value), for: UIControl.State.normal)
+            } else if let tryFormatBlock = self.formatBlock {
+                button.setTitle(tryFormatBlock(value), for: UIControl.State.normal)
+            } else {
+                // check if counting with ints - cast to int
+                if nil != self.format.range(of: "%(.*)d", options: String.CompareOptions.regularExpression, range: nil)
+                    || nil != self.format.range(of: "%(.*)i") {
+                    button.setTitle(String(format: self.format, Int(value)), for: UIControl.State.normal)
+                } else {
+                    button.setTitle(String(format: self.format, value), for: UIControl.State.normal)
+                }
+            }
+        } else {
+            super.setTextValue(value)
+        }
+    }
+}
+
 open class EFCountingButton: UIButton {
 
-    open var countingLabel: EFCountingLabel = {
-        return EFCountingLabel()
+    open lazy var countingLabel: EFCountingButtonLabel = {
+        let buttonLabel: EFCountingButtonLabel = EFCountingButtonLabel()
+        buttonLabel.parentButton = self
+        return buttonLabel
     }()
 
     override open var titleLabel: UILabel? {

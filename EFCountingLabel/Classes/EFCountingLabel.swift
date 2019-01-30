@@ -75,11 +75,9 @@ public class UILabelCounterEaseInBounce: UILabelCounter {
     public func update(_ t: CGFloat) -> CGFloat {
         if t < 4.0 / 11.0 {
             return CGFloat(1.0 - (powf(11.0 / 4.0, 2) * powf(Float(t), 2))) - t
-        }
-        if t < 8.0 / 11.0 {
+        } else if t < 8.0 / 11.0 {
             return CGFloat(1.0 - (3.0 / 4.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 6.0 / 11.0), 2))) - t
-        }
-        if t < 10.0 / 11.0 {
+        } else if t < 10.0 / 11.0 {
             return CGFloat(1.0 - (15.0 / 16.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 9.0 / 11.0), 2))) - t
         }
         return CGFloat(1.0 - (63.0 / 64.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 21.0 / 22.0), 2))) - t
@@ -90,11 +88,9 @@ public class UILabelCounterEaseOutBounce: UILabelCounter {
     public func update(_ t: CGFloat) -> CGFloat {
         if t < 4.0 / 11.0 {
             return CGFloat(powf(11.0 / 4.0, 2) * powf(Float(t), 2))
-        }
-        if t < 8.0 / 11.0 {
+        } else if t < 8.0 / 11.0 {
             return CGFloat(3.0 / 4.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 6.0 / 11.0), 2))
-        }
-        if t < 10.0 / 11.0 {
+        } else if t < 10.0 / 11.0 {
             return CGFloat(15.0 / 16.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 9.0 / 11.0), 2))
         }
         return CGFloat(63.0 / 64.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 21.0 / 22.0), 2))
@@ -219,7 +215,7 @@ open class EFCountingLabel: UILabel {
         }
     }
 
-    private func setTextValue(_ value: CGFloat) {
+    public func setTextValue(_ value: CGFloat) {
         if let tryAttributedFormatBlock = self.attributedFormatBlock {
             self.attributedText = tryAttributedFormatBlock(value)
         } else if let tryFormatBlock = self.formatBlock {
