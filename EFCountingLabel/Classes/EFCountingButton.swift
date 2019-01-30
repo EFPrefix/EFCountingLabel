@@ -51,6 +51,7 @@ public class EFCountingButtonLabel: EFCountingLabel {
     }
 }
 
+// EFCountingButton.titleLabel.font = xxx do not work, use NSAttributedString instead as in example project.
 open class EFCountingButton: UIButton {
 
     open lazy var countingLabel: EFCountingButtonLabel = {

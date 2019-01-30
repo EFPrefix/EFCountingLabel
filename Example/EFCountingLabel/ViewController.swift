@@ -99,12 +99,19 @@ class ViewController: UIViewController {
             self?.label.textColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1)
         }
 
-        // button
+        // button: a simple countdown button
         self.countingButton = EFCountingButton(frame: CGRect(x: 10, y: 170, width: 200, height: 40))
-        self.countingButton.setTitle("倒计时按钮", for: UIControl.State.normal)
+        self.countingButton.setTitle("CountDown", for: .normal)
+        let attrs = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.blue]
+        let attributedString = NSAttributedString(string: countingButton.title(for: UIControl.State.normal) ?? "", attributes: attrs)
+        self.countingButton.setAttributedTitle(attributedString, for: UIControl.State.normal)
+        self.countingButton.contentHorizontalAlignment = .left
+        self.countingButton.countingLabel.attributedFormatBlock = { [weak self] (value) in
+            guard let _ = self else { return NSAttributedString() }
+            return NSAttributedString(string: String(format: "%.0lf", value), attributes: attrs)
+        }
         self.countingButton.setTitleColor(UIColor.blue, for: UIControl.State.normal)
         self.countingButton.addTarget(self, action: #selector(buttonClicked), for: UIControl.Event.touchUpInside)
-        self.countingButton.countingLabel.format = "%d"
         self.countingButton.countingLabel.method = .linear
         self.view.addSubview(countingButton)
     }
@@ -134,10 +141,14 @@ class ViewController: UIViewController {
     }
 
     @objc func buttonClicked(button: EFCountingButton) {
+        let titleBackup: NSAttributedString? = button.attributedTitle(for: UIControl.State.normal)
         self.countingButton.countingLabel.completionBlock = { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.countingButton.setTitle("倒计时按钮", for: UIControl.State.normal)
+            guard let _ = self else { return }
+            button.setAttributedTitle(titleBackup, for: UIControl.State.normal)
         }
-        self.countingButton.countingLabel.countFrom(60, to: 0, withDuration: 60)
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.countingButton.countingLabel.countFrom(10, to: 0, withDuration: 10)
+        }
     }
 }
