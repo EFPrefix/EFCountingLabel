@@ -8,13 +8,12 @@ A label which can show number change animated, in Swift.
                        DESC
 
   s.homepage         = 'https://github.com/EFPrefix/EFCountingLabel'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshot       = 'https://raw.githubusercontent.com/EFPrefix/EFCountingLabel/master/Assets/example.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'EyreFree' => 'eyrefree@eyrefree.org' }
   s.source           = { :git => 'https://github.com/EFPrefix/EFCountingLabel.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/EyreFree777'
 
   s.ios.deployment_target = '8.0'
-  s.requires_arc = true
   s.source_files = 'EFCountingLabel/Classes/*.swift'
 end
