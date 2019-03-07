@@ -2,6 +2,15 @@
 
 -----
 
+## Master
+
+#### Fix
+
+* Replacing Wall Clock with Monotonic Clock. [#18](https://github.com/EFPrefix/EFCountingLabel/pull/18)
+* Keeping Double precision on 64-bit architectures. [#19](https://github.com/EFPrefix/EFCountingLabel/pull/19)
+
+---
+
 ## [4.2.1](https://github.com/EFPrefix/EFCountingLabel/releases/tag/4.2.1) (2019-01-30)
 
 #### Fix
