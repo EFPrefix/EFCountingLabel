@@ -33,6 +33,23 @@ public enum EFLabelCountingMethod: Int {
     case easeInOut = 3
     case easeInBounce = 4
     case easeOutBounce = 5
+    
+    fileprivate var counter: UILabelCounter {
+        switch self {
+        case .linear:
+            return UILabelCounterLinear()
+        case .easeIn:
+            return UILabelCounterEaseIn()
+        case .easeOut:
+            return UILabelCounterEaseOut()
+        case .easeInOut:
+            return UILabelCounterEaseInOut()
+        case .easeOutBounce:
+            return UILabelCounterEaseOutBounce()
+        case .easeInBounce:
+            return UILabelCounterEaseInBounce()
+        }
+    }
 }
 
 //MARK: - UILabelCounter
@@ -141,20 +158,7 @@ open class EFCountingLabel: UILabel {
         self.totalTime = duration
         self.lastUpdate = Date.timeIntervalSinceReferenceDate
 
-        switch self.method {
-        case .linear:
-            self.counter = UILabelCounterLinear()
-        case .easeIn:
-            self.counter = UILabelCounterEaseIn()
-        case .easeOut:
-            self.counter = UILabelCounterEaseOut()
-        case .easeInOut:
-            self.counter = UILabelCounterEaseInOut()
-        case .easeOutBounce:
-            self.counter = UILabelCounterEaseOutBounce()
-        case .easeInBounce:
-            self.counter = UILabelCounterEaseInBounce()
-        }
+        self.counter = self.method.counter
 
         let timer = CADisplayLink(target: self, selector: #selector(EFCountingLabel.updateValue(_:)))
         if #available(iOS 10.0, *) {
