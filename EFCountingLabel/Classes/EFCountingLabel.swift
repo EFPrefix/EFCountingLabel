@@ -26,113 +26,80 @@
 
 import UIKit
 
-public enum EFLabelCountingMethod: Int {
+// MARK:- EFTransition
+public protocol EFLabelCounter {
+
+    func update(_ t: CGFloat, easingRate: CGFloat) -> CGFloat
+}
+
+// MARK:- EFLabelCountingMethod
+public enum EFLabelCountingMethod: Int, EFLabelCounter {
+
     case linear = 0
     case easeIn = 1
     case easeOut = 2
     case easeInOut = 3
     case easeInBounce = 4
     case easeOutBounce = 5
-    
-    fileprivate var counter: UILabelCounter {
+
+    public func update(_ t: CGFloat, easingRate: CGFloat) -> CGFloat {
+        let percent: CGFloat = t
         switch self {
         case .linear:
-            return UILabelCounterLinear()
+            return percent
         case .easeIn:
-            return UILabelCounterEaseIn()
+            return pow(t, easingRate)
         case .easeOut:
-            return UILabelCounterEaseOut()
+            return 1.0 - pow(1.0 - t, easingRate)
         case .easeInOut:
-            return UILabelCounterEaseInOut()
-        case .easeOutBounce:
-            return UILabelCounterEaseOutBounce()
+            let newt: CGFloat = 2 * t
+            if newt < 1 {
+                return 0.5 * pow(newt, easingRate)
+            } else {
+                return 0.5 * (2.0 - pow(2.0 - newt, easingRate))
+            }
         case .easeInBounce:
-            return UILabelCounterEaseInBounce()
+            if t < 4.0 / 11.0 {
+                return 1.0 - (pow(11.0 / 4.0, 2) * pow(t, 2)) - t
+            } else if t < 8.0 / 11.0 {
+                return 1.0 - (3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(t - 6.0 / 11.0, 2)) - t
+            } else if t < 10.0 / 11.0 {
+                return 1.0 - (15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(t - 9.0 / 11.0, 2)) - t
+            }
+            return 1.0 - (63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(t - 21.0 / 22.0, 2)) - t
+        case .easeOutBounce:
+            if t < 4.0 / 11.0 {
+                return pow(11.0 / 4.0, 2) * pow(t, 2)
+            } else if t < 8.0 / 11.0 {
+                return 3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(t - 6.0 / 11.0, 2)
+            } else if t < 10.0 / 11.0 {
+                return 15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(t - 9.0 / 11.0, 2)
+            }
+            return 63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(t - 21.0 / 22.0, 2)
         }
-    }
-}
-
-//MARK: - UILabelCounter
-var kUILabelCounterRate: CGFloat = 3.0
-
-public protocol UILabelCounter {
-    func update(_ t: CGFloat) -> CGFloat
-}
-
-public class UILabelCounterLinear: UILabelCounter {
-    public func update(_ t: CGFloat) -> CGFloat {
-        return t
-    }
-}
-
-public class UILabelCounterEaseIn: UILabelCounter {
-    public func update(_ t: CGFloat) -> CGFloat {
-        return pow(t, kUILabelCounterRate)
-    }
-}
-
-public class UILabelCounterEaseOut: UILabelCounter {
-    public func update(_ t: CGFloat) -> CGFloat {
-        return 1.0 - pow(1.0 - t, kUILabelCounterRate)
-    }
-}
-
-public class UILabelCounterEaseInOut: UILabelCounter {
-    public func update(_ t: CGFloat) -> CGFloat {
-        let newt = 2 * t
-        if newt < 1 {
-            return 0.5 * pow(newt, kUILabelCounterRate)
-        } else {
-            return 0.5 * (2.0 - pow(2.0 - newt, kUILabelCounterRate))
-        }
-    }
-}
-
-public class UILabelCounterEaseInBounce: UILabelCounter {
-    public func update(_ t: CGFloat) -> CGFloat {
-        if t < 4.0 / 11.0 {
-            return 1.0 - (pow(11.0 / 4.0, 2) * pow(t, 2)) - t
-        } else if t < 8.0 / 11.0 {
-            return 1.0 - (3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(t - 6.0 / 11.0, 2)) - t
-        } else if t < 10.0 / 11.0 {
-            return 1.0 - (15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(t - 9.0 / 11.0, 2)) - t
-        }
-        return 1.0 - (63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(t - 21.0 / 22.0, 2)) - t
-    }
-}
-
-public class UILabelCounterEaseOutBounce: UILabelCounter {
-    public func update(_ t: CGFloat) -> CGFloat {
-        if t < 4.0 / 11.0 {
-            return pow(11.0 / 4.0, 2) * pow(t, 2)
-        } else if t < 8.0 / 11.0 {
-            return 3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(t - 6.0 / 11.0, 2)
-        } else if t < 10.0 / 11.0 {
-            return 15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(t - 9.0 / 11.0, 2)
-        }
-        return 63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(t - 21.0 / 22.0, 2)
     }
 }
 
 //MARK: - EFCountingLabel
 open class EFCountingLabel: UILabel {
 
-    public var format = "%f"
-    public var method = EFLabelCountingMethod.linear
-    public var animationDuration = TimeInterval(2)
+    public var format: String = "%f"
+    public var method: EFLabelCounter = EFLabelCountingMethod.linear
+    public var animationDuration: TimeInterval = 2
     public var formatBlock: ((CGFloat) -> String)?
     public var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
     public var completionBlock: (() -> Void)?
+    public var easingRate: CGFloat = 3
 
-    private var startingValue: CGFloat!
-    private var destinationValue: CGFloat!
+    private var startingValue: CGFloat = 0
+    private var destinationValue: CGFloat = 1
     private var progress: TimeInterval = 0
-    private var lastUpdate: TimeInterval!
-    private var totalTime: TimeInterval!
-    private var easingRate: CGFloat!
+    private var lastUpdate: TimeInterval = 0
+    private var totalTime: TimeInterval = 1
+    private var easingRateInner: CGFloat = 3
 
     private var timer: CADisplayLink?
-    private var counter: UILabelCounter = UILabelCounterLinear()
+    private var counter: EFLabelCounter = EFLabelCountingMethod.linear
 
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
         self.countFrom(startValue, to: endValue, withDuration: self.animationDuration)
@@ -153,12 +120,12 @@ open class EFCountingLabel: UILabel {
             return
         }
 
-        self.easingRate = 3.0
         self.progress = 0
         self.totalTime = duration
         self.lastUpdate = CACurrentMediaTime()
 
-        self.counter = self.method.counter
+        self.counter = self.method
+        self.easingRateInner = easingRate
 
         let timer = CADisplayLink(target: self, selector: #selector(EFCountingLabel.updateValue(_:)))
         if #available(iOS 10.0, *) {
@@ -195,7 +162,7 @@ open class EFCountingLabel: UILabel {
         }
 
         let percent = self.progress / self.totalTime
-        let updateVal = self.counter.update(CGFloat(percent))
+        let updateVal = self.counter.update(CGFloat(percent), easingRate: easingRateInner)
 
         return self.startingValue + updateVal * (self.destinationValue - self.startingValue)
     }

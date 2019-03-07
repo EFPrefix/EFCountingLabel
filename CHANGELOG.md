@@ -2,7 +2,7 @@
 
 -----
 
-## Master
+## [4.3.0](https://github.com/EFPrefix/EFCountingLabel/releases/tag/4.3.0) (2019-03-07)
 
 #### Fix
 

@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     func setupLabels() {
         // make one that counts up
         let myLabel = EFCountingLabel(frame: CGRect(x: 10, y: 10, width: 200, height: 40))
-        myLabel.method = .linear
+        myLabel.method = EFLabelCountingMethod.linear
         myLabel.format = "%d"
         self.view.addSubview(myLabel)
         self.myLabel = myLabel
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             (value) in
             return "Score: " + (formatter.string(from: NSNumber(value: Int(value))) ?? "")
         }
-        scoreLabel.method = .easeOut
+        scoreLabel.method = EFLabelCountingMethod.easeOut
         self.view.addSubview(scoreLabel)
         self.scoreLabel = scoreLabel
 
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         self.attributedLabel = attributedLabel
 
         // storyboard
-        self.label.method = .easeInOut
+        self.label.method = EFLabelCountingMethod.easeInOut
         self.label.format = "%d%%"
         self.label.completionBlock = {
             [weak self] () in
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         }
         self.countingButton.setTitleColor(UIColor.blue, for: UIControl.State.normal)
         self.countingButton.addTarget(self, action: #selector(buttonClicked), for: UIControl.Event.touchUpInside)
-        self.countingButton.countingLabel.method = .linear
+        self.countingButton.countingLabel.method = EFLabelCountingMethod.linear
         self.view.addSubview(countingButton)
     }
 
