@@ -30,6 +30,8 @@
 
 A label which can show number change animated, in Swift.
 
+> [中文介绍](README_CN.md)
+
 ## Overview
 
 <img src="https://raw.githubusercontent.com/EFPrefix/EFCountingLabel/master/Assets/example.gif" width = "50%"/>
