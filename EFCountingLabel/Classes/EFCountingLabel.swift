@@ -36,7 +36,7 @@ public enum EFLabelCountingMethod: Int {
 }
 
 //MARK: - UILabelCounter
-let kUILabelCounterRate = Float(3.0)
+var kUILabelCounterRate: CGFloat = 3.0
 
 public protocol UILabelCounter {
     func update(_ t: CGFloat) -> CGFloat
@@ -50,23 +50,23 @@ public class UILabelCounterLinear: UILabelCounter {
 
 public class UILabelCounterEaseIn: UILabelCounter {
     public func update(_ t: CGFloat) -> CGFloat {
-        return CGFloat(powf(Float(t), kUILabelCounterRate))
+        return pow(t, kUILabelCounterRate)
     }
 }
 
 public class UILabelCounterEaseOut: UILabelCounter {
     public func update(_ t: CGFloat) -> CGFloat {
-        return CGFloat(1.0 - powf(Float(1.0 - t), kUILabelCounterRate))
+        return 1.0 - pow(1.0 - t, kUILabelCounterRate)
     }
 }
 
 public class UILabelCounterEaseInOut: UILabelCounter {
     public func update(_ t: CGFloat) -> CGFloat {
-        let newt: CGFloat = 2 * t
+        let newt = 2 * t
         if newt < 1 {
-            return CGFloat(0.5 * powf (Float(newt), kUILabelCounterRate))
+            return 0.5 * pow(newt, kUILabelCounterRate)
         } else {
-            return CGFloat(0.5 * (2.0 - powf(Float(2.0 - newt), kUILabelCounterRate)))
+            return 0.5 * (2.0 - pow(2.0 - newt, kUILabelCounterRate))
         }
     }
 }
@@ -74,26 +74,26 @@ public class UILabelCounterEaseInOut: UILabelCounter {
 public class UILabelCounterEaseInBounce: UILabelCounter {
     public func update(_ t: CGFloat) -> CGFloat {
         if t < 4.0 / 11.0 {
-            return CGFloat(1.0 - (powf(11.0 / 4.0, 2) * powf(Float(t), 2))) - t
+            return 1.0 - (pow(11.0 / 4.0, 2) * pow(t, 2)) - t
         } else if t < 8.0 / 11.0 {
-            return CGFloat(1.0 - (3.0 / 4.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 6.0 / 11.0), 2))) - t
+            return 1.0 - (3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(t - 6.0 / 11.0, 2)) - t
         } else if t < 10.0 / 11.0 {
-            return CGFloat(1.0 - (15.0 / 16.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 9.0 / 11.0), 2))) - t
+            return 1.0 - (15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(t - 9.0 / 11.0, 2)) - t
         }
-        return CGFloat(1.0 - (63.0 / 64.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 21.0 / 22.0), 2))) - t
+        return 1.0 - (63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(t - 21.0 / 22.0, 2)) - t
     }
 }
 
 public class UILabelCounterEaseOutBounce: UILabelCounter {
     public func update(_ t: CGFloat) -> CGFloat {
         if t < 4.0 / 11.0 {
-            return CGFloat(powf(11.0 / 4.0, 2) * powf(Float(t), 2))
+            return pow(11.0 / 4.0, 2) * pow(t, 2)
         } else if t < 8.0 / 11.0 {
-            return CGFloat(3.0 / 4.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 6.0 / 11.0), 2))
+            return 3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(t - 6.0 / 11.0, 2)
         } else if t < 10.0 / 11.0 {
-            return CGFloat(15.0 / 16.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 9.0 / 11.0), 2))
+            return 15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(t - 9.0 / 11.0, 2)
         }
-        return CGFloat(63.0 / 64.0 + powf(11.0 / 4.0, 2) * powf(Float(t - 21.0 / 22.0), 2))
+        return 63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(t - 21.0 / 22.0, 2)
     }
 }
 
