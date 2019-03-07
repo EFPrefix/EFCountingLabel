@@ -139,7 +139,7 @@ open class EFCountingLabel: UILabel {
         self.easingRate = 3.0
         self.progress = 0
         self.totalTime = duration
-        self.lastUpdate = Date.timeIntervalSinceReferenceDate
+        self.lastUpdate = CACurrentMediaTime()
 
         switch self.method {
         case .linear:
@@ -198,7 +198,7 @@ open class EFCountingLabel: UILabel {
 
     @objc public func updateValue(_ timer: Timer) {
         // update progress
-        let now = Date.timeIntervalSinceReferenceDate
+        let now = CACurrentMediaTime()
         self.progress = self.progress + now - self.lastUpdate
         self.lastUpdate = now
 
