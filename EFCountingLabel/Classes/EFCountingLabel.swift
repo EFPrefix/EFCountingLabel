@@ -193,11 +193,11 @@ open class EFCountingLabel: UILabel {
             self.text = tryFormatBlock(value)
         } else {
             // check if counting with ints - cast to int
-            if nil != self.format.range(of: "%(.*)d", options: String.CompareOptions.regularExpression, range: nil)
-                || nil != self.format.range(of: "%(.*)i") {
-                self.text = String(format: self.format, Int(value))
+            let format = self.format
+            if format.hasIntConversionSpecifier() {
+                self.text = String(format: format, Int(value))
             } else {
-                self.text = String(format: self.format, value)
+                self.text = String(format: format, value)
             }
         }
     }
@@ -213,5 +213,13 @@ open class EFCountingLabel: UILabel {
             
             self.completionBlock = nil
         }
+    }
+}
+
+extension String {
+    func hasIntConversionSpecifier() -> Bool {
+        // check if counting with ints
+        // regex based on IEEE printf specification: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html
+        return nil != self.range(of: "%[^fega]*[diouxc]", options: [.regularExpression, .caseInsensitive])
     }
 }

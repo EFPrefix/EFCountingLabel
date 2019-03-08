@@ -30,6 +30,8 @@
 /* Begin PBXFileReference section */
 		0D6321623D5D5D7DD361D3FA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		276DE02E85C0E7D6ED37EDD4 /* Pods-EFCountingLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFCountingLabel_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFCountingLabel_Example/Pods-EFCountingLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		378DEADB22321D1400F0F63D /* README_CN.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README_CN.md; path = ../README_CN.md; sourceTree = "<group>"; };
+		378DEADC22321D1400F0F63D /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		47A0BF93F64203C763BE2E42 /* Pods-EFCountingLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFCountingLabel_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EFCountingLabel_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFCountingLabel_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +136,8 @@
 			children = (
 				80B2BFCC105106F37CED9FA4 /* EFCountingLabel.podspec */,
 				8FF75F8CFAC9673D3C62BA08 /* README.md */,
+				378DEADB22321D1400F0F63D /* README_CN.md */,
+				378DEADC22321D1400F0F63D /* CHANGELOG.md */,
 				0D6321623D5D5D7DD361D3FA /* LICENSE */,
 			);
 			name = "Podspec Metadata";

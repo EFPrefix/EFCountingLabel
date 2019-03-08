@@ -4,10 +4,10 @@
     <a href="https://travis-ci.org/EFPrefix/EFCountingLabel">
     	<img src="https://img.shields.io/travis/EFPrefix/EFCountingLabel.svg">
     </a>
-    <a href="http://cocoapods.org/pods/EFCountingLabel">
+    <a href="https://cocoapods.org/pods/EFCountingLabel">
     	<img src="https://img.shields.io/cocoapods/v/EFCountingLabel.svg?style=flat">
     </a>
-    <a href="http://cocoapods.org/pods/EFCountingLabel">
+    <a href="https://cocoapods.org/pods/EFCountingLabel">
     	<img src="https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat">
     </a>
     <a href="https://github.com/apple/swift">
@@ -145,7 +145,7 @@ myLabel.completionBlock = {
 
 ### Formats
 
-When you set the `format` property, the label will look for the presence of `%(.*)d` or `%(.*)i`, and if found, will cast the value to `Int` before formatting the string. Otherwise, it will format it using a `CGFloat`.
+When you set the `format` property, the label will look for the presence of integer [conversion specifiers](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html) like `%d`, `%-i`, `%+o`, `%llu`, `%1$ 1X`, etc., and if found, will cast the value to `Int` before formatting the string. Otherwise, it will format it using a `CGFloat`, expecting a float conversion specifier like `%f`, `%e`, `%g`, `%a`, etc.
 
 If you're using a `CGFloat` value, it's recommended to limit the number of digits with a format string, such as `"%.1f"` for one decimal place.
 

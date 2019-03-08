@@ -4,10 +4,10 @@
     <a href="https://travis-ci.org/EFPrefix/EFCountingLabel">
     	<img src="https://img.shields.io/travis/EFPrefix/EFCountingLabel.svg">
     </a>
-    <a href="http://cocoapods.org/pods/EFCountingLabel">
+    <a href="https://cocoapods.org/pods/EFCountingLabel">
     	<img src="https://img.shields.io/cocoapods/v/EFCountingLabel.svg?style=flat">
     </a>
-    <a href="http://cocoapods.org/pods/EFCountingLabel">
+    <a href="https://cocoapods.org/pods/EFCountingLabel">
     	<img src="https://img.shields.io/cocoapods/p/EFCountingLabel.svg?style=flat">
     </a>
     <a href="https://github.com/apple/swift">
@@ -57,7 +57,7 @@ git clone git@github.com:EFPrefix/EFCountingLabel.git; cd EFCountingLabel/Exampl
 
 ## 安装
 
-EFCountingLabel 可以通过 [CocoaPods](http://cocoapods.org) 进行获取。只需要在你的 Podfile 中添加如下代码就能实现引入：
+EFCountingLabel 可以通过 [CocoaPods](https://cocoapods.org) 进行获取。只需要在你的 Podfile 中添加如下代码就能实现引入：
 
 ```ruby
 pod 'EFCountingLabel'
@@ -159,7 +159,7 @@ myLabel.completionBlock = {
 
 ### 格式
 
-当设置 `format` 属性后，标签会检测是否有 `%(.*)d` 或者 `%(.*)i` 格式，如果能找到，就会将内容以 `Int` 类型展示。否则，将会使用默认的 `CGFloat` 类型展示。
+当设置 `format` 属性后，标签会检测是否有 `%[^fega]*[diouxc]` 格式，如果能找到，就会将内容以 `Int` 类型展示。否则，将会使用默认的 `CGFloat` 类型展示。
 
 假如你需要以 `CGFloat` 类型展示，最好设置小数点位数限制，例如使用 `@"%.1f"` 来限制只显示一位小数。
 

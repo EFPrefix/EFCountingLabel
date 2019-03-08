@@ -24,7 +24,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import UIKit
 
 public class EFCountingButtonLabel: EFCountingLabel {
 
@@ -38,11 +38,11 @@ public class EFCountingButtonLabel: EFCountingLabel {
                 button.setTitle(tryFormatBlock(value), for: UIControl.State.normal)
             } else {
                 // check if counting with ints - cast to int
-                if nil != self.format.range(of: "%(.*)d", options: String.CompareOptions.regularExpression, range: nil)
-                    || nil != self.format.range(of: "%(.*)i") {
-                    button.setTitle(String(format: self.format, Int(value)), for: UIControl.State.normal)
+                let format = self.format
+                if format.hasIntConversionSpecifier() {
+                    button.setTitle(String(format: format, Int(value)), for: UIControl.State.normal)
                 } else {
-                    button.setTitle(String(format: self.format, value), for: UIControl.State.normal)
+                    button.setTitle(String(format: format, value), for: UIControl.State.normal)
                 }
             }
         } else {
