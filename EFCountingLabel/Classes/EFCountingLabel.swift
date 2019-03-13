@@ -209,9 +209,8 @@ open class EFCountingLabel: UILabel {
 
     private func runCompletionBlock() {
         if let tryCompletionBlock = self.completionBlock {
-            tryCompletionBlock()
-            
             self.completionBlock = nil
+            tryCompletionBlock()
         }
     }
 }
