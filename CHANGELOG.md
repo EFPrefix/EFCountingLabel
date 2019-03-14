@@ -2,6 +2,14 @@
 
 -----
 
+## [4.3.1](https://github.com/EFPrefix/EFCountingLabel/releases/tag/4.3.1) (2019-03-14)
+
+#### Fix
+
+* Supporting chaining animations.
+
+---
+
 ## [4.3.0](https://github.com/EFPrefix/EFCountingLabel/releases/tag/4.3.0) (2019-03-08)
 
 #### Fix
