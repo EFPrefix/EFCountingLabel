@@ -159,6 +159,37 @@ There are currently four modes of counting.
 - EFLabelCountingMethod.easeInOut: Ease In/Out starts out slow, speeds up towards the middle, and then slows down as it approaches the destination. It is a nice, smooth curve that looks great, and is the default method.
 - ...
 
+## Apps using EFCountingLabel
+
+<div class="space_for_appsight EFCountingLabel">
+    <a href="https://www.appsight.io/app/%E5%8D%81%E7%82%B9%E8%AF%BB%E4%B9%A6-%E6%9C%89%E5%A3%B0%E5%90%AC%E4%B9%A6%E9%98%85%E8%AF%BB%E5%9B%BE%E4%B9%A6%E9%A6%86" targer="_blank">
+      <img src="https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/334/858/media/tiny.png?1550728341" title="" style="margin: 2px;" data-toggle="tooltip" data-placement="top" data-original-title="十点读书 - 有声听书精品课程">
+    </a>
+    <a href="https://www.appsight.io/app/liven" targer="_blank">
+      <img src="https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/328/804/media/tiny.png?1548126411" title="" style="margin: 2px;" data-toggle="tooltip" data-placement="top" data-original-title="Liven - Eat, Pay &amp; Earn">
+    </a>
+    <a href="https://www.appsight.io/app/sports-fan-quiz" targer="_blank">
+      <img src="https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/267/811/media/tiny.png?1531170802" title="" style="margin: 2px;" data-toggle="tooltip" data-placement="top" data-original-title="Sports Fan Quiz">
+    </a>
+    <a href="https://www.appsight.io/app/that-s-right-gameshow" targer="_blank">
+      <img src="https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/288/204/media/tiny.png?1534618310" title="" style="margin: 2px;" data-toggle="tooltip" data-placement="top" data-original-title="That's Right Live Gameshow">
+    </a>
+    <a href="https://www.appsight.io/app/press-app-sports" targer="_blank">
+      <img src="https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/342/478/media/tiny.png?1551806101" title="" style="margin: 2px;" data-toggle="tooltip" data-placement="top" data-original-title="Press Sports">
+    </a>
+    <a href="https://www.appsight.io/app/skl-united" targer="_blank">
+      <img src="https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/174/614/media/tiny.png?1523680530" title="" style="margin: 2px;" data-toggle="tooltip" data-placement="top" data-original-title="SKL United">
+    </a>
+    <a href="https://www.appsight.io/app/quigle" targer="_blank">
+      <img src="https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/164/030/media/tiny.png?1523391205" title="" style="margin: 2px;" data-toggle="tooltip" data-placement="top" data-original-title="Quigle - Feud for Google">
+    </a>
+    <a href="https://www.appsight.io/app/pro-football-quiz" targer="_blank">
+      <img src="https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/352/466/media/tiny.png?1552411434" title="" style="margin: 2px;" data-toggle="tooltip" data-placement="top" data-original-title="Pro Football Quiz">
+    </a>
+</div>
+
+[More...](https://www.appsight.io/sdk/ef-counting-label)
+
 ## PS
 
 The first version of [EFCountingLabel](https://github.com/EFPrefix/EFCountingLabel/commit/5e5e12d49b84e4eff8f18df68a99b5e3223b579b) is converted from [UICountingLabel](https://github.com/dataxpress/UICountingLabel/commit/1aa3d51c1ac4d7b8aef4c5f7ea44a1b1428c7985).
