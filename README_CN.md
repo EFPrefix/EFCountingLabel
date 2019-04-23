@@ -319,6 +319,11 @@ myLabel.completionBlock = {
         <img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/251/232/media/small.png?1530205300'>
       </a>
     </td>
+    <td>
+      <a href='https://www.appsight.io/app/piano-rush' title='Piano Rush - Piano Games'>
+        <img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/372/226/media/small.png?1555017024'>
+      </a>
+    </td>
   </tr>
 </table>
 
