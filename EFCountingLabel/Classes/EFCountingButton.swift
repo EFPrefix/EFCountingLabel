@@ -58,10 +58,5 @@ open class EFCountingButton: UIButton {
         buttonLabel.parentButton = self
         return buttonLabel
     }()
-
-    override open var titleLabel: UILabel? {
-        get {
-            return countingLabel
-        }
-    }
+    
 }
