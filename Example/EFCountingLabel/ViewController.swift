@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     var scoreLabel: EFCountingLabel!
     var attributedLabel: EFCountingLabel!
     var countingButton: EFCountingButton!
+    @IBOutlet weak var stopCountButton: EFCountingButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,7 +122,7 @@ class ViewController: UIViewController {
         let screenHeight = UIScreen.main.bounds.size.height
 
         let button = UIButton(
-            frame: CGRect(x: (screenWidth - 72) / 2, y: (screenHeight - 24 - 100), width: 72, height: 24)
+                frame: CGRect(x: (screenWidth - 72) / 2, y: (screenHeight - 24 - 100), width: 72, height: 24)
         )
         button.layer.borderWidth = 0.5
         button.layer.borderColor = UIColor(red: 0, green: 122.0 / 255.0, blue: 1, alpha: 1).cgColor
@@ -150,5 +151,14 @@ class ViewController: UIViewController {
             guard let strongSelf = self else { return }
             strongSelf.countingButton.countingLabel.countFrom(10, to: 0, withDuration: 10)
         }
+    }
+
+    @IBAction func stopButtonClicked(_ sender: EFCountingButton) {
+        if sender.countingLabel.isCounting {
+            sender.countingLabel.stopAtCurrentValue()
+        } else {
+            sender.countingLabel.countFromCurrentValueTo(1000000, withDuration: 20)
+        }
+
     }
 }
