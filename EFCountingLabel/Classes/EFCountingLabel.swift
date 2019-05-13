@@ -101,6 +101,10 @@ open class EFCountingLabel: UILabel {
     private var timer: CADisplayLink?
     private var counter: EFLabelCounter = EFLabelCountingMethod.linear
 
+    public var isCounting: Bool {
+        return timer != nil
+    }
+
     public var currentValue: CGFloat {
         if progress == 0 {
             return 0
@@ -165,6 +169,13 @@ open class EFCountingLabel: UILabel {
 
     public func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
         countFrom(0, to: endValue, withDuration: duration)
+    }
+
+    public func stopAtCurrentValue() {
+        timer?.invalidate()
+        timer = nil
+
+        setTextValue(currentValue)
     }
 
     @objc public func updateValue(_ timer: Timer) {
