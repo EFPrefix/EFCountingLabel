@@ -101,13 +101,26 @@ open class EFCountingLabel: UILabel {
     private var timer: CADisplayLink?
     private var counter: EFLabelCounter = EFLabelCountingMethod.linear
 
+    public var currentValue: CGFloat {
+        if progress == 0 {
+            return 0
+        } else if progress >= totalTime {
+            return destinationValue
+        }
+
+        let percent = progress / totalTime
+        let updateVal = counter.update(CGFloat(percent), easingRate: easingRateInner)
+
+        return startingValue + updateVal * (destinationValue - startingValue)
+    }
+
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
-        self.countFrom(startValue, to: endValue, withDuration: self.animationDuration)
+        countFrom(startValue, to: endValue, withDuration: animationDuration)
     }
 
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
-        self.startingValue = startValue
-        self.destinationValue = endValue
+        startingValue = startValue
+        destinationValue = endValue
 
         // remove any (possible) old timers
         self.timer?.invalidate()
@@ -115,101 +128,87 @@ open class EFCountingLabel: UILabel {
 
         if duration == 0.0 {
             // No animation
-            self.setTextValue(endValue)
-            self.runCompletionBlock()
+            setTextValue(endValue)
+            runCompletionBlock()
             return
         }
 
-        self.progress = 0
-        self.totalTime = duration
-        self.lastUpdate = CACurrentMediaTime()
+        progress = 0
+        totalTime = duration
+        lastUpdate = CACurrentMediaTime()
 
-        self.counter = self.method
-        self.easingRateInner = easingRate
+        counter = method
+        easingRateInner = easingRate
 
-        let timer = CADisplayLink(target: self, selector: #selector(EFCountingLabel.updateValue(_:)))
+        let timer = CADisplayLink(target: self, selector: #selector(updateValue(_:)))
         if #available(iOS 10.0, *) {
             timer.preferredFramesPerSecond = 30
         } else {
             timer.frameInterval = 2
         }
-        timer.add(to: RunLoop.main, forMode: RunLoop.Mode.default)
-        timer.add(to: RunLoop.main, forMode: RunLoop.Mode.tracking)
+        timer.add(to: .main, forMode: .default)
+        timer.add(to: .main, forMode: .tracking)
         self.timer = timer
     }
 
     public func countFromCurrentValueTo(_ endValue: CGFloat) {
-        self.countFrom(self.currentValue(), to: endValue)
+        countFrom(currentValue, to: endValue)
     }
 
     public func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
-        self.countFrom(self.currentValue(), to: endValue, withDuration: duration)
+        countFrom(currentValue, to: endValue, withDuration: duration)
     }
 
     public func countFromZeroTo(_ endValue: CGFloat) {
-        self.countFrom(0, to: endValue)
+        countFrom(0, to: endValue)
     }
 
     public func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
-        self.countFrom(0, to: endValue, withDuration: duration)
-    }
-
-    public func currentValue() -> CGFloat {
-        if self.progress == 0 {
-            return 0
-        } else if self.progress >= self.totalTime {
-            return self.destinationValue
-        }
-
-        let percent = self.progress / self.totalTime
-        let updateVal = self.counter.update(CGFloat(percent), easingRate: easingRateInner)
-
-        return self.startingValue + updateVal * (self.destinationValue - self.startingValue)
+        countFrom(0, to: endValue, withDuration: duration)
     }
 
     @objc public func updateValue(_ timer: Timer) {
         // update progress
         let now = CACurrentMediaTime()
-        self.progress = self.progress + now - self.lastUpdate
-        self.lastUpdate = now
+        progress += now - lastUpdate
+        lastUpdate = now
 
-        if self.progress >= self.totalTime {
+        if progress >= totalTime {
             self.timer?.invalidate()
             self.timer = nil
-            self.progress = self.totalTime
+            progress = totalTime
         }
 
-        self.setTextValue(self.currentValue())
+        setTextValue(currentValue)
 
-        if self.progress == self.totalTime {
-            self.runCompletionBlock()
+        if progress == totalTime {
+            runCompletionBlock()
         }
     }
 
     public func setTextValue(_ value: CGFloat) {
-        if let tryAttributedFormatBlock = self.attributedFormatBlock {
-            self.attributedText = tryAttributedFormatBlock(value)
-        } else if let tryFormatBlock = self.formatBlock {
-            self.text = tryFormatBlock(value)
+        if let tryAttributedFormatBlock = attributedFormatBlock {
+            attributedText = tryAttributedFormatBlock(value)
+        } else if let tryFormatBlock = formatBlock {
+            text = tryFormatBlock(value)
         } else {
             // check if counting with ints - cast to int
-            let format = self.format
             if format.hasIntConversionSpecifier() {
-                self.text = String(format: format, Int(value))
+                text = String(format: format, Int(value))
             } else {
-                self.text = String(format: format, value)
+                text = String(format: format, value)
             }
         }
     }
 
     private func setFormat(_ format: String) {
         self.format = format
-        self.setTextValue(self.currentValue())
+        setTextValue(currentValue)
     }
 
     private func runCompletionBlock() {
-        if let tryCompletionBlock = self.completionBlock {
-            self.completionBlock = nil
+        if let tryCompletionBlock = completionBlock {
+            completionBlock = nil
             tryCompletionBlock()
         }
     }
@@ -219,6 +218,6 @@ extension String {
     func hasIntConversionSpecifier() -> Bool {
         // check if counting with ints
         // regex based on IEEE printf specification: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html
-        return nil != self.range(of: "%[^fega]*[diouxc]", options: [.regularExpression, .caseInsensitive])
+        return nil != range(of: "%[^fega]*[diouxc]", options: [.regularExpression, .caseInsensitive])
     }
 }

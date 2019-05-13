@@ -32,17 +32,16 @@ public class EFCountingButtonLabel: EFCountingLabel {
 
     public override func setTextValue(_ value: CGFloat) {
         if let button = parentButton {
-            if let tryAttributedFormatBlock = self.attributedFormatBlock {
-                button.setAttributedTitle(tryAttributedFormatBlock(value), for: UIControl.State.normal)
-            } else if let tryFormatBlock = self.formatBlock {
-                button.setTitle(tryFormatBlock(value), for: UIControl.State.normal)
+            if let tryAttributedFormatBlock = attributedFormatBlock {
+                button.setAttributedTitle(tryAttributedFormatBlock(value), for: .normal)
+            } else if let tryFormatBlock = formatBlock {
+                button.setTitle(tryFormatBlock(value), for: .normal)
             } else {
                 // check if counting with ints - cast to int
-                let format = self.format
                 if format.hasIntConversionSpecifier() {
-                    button.setTitle(String(format: format, Int(value)), for: UIControl.State.normal)
+                    button.setTitle(String(format: format, Int(value)), for: .normal)
                 } else {
-                    button.setTitle(String(format: format, value), for: UIControl.State.normal)
+                    button.setTitle(String(format: format, value), for: .normal)
                 }
             }
         } else {
@@ -55,7 +54,7 @@ public class EFCountingButtonLabel: EFCountingLabel {
 open class EFCountingButton: UIButton {
 
     open lazy var countingLabel: EFCountingButtonLabel = {
-        let buttonLabel: EFCountingButtonLabel = EFCountingButtonLabel()
+        let buttonLabel = EFCountingButtonLabel()
         buttonLabel.parentButton = self
         return buttonLabel
     }()
