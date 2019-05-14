@@ -27,55 +27,52 @@
 import UIKit
 
 // MARK:- EFTransition
-public protocol EFLabelCounter {
-
-    func update(_ t: CGFloat, easingRate: CGFloat) -> CGFloat
+public protocol EFTiming {
+    func update(_ time: CGFloat) -> CGFloat
 }
 
-// MARK:- EFLabelCountingMethod
-public enum EFLabelCountingMethod: Int, EFLabelCounter {
+public enum EFTimingMethod: EFTiming {
 
-    case linear = 0
-    case easeIn = 1
-    case easeOut = 2
-    case easeInOut = 3
-    case easeInBounce = 4
-    case easeOutBounce = 5
+    case linear
+    case easeIn(easingRate: CGFloat)
+    case easeOut(easingRate: CGFloat)
+    case easeInOut(easingRate: CGFloat)
+    case easeInBounce
+    case easeOutBounce
 
-    public func update(_ t: CGFloat, easingRate: CGFloat) -> CGFloat {
-        let percent: CGFloat = t
+    public func update(_ time: CGFloat) -> CGFloat {
         switch self {
         case .linear:
-            return percent
-        case .easeIn:
-            return pow(t, easingRate)
-        case .easeOut:
-            return 1.0 - pow(1.0 - t, easingRate)
-        case .easeInOut:
-            let newt: CGFloat = 2 * t
+            return time
+        case .easeIn(let rate):
+            return pow(time, rate)
+        case .easeOut(let rate):
+            return 1.0 - pow(1.0 - time, rate)
+        case .easeInOut(let rate):
+            let newt: CGFloat = 2 * time
             if newt < 1 {
-                return 0.5 * pow(newt, easingRate)
+                return 0.5 * pow(newt, rate)
             } else {
-                return 0.5 * (2.0 - pow(2.0 - newt, easingRate))
+                return 0.5 * (2.0 - pow(2.0 - newt, rate))
             }
         case .easeInBounce:
-            if t < 4.0 / 11.0 {
-                return 1.0 - (pow(11.0 / 4.0, 2) * pow(t, 2)) - t
-            } else if t < 8.0 / 11.0 {
-                return 1.0 - (3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(t - 6.0 / 11.0, 2)) - t
-            } else if t < 10.0 / 11.0 {
-                return 1.0 - (15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(t - 9.0 / 11.0, 2)) - t
+            if time < 4.0 / 11.0 {
+                return 1.0 - (pow(11.0 / 4.0, 2) * pow(time, 2)) - time
+            } else if time < 8.0 / 11.0 {
+                return 1.0 - (3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(time - 6.0 / 11.0, 2)) - time
+            } else if time < 10.0 / 11.0 {
+                return 1.0 - (15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(time - 9.0 / 11.0, 2)) - time
             }
-            return 1.0 - (63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(t - 21.0 / 22.0, 2)) - t
+            return 1.0 - (63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(time - 21.0 / 22.0, 2)) - time
         case .easeOutBounce:
-            if t < 4.0 / 11.0 {
-                return pow(11.0 / 4.0, 2) * pow(t, 2)
-            } else if t < 8.0 / 11.0 {
-                return 3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(t - 6.0 / 11.0, 2)
-            } else if t < 10.0 / 11.0 {
-                return 15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(t - 9.0 / 11.0, 2)
+            if time < 4.0 / 11.0 {
+                return pow(11.0 / 4.0, 2) * pow(time, 2)
+            } else if time < 8.0 / 11.0 {
+                return 3.0 / 4.0 + pow(11.0 / 4.0, 2) * pow(time - 6.0 / 11.0, 2)
+            } else if time < 10.0 / 11.0 {
+                return 15.0 / 16.0 + pow(11.0 / 4.0, 2) * pow(time - 9.0 / 11.0, 2)
             }
-            return 63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(t - 21.0 / 22.0, 2)
+            return 63.0 / 64.0 + pow(11.0 / 4.0, 2) * pow(time - 21.0 / 22.0, 2)
         }
     }
 }
@@ -84,22 +81,19 @@ public enum EFLabelCountingMethod: Int, EFLabelCounter {
 open class EFCountingLabel: UILabel {
 
     public var format: String = "%f"
-    public var method: EFLabelCounter = EFLabelCountingMethod.linear
+    public var timingMethod: EFTiming = EFTimingMethod.linear
     public var animationDuration: TimeInterval = 2
     public var formatBlock: ((CGFloat) -> String)?
     public var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
     public var completionBlock: (() -> Void)?
-    public var easingRate: CGFloat = 3
 
     private var startingValue: CGFloat = 0
     private var destinationValue: CGFloat = 1
     private var progress: TimeInterval = 0
     private var lastUpdate: TimeInterval = 0
     private var totalTime: TimeInterval = 1
-    private var easingRateInner: CGFloat = 3
 
     private var timer: CADisplayLink?
-    private var counter: EFLabelCounter = EFLabelCountingMethod.linear
 
     public var isCounting: Bool {
         return timer != nil
@@ -113,7 +107,7 @@ open class EFCountingLabel: UILabel {
         }
 
         let percent = progress / totalTime
-        let updateVal = counter.update(CGFloat(percent), easingRate: easingRateInner)
+        let updateVal = timingMethod.update(CGFloat(percent))
 
         return startingValue + updateVal * (destinationValue - startingValue)
     }
@@ -140,9 +134,6 @@ open class EFCountingLabel: UILabel {
         progress = 0
         totalTime = duration
         lastUpdate = CACurrentMediaTime()
-
-        counter = method
-        easingRateInner = easingRate
 
         let timer = CADisplayLink(target: self, selector: #selector(updateValue(_:)))
         if #available(iOS 10.0, *) {

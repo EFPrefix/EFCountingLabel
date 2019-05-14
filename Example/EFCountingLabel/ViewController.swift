@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     func setupLabels() {
         // make one that counts up
         let myLabel = EFCountingLabel(frame: CGRect(x: 10, y: 10, width: 200, height: 40))
-        myLabel.method = EFLabelCountingMethod.linear
+        myLabel.timingMethod = EFTimingMethod.linear
         myLabel.format = "%d"
         self.view.addSubview(myLabel)
         self.myLabel = myLabel
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
             (value) in
             return "Score: " + (formatter.string(from: NSNumber(value: Int(value))) ?? "")
         }
-        scoreLabel.method = EFLabelCountingMethod.easeOut
+        scoreLabel.timingMethod = EFTimingMethod.easeOut(easingRate: 3)
         self.view.addSubview(scoreLabel)
         self.scoreLabel = scoreLabel
 
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
         self.attributedLabel = attributedLabel
 
         // storyboard
-        self.label.method = EFLabelCountingMethod.easeInOut
+        self.label.timingMethod = EFTimingMethod.easeInOut(easingRate: 3)
         self.label.format = "%d%%"
         self.label.completionBlock = {
             [weak self] () in
@@ -113,7 +113,7 @@ class ViewController: UIViewController {
         }
         self.countingButton.setTitleColor(UIColor.blue, for: UIControl.State.normal)
         self.countingButton.addTarget(self, action: #selector(buttonClicked), for: UIControl.Event.touchUpInside)
-        self.countingButton.countingLabel.method = EFLabelCountingMethod.linear
+        self.countingButton.countingLabel.timingMethod = EFTimingMethod.linear
         self.view.addSubview(countingButton)
     }
 
