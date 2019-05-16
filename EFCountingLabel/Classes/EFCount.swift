@@ -1,11 +1,3 @@
-//
-//  EFCountingLabel.swift
-//  EFCountingLabel
-//
-//  Created by EyreFree on 2016/12/11.
-//
-//  Copyright (c) 2017 EyreFree <eyrefree@eyrefree.org>
-//
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
@@ -24,22 +16,29 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-// MARK:- EFTransition
 public protocol EFTiming {
     func update(_ time: CGFloat) -> CGFloat
 }
 
-//MARK: - EFCountingLabel
-open class EFCountingLabel: UILabel {
+public protocol EFCount {
+    func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval)
+    func countFrom(_ startValue: CGFloat, to endValue: CGFloat)
+    func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval)
+    func countFromCurrentValueTo(_ endValue: CGFloat)
+    func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval)
+    func countFromZeroTo(_ endValue: CGFloat)
+    func stopAtCurrentValue()
+}
 
-    public var format: String = "%f"
+public class EFCounter {
     public var timingMethod: EFTiming = EFTimingMethod.linear
-    public var animationDuration: TimeInterval = 2
-    public var formatBlock: ((CGFloat) -> String)?
-    public var attributedFormatBlock: ((CGFloat) -> NSAttributedString)?
+
+    public var updateBlock: ((CGFloat) -> Void)?
     public var completionBlock: (() -> Void)?
+
+    public var defaultDuration: TimeInterval = 2
 
     private var startingValue: CGFloat = 0
     private var destinationValue: CGFloat = 1
@@ -66,10 +65,41 @@ open class EFCountingLabel: UILabel {
         return startingValue + updateVal * (destinationValue - startingValue)
     }
 
-    public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
-        countFrom(startValue, to: endValue, withDuration: animationDuration)
+    public func stopAtCurrentValue() {
+        timer?.invalidate()
+        timer = nil
+
+        updateBlock?(currentValue)
     }
 
+    @objc public func updateValue(_ timer: Timer) {
+        // update progress
+        let now = CACurrentMediaTime()
+        progress += now - lastUpdate
+        lastUpdate = now
+
+        if progress >= totalTime {
+            self.timer?.invalidate()
+            self.timer = nil
+            progress = totalTime
+        }
+
+        updateBlock?(currentValue)
+
+        if progress == totalTime {
+            runCompletionBlock()
+        }
+    }
+
+    private func runCompletionBlock() {
+        if let tryCompletionBlock = completionBlock {
+            completionBlock = nil
+            tryCompletionBlock()
+        }
+    }
+}
+
+extension EFCounter: EFCount {
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
         startingValue = startValue
         destinationValue = endValue
@@ -80,7 +110,7 @@ open class EFCountingLabel: UILabel {
 
         if duration == 0.0 {
             // No animation
-            setTextValue(endValue)
+            updateBlock?(endValue)
             runCompletionBlock()
             return
         }
@@ -100,80 +130,23 @@ open class EFCountingLabel: UILabel {
         self.timer = timer
     }
 
-    public func countFromCurrentValueTo(_ endValue: CGFloat) {
-        countFrom(currentValue, to: endValue)
-    }
-
     public func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
         countFrom(currentValue, to: endValue, withDuration: duration)
-    }
-
-    public func countFromZeroTo(_ endValue: CGFloat) {
-        countFrom(0, to: endValue)
     }
 
     public func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
         countFrom(0, to: endValue, withDuration: duration)
     }
 
-    public func stopAtCurrentValue() {
-        timer?.invalidate()
-        timer = nil
-
-        setTextValue(currentValue)
+    public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
+        countFrom(startValue, to: endValue, withDuration: defaultDuration)
     }
 
-    @objc public func updateValue(_ timer: Timer) {
-        // update progress
-        let now = CACurrentMediaTime()
-        progress += now - lastUpdate
-        lastUpdate = now
-
-        if progress >= totalTime {
-            self.timer?.invalidate()
-            self.timer = nil
-            progress = totalTime
-        }
-
-        setTextValue(currentValue)
-
-        if progress == totalTime {
-            runCompletionBlock()
-        }
+    public func countFromCurrentValueTo(_ endValue: CGFloat) {
+        countFromCurrentValueTo(endValue, withDuration: defaultDuration)
     }
 
-    public func setTextValue(_ value: CGFloat) {
-        if let tryAttributedFormatBlock = attributedFormatBlock {
-            attributedText = tryAttributedFormatBlock(value)
-        } else if let tryFormatBlock = formatBlock {
-            text = tryFormatBlock(value)
-        } else {
-            // check if counting with ints - cast to int
-            if format.hasIntConversionSpecifier() {
-                text = String(format: format, Int(value))
-            } else {
-                text = String(format: format, value)
-            }
-        }
-    }
-
-    private func setFormat(_ format: String) {
-        self.format = format
-        setTextValue(currentValue)
-    }
-
-    private func runCompletionBlock() {
-        if let tryCompletionBlock = completionBlock {
-            completionBlock = nil
-            tryCompletionBlock()
-        }
-    }
-}
-
-extension String {
-    func hasIntConversionSpecifier() -> Bool {
-        // check if counting with ints
-        // regex based on IEEE printf specification: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html
-        return nil != range(of: "%[^fega]*[diouxc]", options: [.regularExpression, .caseInsensitive])
+    public func countFromZeroTo(_ endValue: CGFloat) {
+        countFromZeroTo(endValue, withDuration: defaultDuration)
     }
 }
