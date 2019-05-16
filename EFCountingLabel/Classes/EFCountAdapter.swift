@@ -22,14 +22,18 @@ public protocol EFCountAdapter: class {
 }
 
 extension EFCountAdapter where Self: EFCount {
-    public var updateBlock: ((CGFloat) -> Void)? {
-        get { return counter.updateBlock }
-        set { counter.updateBlock = newValue }
+    public func setUpdateBlock(_ update: ((CGFloat, Self) -> Void)?) {
+        if let update = update {
+            counter.updateBlock = { [unowned self] value in
+                update(value, self)
+            }
+        } else {
+            counter.updateBlock = nil
+        }
     }
 
-    public var completionBlock: (() -> Void)? {
-        get { return counter.completionBlock }
-        set { counter.completionBlock = newValue }
+    public func setCompletionBlock(_ completion: (() -> Void)?) {
+        counter.completionBlock = completion
     }
 
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {

@@ -48,21 +48,22 @@ class ViewController: UIViewController {
     }
 
     func setupLabels() {
-        stopCountButton.updateBlock = { value in
-            self.stopCountButton.setTitle("\(value)", for: .normal)
+        stopCountButton.setUpdateBlock { value, button in
+            button.setTitle("\(value)", for: .normal)
         }
         // make one that counts up
         let myLabel = EFCountingLabel(frame: CGRect(x: 10, y: 10, width: 200, height: 40))
-        myLabel.updateBlock = { value in
-            myLabel.text = String(format: "%d", value)
+        myLabel.setUpdateBlock { value, label in
+            label.text = String(format: "%d", value)
         }
+
         self.view.addSubview(myLabel)
         self.myLabel = myLabel
 
         // make one that counts up from 5% to 10%, using ease in out (the default)
         let countPercentageLabel = EFCountingLabel(frame: CGRect(x: 10, y: 50, width: 200, height: 40))
-        countPercentageLabel.updateBlock = { value in
-            countPercentageLabel.text = String(format: "%.1f%%", value)
+        countPercentageLabel.setUpdateBlock { value, label in
+            label.text = String(format: "%.1f%%", value)
         }
         self.view.addSubview(countPercentageLabel)
         self.countPercentageLabel = countPercentageLabel
@@ -71,8 +72,8 @@ class ViewController: UIViewController {
         let scoreLabel = EFCountingLabel(frame: CGRect(x: 10, y: 90, width: 200, height: 40))
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
-        scoreLabel.updateBlock = { value in
-            scoreLabel.text = "Score: " + (formatter.string(from: NSNumber(value: Int(value))) ?? "")
+        scoreLabel.setUpdateBlock { value, label in
+            label.text = "Score: " + (formatter.string(from: NSNumber(value: Int(value))) ?? "")
         }
         scoreLabel.counter.timingMethod = EFTimingMethod.easeOut(easingRate: 3)
 
@@ -82,7 +83,7 @@ class ViewController: UIViewController {
         // count up with attributed string
         let attributedLabel = EFCountingLabel(frame: CGRect(x: 10, y: 130, width: 200, height: 40))
 
-        attributedLabel.updateBlock = { value in
+        attributedLabel.setUpdateBlock { value, label in
             let highlight = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 20) ?? UIFont.systemFont(ofSize: 20)]
             let normal = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-UltraLight", size: 20) ?? UIFont.systemFont(ofSize: 20)]
 
@@ -94,7 +95,7 @@ class ViewController: UIViewController {
 
             prefixAttr.append(postfixAttr)
 
-            attributedLabel.attributedText = prefixAttr
+            label.attributedText = prefixAttr
         }
 
         self.view.addSubview(attributedLabel)
@@ -102,11 +103,11 @@ class ViewController: UIViewController {
 
         // storyboard
         self.label.counter.timingMethod = EFTimingMethod.easeInOut(easingRate: 3)
-        self.label.updateBlock = { [weak self] value in
-            self?.label.text = String(format: "%d%%", value)
+        self.label.setUpdateBlock { value, label in
+            label.text = String(format: "%d%%", value)
         }
 
-        self.label.completionBlock = { [weak self] in
+        self.label.setCompletionBlock { [weak self] in
             self?.label.textColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1)
         }
 
@@ -117,8 +118,8 @@ class ViewController: UIViewController {
         let attributedString = NSAttributedString(string: countingButton.title(for: UIControl.State.normal) ?? "", attributes: attrs)
         self.countingButton.setAttributedTitle(attributedString, for: UIControl.State.normal)
         self.countingButton.contentHorizontalAlignment = .left
-        self.countingButton.updateBlock = { [weak self] value in
-            self?.countingButton.setAttributedTitle(NSAttributedString(string: String(format: "%.0lf", value), attributes: attrs), for: .normal)
+        self.countingButton.setUpdateBlock { value, button in
+            button.setAttributedTitle(NSAttributedString(string: String(format: "%.0lf", value), attributes: attrs), for: .normal)
         }
 
         self.countingButton.setTitleColor(UIColor.blue, for: UIControl.State.normal)
@@ -152,10 +153,10 @@ class ViewController: UIViewController {
     }
 
     @objc func buttonClicked(button: EFCountingButton) {
-        let titleBackup: NSAttributedString? = button.attributedTitle(for: UIControl.State.normal)
-        self.countingButton.completionBlock = { [weak self] in
+        let titleBackup: NSAttributedString? = button.attributedTitle(for: .normal)
+        self.countingButton.setCompletionBlock { [weak self] in
             guard let _ = self else { return }
-            button.setAttributedTitle(titleBackup, for: UIControl.State.normal)
+            button.setAttributedTitle(titleBackup, for: .normal)
         }
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
