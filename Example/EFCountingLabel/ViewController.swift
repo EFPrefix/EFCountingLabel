@@ -29,7 +29,7 @@ import EFCountingLabel
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var label: EFCountingLabel!
+    @IBOutlet weak var storyboardLabel: EFCountingLabel!
 
     var myLabel: EFCountingLabel!
     var countPercentageLabel: EFCountingLabel!
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         // make one that counts up
         let myLabel = EFCountingLabel(frame: CGRect(x: 10, y: 10, width: 200, height: 40))
         myLabel.setUpdateBlock { value, label in
-            label.text = String(format: "%d", value)
+            label.text = String(format: "%d", Int(value))
         }
 
         self.view.addSubview(myLabel)
@@ -102,13 +102,13 @@ class ViewController: UIViewController {
         self.attributedLabel = attributedLabel
 
         // storyboard
-        self.label.counter.timingMethod = EFTimingMethod.easeInOut(easingRate: 3)
-        self.label.setUpdateBlock { value, label in
-            label.text = String(format: "%d%%", value)
+        self.storyboardLabel.counter.timingMethod = EFTimingMethod.easeInOut(easingRate: 3)
+        self.storyboardLabel.setUpdateBlock { value, label in
+            label.text = String(format: "%i%%", Int(value))
         }
 
-        self.label.setCompletionBlock { [weak self] in
-            self?.label.textColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1)
+        self.storyboardLabel.setCompletionBlock { [weak self] in
+            self?.storyboardLabel.textColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1)
         }
 
         // button: a simple countdown button
@@ -146,10 +146,10 @@ class ViewController: UIViewController {
 
     @objc func startCount() {
         myLabel.countFrom(1, to: 10, withDuration: 3.0)
-        countPercentageLabel.countFrom(5, to: 10)
+        countPercentageLabel.countFrom(5, to: 10, withDuration: 2.5)
         scoreLabel.countFrom(0, to: 10000, withDuration: 2.5)
         attributedLabel.countFrom(0, to: 100, withDuration: 2.5)
-        self.label.countFrom(0, to: 100)
+        self.storyboardLabel.countFrom(0, to: 100, withDuration: 3.0)
     }
 
     @objc func buttonClicked(button: EFCountingButton) {
@@ -166,7 +166,7 @@ class ViewController: UIViewController {
 
     @IBAction func stopButtonClicked(_ sender: EFCountingButton) {
         if sender.counter.isCounting {
-            sender.stopAtCurrentValue()
+            sender.stopCountAtCurrentValue()
         } else {
             sender.countFromCurrentValueTo(1000000, withDuration: 20)
         }

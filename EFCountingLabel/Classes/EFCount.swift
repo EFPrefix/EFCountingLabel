@@ -24,13 +24,26 @@ public protocol EFTiming {
 
 public protocol EFCount {
     func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval)
-    func countFrom(_ startValue: CGFloat, to endValue: CGFloat)
     func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval)
-    func countFromCurrentValueTo(_ endValue: CGFloat)
-    func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval)
-    func countFromZeroTo(_ endValue: CGFloat)
-    func stopAtCurrentValue()
-    func resetCounter()
+    func stopCountAtCurrentValue()
+}
+
+extension EFCount {
+    public func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
+        countFrom(0, to: endValue, withDuration: duration)
+    }
+
+    public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
+        countFrom(startValue, to: endValue, withDuration: 0)
+    }
+
+    public func countFromCurrentValueTo(_ endValue: CGFloat) {
+        countFromCurrentValueTo(endValue, withDuration: 0)
+    }
+
+    public func countFromZeroTo(_ endValue: CGFloat) {
+        countFromZeroTo(endValue, withDuration: 0)
+    }
 }
 
 public class EFCounter {
@@ -89,9 +102,24 @@ public class EFCounter {
             tryCompletionBlock()
         }
     }
+
+    public func reset() {
+        //set init values
+        timer?.invalidate()
+        timer = nil
+        startingValue = 0
+        destinationValue = 1
+        progress = 0
+        lastUpdate = 0
+        totalTime = 1
+    }
 }
 
 extension EFCounter: EFCount {
+    public func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
+        countFrom(currentValue, to: endValue, withDuration: duration)
+    }
+
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
         startingValue = startValue
         destinationValue = endValue
@@ -122,41 +150,10 @@ extension EFCounter: EFCount {
         self.timer = timer
     }
 
-    public func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
-        countFrom(currentValue, to: endValue, withDuration: duration)
-    }
-
-    public func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
-        countFrom(0, to: endValue, withDuration: duration)
-    }
-
-    public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
-        countFrom(startValue, to: endValue, withDuration: 0)
-    }
-
-    public func countFromCurrentValueTo(_ endValue: CGFloat) {
-        countFromCurrentValueTo(endValue, withDuration: 0)
-    }
-
-    public func countFromZeroTo(_ endValue: CGFloat) {
-        countFromZeroTo(endValue, withDuration: 0)
-    }
-
-    public func stopAtCurrentValue() {
+    public func stopCountAtCurrentValue() {
         timer?.invalidate()
         timer = nil
 
         updateBlock?(currentValue)
-    }
-
-    public func resetCounter() {
-        //set init values
-        timer?.invalidate()
-        timer = nil
-        startingValue = 0
-        destinationValue = 1
-        progress = 0
-        lastUpdate = 0
-        totalTime = 1
     }
 }

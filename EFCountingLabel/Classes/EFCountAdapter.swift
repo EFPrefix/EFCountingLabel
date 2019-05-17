@@ -40,32 +40,12 @@ extension EFCountAdapter {
         counter.countFrom(startValue, to: endValue, withDuration: duration)
     }
 
-    public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
-        counter.countFrom(startValue, to: endValue)
-    }
-
     public func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
-        counter.countFromCurrentValueTo(endValue, withDuration: duration)
+        countFrom(counter.currentValue, to: endValue, withDuration: duration)
     }
 
-    public func countFromCurrentValueTo(_ endValue: CGFloat) {
-        counter.countFromCurrentValueTo(endValue)
-    }
-
-    public func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
-        counter.countFromZeroTo(endValue, withDuration: duration)
-    }
-
-    public func countFromZeroTo(_ endValue: CGFloat) {
-        counter.countFromZeroTo(endValue)
-    }
-
-    public func stopAtCurrentValue() {
-        counter.stopAtCurrentValue()
-    }
-
-    public func resetCounter() {
-        counter.resetCounter()
+    public func stopCountAtCurrentValue() {
+        counter.stopCountAtCurrentValue()
     }
 }
 

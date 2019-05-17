@@ -49,7 +49,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="label" destination="g9a-oG-D3D" id="aCL-QY-iQt"/>
+                        <outlet property="storyboardLabel" destination="g9a-oG-D3D" id="aCL-QY-iQt"/>
                         <outlet property="stopCountButton" destination="tqY-lT-Vki" id="O7o-0k-ahW"/>
                     </connections>
                 </viewController>
