@@ -17,11 +17,11 @@
 //  THE SOFTWARE.
 
 
-public protocol EFCountAdapter: class {
+public protocol EFCountAdapter: class, EFCount {
     var counter: EFCounter { get }
 }
 
-extension EFCountAdapter where Self: EFCount {
+extension EFCountAdapter {
     public func setUpdateBlock(_ update: ((CGFloat, Self) -> Void)?) {
         if let update = update {
             counter.updateBlock = { [unowned self] value in
@@ -63,12 +63,16 @@ extension EFCountAdapter where Self: EFCount {
     public func stopAtCurrentValue() {
         counter.stopAtCurrentValue()
     }
+
+    public func resetCounter() {
+        counter.resetCounter()
+    }
 }
 
-open class EFCountingButton: UIButton, EFCountAdapter, EFCount {
+open class EFCountingButton: UIButton, EFCountAdapter {
     public private(set) var counter = EFCounter()
 }
 
-open class EFCountingLabel: UILabel, EFCountAdapter, EFCount {
+open class EFCountingLabel: UILabel, EFCountAdapter {
     public private(set) var counter = EFCounter()
 }
