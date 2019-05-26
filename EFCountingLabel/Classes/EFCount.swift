@@ -47,16 +47,16 @@ extension EFCount {
 }
 
 public class EFCounter {
-    public var timingMethod: EFTiming = EFTimingMethod.linear
+    public var timingFunction: EFTiming = EFTimingFunction.linear
 
     public var updateBlock: ((CGFloat) -> Void)?
     public var completionBlock: (() -> Void)?
 
-    private var startingValue: CGFloat = 0
-    private var destinationValue: CGFloat = 1
-    private var progress: TimeInterval = 0
+    public private(set) var fromValue: CGFloat = 0
+    public private(set) var toValue: CGFloat = 1
+    private var currentDuration: TimeInterval = 0
+    public private(set) var totalDuration: TimeInterval = 1
     private var lastUpdate: TimeInterval = 0
-    private var totalTime: TimeInterval = 1
 
     private var timer: CADisplayLink?
 
@@ -64,34 +64,38 @@ public class EFCounter {
         return timer != nil
     }
 
-    public var currentValue: CGFloat {
-        if progress == 0 {
-            return 0
-        } else if progress >= totalTime {
-            return destinationValue
-        }
-
-        let percent = progress / totalTime
-        let updateVal = timingMethod.update(CGFloat(percent))
-
-        return startingValue + updateVal * (destinationValue - startingValue)
+    public var progress: CGFloat {
+        guard totalDuration != 0 else { return 1 }
+        return CGFloat(currentDuration / totalDuration)
     }
 
+    public var currentValue: CGFloat {
+        if currentDuration == 0 {
+            return 0
+        } else if currentDuration >= totalDuration {
+            return toValue
+        }
+        return fromValue + timingFunction.update(progress) * (toValue - fromValue)
+    }
+
+    public init() {
+
+    }
+
+    // CADisplayLink callback
     @objc public func updateValue(_ timer: Timer) {
-        // update progress
         let now = CACurrentMediaTime()
-        progress += now - lastUpdate
+        currentDuration += now - lastUpdate
         lastUpdate = now
 
-        if progress >= totalTime {
-            self.timer?.invalidate()
-            self.timer = nil
-            progress = totalTime
+        if currentDuration >= totalDuration {
+            invalidate()
+            currentDuration = totalDuration
         }
 
         updateBlock?(currentValue)
 
-        if progress == totalTime {
+        if currentDuration == totalDuration {
             runCompletionBlock()
         }
     }
@@ -103,15 +107,19 @@ public class EFCounter {
         }
     }
 
+    //set init values
     public func reset() {
-        //set init values
+        invalidate()
+        fromValue = 0
+        toValue = 1
+        currentDuration = 0
+        lastUpdate = 0
+        totalDuration = 1
+    }
+
+    public func invalidate() {
         timer?.invalidate()
         timer = nil
-        startingValue = 0
-        destinationValue = 1
-        progress = 0
-        lastUpdate = 0
-        totalTime = 1
     }
 }
 
@@ -121,12 +129,11 @@ extension EFCounter: EFCount {
     }
 
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
-        startingValue = startValue
-        destinationValue = endValue
+        fromValue = startValue
+        toValue = endValue
 
         // remove any (possible) old timers
-        self.timer?.invalidate()
-        self.timer = nil
+        invalidate()
 
         if duration == 0.0 {
             // No animation
@@ -135,8 +142,8 @@ extension EFCounter: EFCount {
             return
         }
 
-        progress = 0
-        totalTime = duration
+        currentDuration = 0
+        totalDuration = duration
         lastUpdate = CACurrentMediaTime()
 
         let timer = CADisplayLink(target: self, selector: #selector(updateValue(_:)))
@@ -151,9 +158,7 @@ extension EFCounter: EFCount {
     }
 
     public func stopCountAtCurrentValue() {
-        timer?.invalidate()
-        timer = nil
-
+        invalidate()
         updateBlock?(currentValue)
     }
 }

@@ -24,7 +24,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-public enum EFTimingMethod: EFTiming {
+public enum EFTimingFunction: EFTiming {
     case linear
     case easeIn(easingRate: CGFloat)
     case easeOut(easingRate: CGFloat)

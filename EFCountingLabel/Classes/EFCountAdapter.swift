@@ -16,13 +16,15 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+import Foundation
+import UIKit
 
 public protocol EFCountAdapter: class, EFCount {
     var counter: EFCounter { get }
 }
 
 extension EFCountAdapter {
-    public func setUpdateBlock(_ update: ((CGFloat, Self) -> Void)?) {
+    public func setUpdateBlock(_ update: ((_ value: CGFloat, _ sender: Self) -> Void)?) {
         if let update = update {
             counter.updateBlock = { [unowned self] value in
                 update(value, self)
@@ -32,8 +34,14 @@ extension EFCountAdapter {
         }
     }
 
-    public func setCompletionBlock(_ completion: (() -> Void)?) {
-        counter.completionBlock = completion
+    public func setCompletionBlock(_ completion: ((_ sender: Self) -> Void)?) {
+        if let completion = completion {
+            counter.completionBlock = { [unowned self] in
+                completion(self)
+            }
+        } else {
+            counter.completionBlock = nil
+        }
     }
 
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
@@ -51,8 +59,16 @@ extension EFCountAdapter {
 
 open class EFCountingButton: UIButton, EFCountAdapter {
     public private(set) var counter = EFCounter()
+
+    deinit {
+        counter.invalidate()
+    }
 }
 
 open class EFCountingLabel: UILabel, EFCountAdapter {
     public private(set) var counter = EFCounter()
+
+    deinit {
+        counter.invalidate()
+    }
 }
