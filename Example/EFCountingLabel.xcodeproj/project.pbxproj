@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		5EEE4459477CD89613CC9254 /* Pods_EFCountingLabel_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BF1F2807CCE416BEF5C0C /* Pods_EFCountingLabel_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		615470077217336459F28548 /* StoryboardButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615478D55F97750BE62D6350 /* StoryboardButtonViewController.swift */; };
+		61547605835C3408C93468DF /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615478D4657C10BDDB2930B2 /* CustomTableViewController.swift */; };
+		61547AB8DD5A704F70185C87 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6154772B1F9DBE58D87528C6 /* ListTableViewController.swift */; };
+		61547FDE291FDA37914D8D74 /* StoryboardLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615477C97BA7D1BE03393744 /* StoryboardLabelViewController.swift */; };
 		88B4CB65271A07819AE9D976 /* Pods_EFCountingLabel_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF702AD45972585A86A336D5 /* Pods_EFCountingLabel_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,13 +39,16 @@
 		607FACD01AFB9204008FA782 /* EFCountingLabel_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFCountingLabel_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* EFCountingLabel_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EFCountingLabel_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		6154772B1F9DBE58D87528C6 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		615477C97BA7D1BE03393744 /* StoryboardLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLabelViewController.swift; sourceTree = "<group>"; };
+		615478D4657C10BDDB2930B2 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		615478D55F97750BE62D6350 /* StoryboardButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardButtonViewController.swift; sourceTree = "<group>"; };
 		80B2BFCC105106F37CED9FA4 /* EFCountingLabel.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EFCountingLabel.podspec; path = ../EFCountingLabel.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8BCD51943A3A1640311342F6 /* Pods-EFCountingLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFCountingLabel_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FF75F8CFAC9673D3C62BA08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -96,11 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				6154772B1F9DBE58D87528C6 /* ListTableViewController.swift */,
+				61547E8FF1E28878A7E86491 /* ViewControllers */,
 			);
 			name = "Example for EFCountingLabel";
 			path = EFCountingLabel;
@@ -141,6 +148,16 @@
 				0D6321623D5D5D7DD361D3FA /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		61547E8FF1E28878A7E86491 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				615478D55F97750BE62D6350 /* StoryboardButtonViewController.swift */,
+				615477C97BA7D1BE03393744 /* StoryboardLabelViewController.swift */,
+				615478D4657C10BDDB2930B2 /* CustomTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A7CA133B4A0DCCD8F0D16197 /* Frameworks */ = {
@@ -326,8 +343,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				61547AB8DD5A704F70185C87 /* ListTableViewController.swift in Sources */,
+				615470077217336459F28548 /* StoryboardButtonViewController.swift in Sources */,
+				61547FDE291FDA37914D8D74 /* StoryboardLabelViewController.swift in Sources */,
+				61547605835C3408C93468DF /* CustomTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +503,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EFCountingLabel/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -499,7 +519,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EFCountingLabel/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

@@ -4,7 +4,7 @@
   "summary": "A label which can show number change animated.",
   "description": "A label which can show number change animated, in Swift.",
   "homepage": "https://github.com/EFPrefix/EFCountingLabel",
-  "screenshots": "https://raw.githubusercontent.com/EFPrefix/EFCountingLabel/master/Assets/example.gif",
+  "screenshots": "https://raw.githubusercontent.com/EFPrefix/EFCountingLabel/master/Assets/EFCountingLabel.png",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
