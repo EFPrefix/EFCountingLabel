@@ -59,6 +59,46 @@ extension EFCountAdapter {
 
 open class EFCountingButton: UIButton, EFCountAdapter {
     public private(set) var counter = EFCounter()
+    
+    open var formatBlock: ((CGFloat) -> String)? {
+        set {
+            if let formatBlock = newValue {
+                setUpdateBlock { value, button in button.setTitle(formatBlock(value), for: .normal) }
+            } else {
+                setUpdateBlock(nil)
+            }
+        }
+        @available(*, unavailable)
+        get {
+            return nil
+        }
+    }
+    open var attributedFormatBlock: ((CGFloat) -> NSAttributedString)? {
+        set {
+            if let attributedFormatBlock = newValue {
+                setUpdateBlock { value, button in button.setAttributedTitle(attributedFormatBlock(value), for: .normal) }
+            } else {
+                setUpdateBlock(nil)
+            }
+        }
+        @available(*, unavailable)
+        get {
+            return nil
+        }
+    }
+    open var completionBlock: (() -> Void)? {
+        set {
+            if let completionBlock = newValue {
+                setCompletionBlock { _ in completionBlock() }
+            } else {
+                setCompletionBlock(nil)
+            }
+        }
+        @available(*, unavailable)
+        get {
+            return nil
+        }
+    }
 
     deinit {
         counter.invalidate()
@@ -67,6 +107,46 @@ open class EFCountingButton: UIButton, EFCountAdapter {
 
 open class EFCountingLabel: UILabel, EFCountAdapter {
     public private(set) var counter = EFCounter()
+
+    open var formatBlock: ((CGFloat) -> String)? {
+        set {
+            if let formatBlock = newValue {
+                setUpdateBlock { value, label in label.text = formatBlock(value) }
+            } else {
+                setUpdateBlock(nil)
+            }
+        }
+        @available(*, unavailable)
+        get {
+            return nil
+        }
+    }
+    open var attributedFormatBlock: ((CGFloat) -> NSAttributedString)? {
+        set {
+            if let attributedFormatBlock = newValue {
+                setUpdateBlock { value, label in label.attributedText = attributedFormatBlock(value) }
+            } else {
+                setUpdateBlock(nil)
+            }
+        }
+        @available(*, unavailable)
+        get {
+            return nil
+        }
+    }
+    open var completionBlock: (() -> Void)? {
+        set {
+            if let completionBlock = newValue {
+                setCompletionBlock { _ in completionBlock() }
+            } else {
+                setCompletionBlock(nil)
+            }
+        }
+        @available(*, unavailable)
+        get {
+            return nil
+        }
+    }
 
     deinit {
         counter.invalidate()
