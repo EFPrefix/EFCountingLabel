@@ -47,7 +47,42 @@ extension EFCount {
 }
 
 public class EFCounter {
+
+    public enum RefreshRate: Int {
+        case _5fps = 5
+        case _6fps = 6
+        case _10fps = 10
+        case _12fps = 12
+        case _15fps = 15
+        case _20fps = 20
+        case _30fps = 30
+        case _60fps = 60
+        case max = 0
+
+        private var interval: Int {
+            switch self {
+            case ._5fps:    return 12
+            case ._6fps:    return 10
+            case ._10fps:   return 6
+            case ._12fps:   return 5
+            case ._15fps:   return 4
+            case ._20fps:   return 3
+            case ._30fps:   return 2
+            default:        return 1
+            }
+        }
+
+        func apply(to displayLink: CADisplayLink) {
+            if #available(iOS 10.0, *) {
+                displayLink.preferredFramesPerSecond = rawValue
+            } else {
+                displayLink.frameInterval = interval
+            }
+        }
+    }
+
     public var timingFunction: EFTiming = EFTimingFunction.linear
+    public var refreshRate: RefreshRate = ._30fps
 
     public var updateBlock: ((CGFloat) -> Void)?
     public var completionBlock: (() -> Void)?
@@ -147,11 +182,7 @@ extension EFCounter: EFCount {
         lastUpdate = CACurrentMediaTime()
 
         let timer = CADisplayLink(target: self, selector: #selector(updateValue(_:)))
-        if #available(iOS 10.0, *) {
-            timer.preferredFramesPerSecond = 30
-        } else {
-            timer.frameInterval = 2
-        }
+        refreshRate.apply(to: timer)
         timer.add(to: .main, forMode: .default)
         timer.add(to: .main, forMode: .tracking)
         self.timer = timer
