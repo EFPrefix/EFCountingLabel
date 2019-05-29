@@ -63,8 +63,6 @@ class StoryboardButtonViewController: UIViewController {
         } else {
             sender.contentHorizontalAlignment = .left
             sender.countFromCurrentValueTo(1000000, withDuration: 20)
-
         }
-
     }
 }

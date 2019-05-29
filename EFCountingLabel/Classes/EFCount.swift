@@ -51,7 +51,12 @@ public class EFCounter {
     public var timingFunction: EFTiming = EFTimingFunction.linear
     //works same way as CADisplayLink.frameInterval
     //0 - max frame rate
-    public var refreshRateInterval: Int = 2
+    public var refreshRateInterval: Int = 2 {
+        didSet {
+            guard let timer = timer else { return }
+            apply(interval: refreshRateInterval, to: timer)
+        }
+    }
 
     public var updateBlock: ((CGFloat) -> Void)?
     public var completionBlock: (() -> Void)?
