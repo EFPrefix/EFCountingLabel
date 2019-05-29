@@ -98,8 +98,8 @@ class FrameRateViewController: UIViewController {
         rate6.setCompletionBlock({ [unowned self] _ in
             print("rate6 - \(self.rate6Count). (expected \(6 * self.cycle)+1)")
         })
-        rate6.setCompletionBlock({ [unowned self] _ in
-            print("rate8 - \(self.rate6Count). (expected \(Int(7.5 * Double(self.cycle)))+1)")
+        rate8.setCompletionBlock({ [unowned self] _ in
+            print("rate8 - \(self.rate8Count). (expected \(Int(7.5) * self.cycle)+1)")
         })
         rate10.setCompletionBlock({ [unowned self] _ in
             print("rate10 - \(self.rate10Count). (expected \(10 * self.cycle)+1)")
