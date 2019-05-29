@@ -50,6 +50,7 @@ public class EFCounter {
 
     public var timingFunction: EFTiming = EFTimingFunction.linear
     //works same way as CADisplayLink.frameInterval
+    //0 - max frame rate
     public var refreshRateInterval: Int = 2
 
     public var updateBlock: ((CGFloat) -> Void)?
@@ -112,11 +113,11 @@ public class EFCounter {
 
     private func apply(interval: Int, to displayLink: CADisplayLink) {
         if #available(iOS 10.3, *) {
-            displayLink.preferredFramesPerSecond = max(1, UIScreen.main.maximumFramesPerSecond / interval)
+            displayLink.preferredFramesPerSecond = interval > 0 ? max(1, UIScreen.main.maximumFramesPerSecond / interval) : 0
         } else if #available(iOS 10.0, *) {
-            displayLink.preferredFramesPerSecond = max(1, 60 / interval)
+            displayLink.preferredFramesPerSecond = interval > 0 ? max(1, 60 / interval) : 0
         } else {
-            displayLink.frameInterval = interval
+            displayLink.frameInterval = interval == 0 ? 1 : interval
         }
     }
 
