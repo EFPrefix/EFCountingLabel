@@ -1,3 +1,11 @@
+//
+//  EFCount.swift
+//  EFCountingLabel
+//
+//  Created by Kirow on 2019/05/14.
+//
+//  Copyright (c) 2017 EyreFree <eyrefree@eyrefree.org>
+//
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
@@ -33,15 +41,15 @@ extension EFCount {
     public func countFromZeroTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
         countFrom(0, to: endValue, withDuration: duration)
     }
-
+    
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
         countFrom(startValue, to: endValue, withDuration: 0)
     }
-
+    
     public func countFromCurrentValueTo(_ endValue: CGFloat) {
         countFromCurrentValueTo(endValue, withDuration: 0)
     }
-
+    
     public func countFromZeroTo(_ endValue: CGFloat) {
         countFromZeroTo(endValue, withDuration: 0)
     }
@@ -49,27 +57,27 @@ extension EFCount {
 
 public class EFCounter {
     public var timingFunction: EFTiming = EFTimingFunction.linear
-
+    
     public var updateBlock: ((CGFloat) -> Void)?
     public var completionBlock: (() -> Void)?
-
+    
     public private(set) var fromValue: CGFloat = 0
     public private(set) var toValue: CGFloat = 1
     private var currentDuration: TimeInterval = 0
     public private(set) var totalDuration: TimeInterval = 1
     private var lastUpdate: TimeInterval = 0
-
+    
     private var timer: CADisplayLink?
-
+    
     public var isCounting: Bool {
         return timer != nil
     }
-
+    
     public var progress: CGFloat {
         guard totalDuration != 0 else { return 1 }
         return CGFloat(currentDuration / totalDuration)
     }
-
+    
     public var currentValue: CGFloat {
         if currentDuration == 0 {
             return 0
@@ -78,36 +86,36 @@ public class EFCounter {
         }
         return fromValue + timingFunction.update(progress) * (toValue - fromValue)
     }
-
+    
     public init() {
-
+        
     }
-
+    
     // CADisplayLink callback
     @objc public func updateValue(_ timer: Timer) {
         let now = CACurrentMediaTime()
         currentDuration += now - lastUpdate
         lastUpdate = now
-
+        
         if currentDuration >= totalDuration {
             invalidate()
             currentDuration = totalDuration
         }
-
+        
         updateBlock?(currentValue)
-
+        
         if currentDuration == totalDuration {
             runCompletionBlock()
         }
     }
-
+    
     private func runCompletionBlock() {
         if let tryCompletionBlock = completionBlock {
             completionBlock = nil
             tryCompletionBlock()
         }
     }
-
+    
     //set init values
     public func reset() {
         invalidate()
@@ -117,7 +125,7 @@ public class EFCounter {
         lastUpdate = 0
         totalDuration = 1
     }
-
+    
     public func invalidate() {
         timer?.invalidate()
         timer = nil
@@ -128,25 +136,25 @@ extension EFCounter: EFCount {
     public func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
         countFrom(currentValue, to: endValue, withDuration: duration)
     }
-
+    
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
         fromValue = startValue
         toValue = endValue
-
+        
         // remove any (possible) old timers
         invalidate()
-
+        
         if duration == 0.0 {
             // No animation
             updateBlock?(endValue)
             runCompletionBlock()
             return
         }
-
+        
         currentDuration = 0
         totalDuration = duration
         lastUpdate = CACurrentMediaTime()
-
+        
         let timer = CADisplayLink(target: self, selector: #selector(updateValue(_:)))
         if #available(iOS 10.0, *) {
             timer.preferredFramesPerSecond = 30
@@ -157,7 +165,7 @@ extension EFCounter: EFCount {
         timer.add(to: .main, forMode: .tracking)
         self.timer = timer
     }
-
+    
     public func stopCountAtCurrentValue() {
         invalidate()
         updateBlock?(currentValue)

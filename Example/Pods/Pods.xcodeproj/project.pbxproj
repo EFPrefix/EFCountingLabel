@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1070573C1E1B8CA300A20F5281858AF2 /* EFTimingMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472D3235BDBC3BF3188A31F0DEEDBD6 /* EFTimingMethod.swift */; };
-		55DE45DFC78EE4DFFB469AE7E8F5BE80 /* EFCountAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF3BCAAE7A3F89BF3A894393FF77FD /* EFCountAdapter.swift */; };
-		796042A8368D0BCD22F5067CAFBC9AAA /* Pods-EFCountingLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB60A8A0636D3156E365D8E97630977 /* Pods-EFCountingLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99BD2673543CE37CDBB8BD77F3E2A7BE /* EFCountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6344AA5AB8530F79D6D6764111030 /* EFCountingLabel-dummy.m */; };
-		A7668615A02C8C0AB40535A43E15EF2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		B6F120A3E3709F329A8B496489BAED25 /* Pods-EFCountingLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AD160971F8E453D87B755BE0C3C73F /* Pods-EFCountingLabel_Example-dummy.m */; };
-		BE467AE21FB5AB3CCC73836103FF166A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		C4E3E9AFE3F78473E52C5805D91BC484 /* Pods-EFCountingLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B87957D051F840B09E442BD2872E46A8 /* Pods-EFCountingLabel_Tests-dummy.m */; };
-		C51BD10C806D78E1F24D3538B3F84D78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		CA6C4B7F9DA47D5B8747791EE4ABA338 /* EFCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3BA4587F159B32F6842390E030C25F /* EFCount.swift */; };
-		DF8794213EEFAD6B2E1D39C87076CD2A /* Pods-EFCountingLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1653CDC9D6E3900BEBD4B6FE574D6FC6 /* Pods-EFCountingLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5FBFEF301E81B265F543C46C0844477 /* EFCountingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE910C2B97E4852C942B947FAC1F4A /* EFCountingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2030C0BD04C6FE221FB08A14D029E097 /* Pods-EFCountingLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AD160971F8E453D87B755BE0C3C73F /* Pods-EFCountingLabel_Example-dummy.m */; };
+		24970E61EFC148F124B13DA21200E44B /* Pods-EFCountingLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B87957D051F840B09E442BD2872E46A8 /* Pods-EFCountingLabel_Tests-dummy.m */; };
+		2A2AC199E504660604EDA6DAB86EBF9E /* EFCountingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE910C2B97E4852C942B947FAC1F4A /* EFCountingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E9F70E53DF558816F8EF5794BD8A39E /* EFCountAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF3BCAAE7A3F89BF3A894393FF77FD /* EFCountAdapter.swift */; };
+		2F1116A617E6B4AC325A142835ECECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		46E4C58B2F4A507735F280036130D20A /* EFTimingMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472D3235BDBC3BF3188A31F0DEEDBD6 /* EFTimingMethod.swift */; };
+		4DBBD6C29C515FBD9D693A99F640B2BF /* Pods-EFCountingLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1653CDC9D6E3900BEBD4B6FE574D6FC6 /* Pods-EFCountingLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DC54E51ECD6D08BC366578BA4E7982A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4F334D216196E032FB47C2E3A5872704 /* EFCountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6344AA5AB8530F79D6D6764111030 /* EFCountingLabel-dummy.m */; };
+		820EFD1568A1189BFF89BF65933CBE9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		F1A867186CB8C80A13D6C7DEF75697A5 /* EFCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3BA4587F159B32F6842390E030C25F /* EFCount.swift */; };
+		F7AB21C08B052A19B47DB09B36ADDB26 /* Pods-EFCountingLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB60A8A0636D3156E365D8E97630977 /* Pods-EFCountingLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7528D4093B510B2016E8D24530EBB7A0 /* PBXContainerItemProxy */ = {
+		376372BF4D7E62D33101037E088B139B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8C4582010343B9B88E6D43FB890130C9;
 			remoteInfo = "Pods-EFCountingLabel_Example";
 		};
-		92D50A755015C935850BBE0B8F53FCCF /* PBXContainerItemProxy */ = {
+		5588D3660451B3EA397D771C18F98B82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -51,15 +51,15 @@
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		38147FE581C08350930DCDC6884202DA /* Pods-EFCountingLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFCountingLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4AA26DDA8FF36EE3034003B8A38591F5 /* EFCountingLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EFCountingLabel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5EBFFBCF9E56DA4AF71E6A1981521E28 /* EFCountingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFCountingLabel.framework; path = EFCountingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCB0AD06832AF841C3D5A06093D29D3 /* Pods-EFCountingLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFCountingLabel_Example.modulemap"; sourceTree = "<group>"; };
-		68BD45FDCADBE44BB1A1DD892EADD13D /* Pods_EFCountingLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFCountingLabel_Tests.framework; path = "Pods-EFCountingLabel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64484A7ECC99C41AA0499383F4DC8157 /* Pods_EFCountingLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFCountingLabel_Tests.framework; path = "Pods-EFCountingLabel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F9DADB329292DCDA3696F5EFB1FE08 /* Pods_EFCountingLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFCountingLabel_Example.framework; path = "Pods-EFCountingLabel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7656696EF20F921F44EAA42B0E19A86E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		7C3BA4587F159B32F6842390E030C25F /* EFCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFCount.swift; path = EFCountingLabel/Classes/EFCount.swift; sourceTree = "<group>"; };
 		7C5CC72CC53F6EDCEB7844FB8B8C0085 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		7CD6344AA5AB8530F79D6D6764111030 /* EFCountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFCountingLabel-dummy.m"; sourceTree = "<group>"; };
-		891D0BF5D243CB4AF7DD531AF078ED6A /* Pods_EFCountingLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFCountingLabel_Example.framework; path = "Pods-EFCountingLabel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A05C17F2FC14F4EF84EACA5043DF897A /* EFCountingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFCountingLabel.framework; path = EFCountingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72AE3A853FF2ABD2F3FF343E8BCD815 /* Pods-EFCountingLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFCountingLabel_Tests.modulemap"; sourceTree = "<group>"; };
 		B87957D051F840B09E442BD2872E46A8 /* Pods-EFCountingLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFCountingLabel_Tests-dummy.m"; sourceTree = "<group>"; };
 		C7873A1764BC773CAABCE0CBD1CE77B0 /* EFCountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFCountingLabel.xcconfig; sourceTree = "<group>"; };
@@ -76,27 +76,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		03C80E20B5D93E3B8747E286CBC06199 /* Frameworks */ = {
+		4CB0066236F62A084B7370BFA5175040 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE467AE21FB5AB3CCC73836103FF166A /* Foundation.framework in Frameworks */,
+				2F1116A617E6B4AC325A142835ECECEC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D445095A6471536D4555D95F44957A4 /* Frameworks */ = {
+		4FC1EF6B9DB01E4626B9F608934616A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51BD10C806D78E1F24D3538B3F84D78 /* Foundation.framework in Frameworks */,
+				820EFD1568A1189BFF89BF65933CBE9F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		844A98193DD0181538BF35E74C9A622F /* Frameworks */ = {
+		B470023E252E235D6D04AEA2E18530FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7668615A02C8C0AB40535A43E15EF2E /* Foundation.framework in Frameworks */,
+				4DC54E51ECD6D08BC366578BA4E7982A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,9 +160,9 @@
 		5F48950C6E5D66C419CF07FC3D07B2CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A05C17F2FC14F4EF84EACA5043DF897A /* EFCountingLabel.framework */,
-				891D0BF5D243CB4AF7DD531AF078ED6A /* Pods_EFCountingLabel_Example.framework */,
-				68BD45FDCADBE44BB1A1DD892EADD13D /* Pods_EFCountingLabel_Tests.framework */,
+				5EBFFBCF9E56DA4AF71E6A1981521E28 /* EFCountingLabel.framework */,
+				75F9DADB329292DCDA3696F5EFB1FE08 /* Pods_EFCountingLabel_Example.framework */,
+				64484A7ECC99C41AA0499383F4DC8157 /* Pods_EFCountingLabel_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,27 +230,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		56E14661D61F5450E024D88F7DCC98DE /* Headers */ = {
+		1C6B97ECFE5D5D28BBC9542CEBA9D902 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5FBFEF301E81B265F543C46C0844477 /* EFCountingLabel-umbrella.h in Headers */,
+				2A2AC199E504660604EDA6DAB86EBF9E /* EFCountingLabel-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7ECD7F17A471C6E8F7706848DA7C2059 /* Headers */ = {
+		785BA2E3A4EA76D5B4F2BDB01C8EAF62 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				796042A8368D0BCD22F5067CAFBC9AAA /* Pods-EFCountingLabel_Example-umbrella.h in Headers */,
+				4DBBD6C29C515FBD9D693A99F640B2BF /* Pods-EFCountingLabel_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C21D77B7B097C9C9AAE2C55817302123 /* Headers */ = {
+		82A6C8683F273335FC23D6F46226A2C5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF8794213EEFAD6B2E1D39C87076CD2A /* Pods-EFCountingLabel_Tests-umbrella.h in Headers */,
+				F7AB21C08B052A19B47DB09B36ADDB26 /* Pods-EFCountingLabel_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,31 +259,31 @@
 /* Begin PBXNativeTarget section */
 		8C4582010343B9B88E6D43FB890130C9 /* Pods-EFCountingLabel_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B5EAF5B37CFD9C1477DCE779E67300D /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Example" */;
+			buildConfigurationList = CFB7E478A7B5BF81EEC649C0D1915735 /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Example" */;
 			buildPhases = (
-				7ECD7F17A471C6E8F7706848DA7C2059 /* Headers */,
-				39D3B6519B41472602E24DBDC4AB41B2 /* Sources */,
-				03C80E20B5D93E3B8747E286CBC06199 /* Frameworks */,
-				D4D84E29808C4E59E50C74C2C30DF125 /* Resources */,
+				82A6C8683F273335FC23D6F46226A2C5 /* Headers */,
+				7B482A4E6D14EF7AE8371BF9755BD5CC /* Sources */,
+				4FC1EF6B9DB01E4626B9F608934616A0 /* Frameworks */,
+				ACE85E0F95F1F3515F5EBA20C729D040 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0C8980F3E0A17FEA5839440152A3DDF5 /* PBXTargetDependency */,
+				9EC5DE094DCA60B8709DD3ED1FB20AD0 /* PBXTargetDependency */,
 			);
 			name = "Pods-EFCountingLabel_Example";
 			productName = "Pods-EFCountingLabel_Example";
-			productReference = 891D0BF5D243CB4AF7DD531AF078ED6A /* Pods_EFCountingLabel_Example.framework */;
+			productReference = 75F9DADB329292DCDA3696F5EFB1FE08 /* Pods_EFCountingLabel_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8D87E5A9FC1F8F56498963BEA9EDFE7A /* EFCountingLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4292598DB4E727168C30EDCEE710E63C /* Build configuration list for PBXNativeTarget "EFCountingLabel" */;
+			buildConfigurationList = 14114E04A57A6E889A8AB768089F3FF2 /* Build configuration list for PBXNativeTarget "EFCountingLabel" */;
 			buildPhases = (
-				56E14661D61F5450E024D88F7DCC98DE /* Headers */,
-				FAAD5C2007B70D95691FAE31CCE81D15 /* Sources */,
-				5D445095A6471536D4555D95F44957A4 /* Frameworks */,
-				EE5FE66F40113B3B9746FF81AF21FA36 /* Resources */,
+				1C6B97ECFE5D5D28BBC9542CEBA9D902 /* Headers */,
+				FF4C03218B39446A6E0B97C35A28345F /* Sources */,
+				B470023E252E235D6D04AEA2E18530FF /* Frameworks */,
+				504078AF28E44AC7EC62FB7174169BA1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -291,26 +291,26 @@
 			);
 			name = EFCountingLabel;
 			productName = EFCountingLabel;
-			productReference = A05C17F2FC14F4EF84EACA5043DF897A /* EFCountingLabel.framework */;
+			productReference = 5EBFFBCF9E56DA4AF71E6A1981521E28 /* EFCountingLabel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B0F85C85FC1A7A5C9193CC47492B429F /* Pods-EFCountingLabel_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A307B924BEE0348F4E4FCB86EFAAC77 /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Tests" */;
+			buildConfigurationList = B32D7FB7CE0460F76A743F252BC65AB2 /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Tests" */;
 			buildPhases = (
-				C21D77B7B097C9C9AAE2C55817302123 /* Headers */,
-				A2023ABC758724D4BC539A0FB3566157 /* Sources */,
-				844A98193DD0181538BF35E74C9A622F /* Frameworks */,
-				D063ECA84BDF88A43703882F7CC5502E /* Resources */,
+				785BA2E3A4EA76D5B4F2BDB01C8EAF62 /* Headers */,
+				067A26798E992C43807E73341520E732 /* Sources */,
+				4CB0066236F62A084B7370BFA5175040 /* Frameworks */,
+				D81BEC4E7ED82E13FB85EE27DD0AAFED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				28A430DB2F8493A60C8B72E4194A341B /* PBXTargetDependency */,
+				80CB48CBCFB16B806FC5B427ADBDFFDE /* PBXTargetDependency */,
 			);
 			name = "Pods-EFCountingLabel_Tests";
 			productName = "Pods-EFCountingLabel_Tests";
-			productReference = 68BD45FDCADBE44BB1A1DD892EADD13D /* Pods_EFCountingLabel_Tests.framework */;
+			productReference = 64484A7ECC99C41AA0499383F4DC8157 /* Pods_EFCountingLabel_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -319,8 +319,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -342,21 +342,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D063ECA84BDF88A43703882F7CC5502E /* Resources */ = {
+		504078AF28E44AC7EC62FB7174169BA1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4D84E29808C4E59E50C74C2C30DF125 /* Resources */ = {
+		ACE85E0F95F1F3515F5EBA20C729D040 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE5FE66F40113B3B9746FF81AF21FA36 /* Resources */ = {
+		D81BEC4E7ED82E13FB85EE27DD0AAFED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,54 +366,54 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		39D3B6519B41472602E24DBDC4AB41B2 /* Sources */ = {
+		067A26798E992C43807E73341520E732 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6F120A3E3709F329A8B496489BAED25 /* Pods-EFCountingLabel_Example-dummy.m in Sources */,
+				24970E61EFC148F124B13DA21200E44B /* Pods-EFCountingLabel_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2023ABC758724D4BC539A0FB3566157 /* Sources */ = {
+		7B482A4E6D14EF7AE8371BF9755BD5CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E3E9AFE3F78473E52C5805D91BC484 /* Pods-EFCountingLabel_Tests-dummy.m in Sources */,
+				2030C0BD04C6FE221FB08A14D029E097 /* Pods-EFCountingLabel_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAAD5C2007B70D95691FAE31CCE81D15 /* Sources */ = {
+		FF4C03218B39446A6E0B97C35A28345F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA6C4B7F9DA47D5B8747791EE4ABA338 /* EFCount.swift in Sources */,
-				55DE45DFC78EE4DFFB469AE7E8F5BE80 /* EFCountAdapter.swift in Sources */,
-				99BD2673543CE37CDBB8BD77F3E2A7BE /* EFCountingLabel-dummy.m in Sources */,
-				1070573C1E1B8CA300A20F5281858AF2 /* EFTimingMethod.swift in Sources */,
+				F1A867186CB8C80A13D6C7DEF75697A5 /* EFCount.swift in Sources */,
+				2E9F70E53DF558816F8EF5794BD8A39E /* EFCountAdapter.swift in Sources */,
+				4F334D216196E032FB47C2E3A5872704 /* EFCountingLabel-dummy.m in Sources */,
+				46E4C58B2F4A507735F280036130D20A /* EFTimingMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0C8980F3E0A17FEA5839440152A3DDF5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = EFCountingLabel;
-			target = 8D87E5A9FC1F8F56498963BEA9EDFE7A /* EFCountingLabel */;
-			targetProxy = 92D50A755015C935850BBE0B8F53FCCF /* PBXContainerItemProxy */;
-		};
-		28A430DB2F8493A60C8B72E4194A341B /* PBXTargetDependency */ = {
+		80CB48CBCFB16B806FC5B427ADBDFFDE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-EFCountingLabel_Example";
 			target = 8C4582010343B9B88E6D43FB890130C9 /* Pods-EFCountingLabel_Example */;
-			targetProxy = 7528D4093B510B2016E8D24530EBB7A0 /* PBXContainerItemProxy */;
+			targetProxy = 376372BF4D7E62D33101037E088B139B /* PBXContainerItemProxy */;
+		};
+		9EC5DE094DCA60B8709DD3ED1FB20AD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EFCountingLabel;
+			target = 8D87E5A9FC1F8F56498963BEA9EDFE7A /* EFCountingLabel */;
+			targetProxy = 5588D3660451B3EA397D771C18F98B82 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2236389BB76DBC3C99877BD344A40B8E /* Release */ = {
+		48C55CC40D4957F47734037F8F6B47B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C81588BB56B75D425E8D9A36FF3EC746 /* Pods-EFCountingLabel_Tests.release.xcconfig */;
+			baseConfigurationReference = 1EFBE3A78B27DC1330FC7FF43C8F2BC0 /* Pods-EFCountingLabel_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -439,11 +439,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -502,6 +501,38 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7D91F06BB64DE78C4ECDB94ED32F1DF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7873A1764BC773CAABCE0CBD1CE77B0 /* EFCountingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
+				PRODUCT_MODULE_NAME = EFCountingLabel;
+				PRODUCT_NAME = EFCountingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -569,7 +600,105 @@
 			};
 			name = Debug;
 		};
-		ACAC07C68B3CF0F869B10080669F110A /* Release */ = {
+		A9A24C9334AC8E004CCC5F682CC03C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8CDAA9A313CCF8FBB622265D33E9F24 /* Pods-EFCountingLabel_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Pods-EFCountingLabel_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Pods-EFCountingLabel_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B28AFC5B08621C8189A05CAC4CA4C98C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81588BB56B75D425E8D9A36FF3EC746 /* Pods-EFCountingLabel_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E1855C02B62E07FAD9C2F20A5EE66EA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7873A1764BC773CAABCE0CBD1CE77B0 /* EFCountingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
+				PRODUCT_MODULE_NAME = EFCountingLabel;
+				PRODUCT_NAME = EFCountingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F982390348FBCCBA1AF164B776685DB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FF5C152FC56C4D532DFA882CD1ED0E99 /* Pods-EFCountingLabel_Example.release.xcconfig */;
 			buildSettings = {
@@ -603,152 +732,14 @@
 			};
 			name = Release;
 		};
-		B919EB876FC6A16D808C709A0088CA27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EFBE3A78B27DC1330FC7FF43C8F2BC0 /* Pods-EFCountingLabel_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFCountingLabel_Tests/Pods-EFCountingLabel_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C4B6D09F00E180E2FAF1B5A41F158CD3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7873A1764BC773CAABCE0CBD1CE77B0 /* EFCountingLabel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
-				PRODUCT_MODULE_NAME = EFCountingLabel;
-				PRODUCT_NAME = EFCountingLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C56260C5DCCC8737D0C539594AE773BF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7873A1764BC773CAABCE0CBD1CE77B0 /* EFCountingLabel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EFCountingLabel/EFCountingLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EFCountingLabel/EFCountingLabel.modulemap";
-				PRODUCT_MODULE_NAME = EFCountingLabel;
-				PRODUCT_NAME = EFCountingLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C8B4C19AC31EF19A04BAA8D78E7DC1E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8CDAA9A313CCF8FBB622265D33E9F24 /* Pods-EFCountingLabel_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Pods-EFCountingLabel_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EFCountingLabel_Example/Pods-EFCountingLabel_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A307B924BEE0348F4E4FCB86EFAAC77 /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Tests" */ = {
+		14114E04A57A6E889A8AB768089F3FF2 /* Build configuration list for PBXNativeTarget "EFCountingLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B919EB876FC6A16D808C709A0088CA27 /* Debug */,
-				2236389BB76DBC3C99877BD344A40B8E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4292598DB4E727168C30EDCEE710E63C /* Build configuration list for PBXNativeTarget "EFCountingLabel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C56260C5DCCC8737D0C539594AE773BF /* Debug */,
-				C4B6D09F00E180E2FAF1B5A41F158CD3 /* Release */,
+				E1855C02B62E07FAD9C2F20A5EE66EA3 /* Debug */,
+				7D91F06BB64DE78C4ECDB94ED32F1DF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -762,11 +753,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B5EAF5B37CFD9C1477DCE779E67300D /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Example" */ = {
+		B32D7FB7CE0460F76A743F252BC65AB2 /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C8B4C19AC31EF19A04BAA8D78E7DC1E4 /* Debug */,
-				ACAC07C68B3CF0F869B10080669F110A /* Release */,
+				48C55CC40D4957F47734037F8F6B47B9 /* Debug */,
+				B28AFC5B08621C8189A05CAC4CA4C98C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB7E478A7B5BF81EEC649C0D1915735 /* Build configuration list for PBXNativeTarget "Pods-EFCountingLabel_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9A24C9334AC8E004CCC5F682CC03C59 /* Debug */,
+				F982390348FBCCBA1AF164B776685DB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,6 +1,6 @@
 //
 //  EFTimingMethod.swift
-//  EFTimingMethod
+//  EFCountingLabel
 //
 //  Created by Kirow on 2019/05/14.
 //
@@ -31,7 +31,7 @@ public enum EFTimingFunction: EFTiming {
     case easeInOut(easingRate: CGFloat)
     case easeInBounce
     case easeOutBounce
-
+    
     public func update(_ time: CGFloat) -> CGFloat {
         switch self {
         case .linear:

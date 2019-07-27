@@ -54,7 +54,7 @@ git clone git@github.com:EFPrefix/EFCountingLabel.git; cd EFCountingLabel/Exampl
 |:--------|:-------------------------------------|
 | 1.x     | Xcode 8.0+<br>Swift 3.0+<br>iOS 8.0+ |
 | 4.x     | Xcode 9.0+<br>Swift 4.0+<br>iOS 8.0+ |
-| 5.x     | Xcode 9.0+<br>Swift 5.0+<br>iOS 8.0+ |
+| 5.x     | Xcode 10.0+<br>Swift 5.0+<br>iOS 8.0+ |
 
 ## 安装
 
@@ -85,27 +85,18 @@ self.view.addSubview(myLabel)
 
 ### 使用
 
-设置标签格式. 设置标签格式后，标签会在更新数值的时候以你设置的方式填充，默认是显示 float 类型的数值，也可以设置成显示 int 类型的数值，比如下面的代码：
+设置标签格式. 设置标签格式后，标签会在更新数值的时候以你设置的方式填充，你可以使用 `formatBlock`，这个可以对显示的文本格式进行高度的自定义：
 
 ```swift
-myLabel.format = "%d"
-```
-
-另外，你也可以使用 `formatBlock`，这个可以对显示的文本格式进行更加高度的自定义：
-
-```swift
-myLabel.formatBlock = {
-      (value) in
-      return "Score: " + (formatter.string(from: NSNumber(value: Int(value))) ?? "")
+myLabel.setUpdateBlock { value, label in
+    label.text = String(format: "%.2f%%", value)
 }
 ```
 
-除此之外还有一个 `attributedFormatBlock` 用于设置属性字符串的格式，用法和上面的 block 类似。如果指定了以上两个 `formatBlock` 中的任意一个，它将会覆盖掉 `format`属性，因为 block 的优先级更高。
-
-可选项，设置动画样式，默认的动画样式是 `EFLabelCountingMethod.linear`，这个样式是匀速显示动画。以下将介绍其他动画样式及用法：
+可选项，设置动画样式，默认的动画样式是 `EFTimingFunction.linear`，这个样式是匀速显示动画。以下将介绍其他动画样式及用法：
 
 ```swift
-myLabel.method = .easeOut
+myLabel.counter.timingFunction = EFTimingFunction.easeOut(easingRate: 3)
 ```
 
 需要计数时只需要使用以下方法即可：
@@ -120,12 +111,6 @@ myLabel.countFrom(5, to: 100)
 myLabel.countFrom(1, to: 10, withDuration: 3.0)
 ```
 
-另外，也可以使用 `animationDuration` 属性去设置动画时长。
-
-```swift
-myLabel.animationDuration = 1.0
-```
-
 可以使用便利方法计数，例如：
 
 ```swift
@@ -136,45 +121,33 @@ myLabel.countFromZeroTo(100)
 本质上，这些便利方法都是基于一个总方法封装的，以下就是这个方法完整的声明：
 
 ```swift
-myLabel.countFrom(
-      startValue: CGFloat,
-      to: CGFloat,
-      withDuration: TimeInterval
-)
+myLabel.countFrom(startValue: CGFloat, to: CGFloat, withDuration: TimeInterval)
 ```
 
 可以使用 `currentValue` 方法获得当前数据（即使在动画过程中也可以正常获得）：
 
 ```swift
-let currentValue = myLabel.currentValue()
+let currentValue: CGFloat = myLabel.counter.currentValue
 ```
 
 可选项，可以使用 `completionBlock` 获得动画结束的事件：
 
 ```swift
-myLabel.completionBlock = {
-      () in
-      print("finish")
+myLabel.completionBlock = { () in
+    print("finish")
 }
 ```
-
-### 格式
-
-当设置 `format` 属性后，标签会检测是否有 `%[^fega]*[diouxc]` 格式，如果能找到，就会将内容以 `Int` 类型展示。否则，将会使用默认的 `CGFloat` 类型展示。
-
-假如你需要以 `CGFloat` 类型展示，最好设置小数点位数限制，例如使用 `@"%.1f"` 来限制只显示一位小数。
-
-因为使用了标准的 `String(format: String, arguments: CVarArg...)` 方法，你可以按照自己的意愿自定义格式，例如：`@"Points: %i"`。
 
 ### 模式
 
 当前有多种动画模式：
 
-- EFLabelCountingMethod.linear：匀速计数动画，是默认采用的动画样式；
-- EFLabelCountingMethod.easeIn：开始比较缓慢,快结束时加速,结束时突然停止；
-- EFLabelCountingMethod.easeOut：开始速度很快,快结束时变得缓慢；
-- EFLabelCountingMethod.easeInOut：开始时比较缓慢，中间加速，快结束时减速。动画速度是一个平滑的曲线。
-- ...
+- EFTimingFunction.linear：匀速计数动画，是默认采用的动画样式；
+- EFTimingFunction.easeIn：开始比较缓慢,快结束时加速,结束时突然停止；
+- EFTimingFunction.easeOut：开始速度很快,快结束时变得缓慢；
+- EFTimingFunction.easeInOut：开始时比较缓慢，中间加速，快结束时减速。动画速度是一个平滑的曲线。
+- EFTimingFunction.easeInBounce；
+- EFTimingFunction.easeOutBounce。
 
 ## 使用 EFCountingLabel 的应用
 

@@ -2,6 +2,12 @@
 
 -----
 
+## [5.1.0](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.0) (2019-07-27)
+
+- Refactoring.
+
+---
+
 ## [5.0.0](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.0.0) (2019-03-30)
 
 - Upgrade to Swift 5.0.

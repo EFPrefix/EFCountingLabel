@@ -1,3 +1,11 @@
+//
+//  EFCountAdapter.swift
+//  EFCountingLabel
+//
+//  Created by Kirow on 2019/05/14.
+//
+//  Copyright (c) 2017 EyreFree <eyrefree@eyrefree.org>
+//
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
@@ -33,7 +41,7 @@ extension EFCountAdapter {
             counter.updateBlock = nil
         }
     }
-
+    
     public func setCompletionBlock(_ completion: ((_ sender: Self) -> Void)?) {
         if let completion = completion {
             counter.completionBlock = { [unowned self] in
@@ -43,15 +51,15 @@ extension EFCountAdapter {
             counter.completionBlock = nil
         }
     }
-
+    
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval) {
         counter.countFrom(startValue, to: endValue, withDuration: duration)
     }
-
+    
     public func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval) {
         countFrom(counter.currentValue, to: endValue, withDuration: duration)
     }
-
+    
     public func stopCountAtCurrentValue() {
         counter.stopCountAtCurrentValue()
     }
@@ -99,7 +107,7 @@ open class EFCountingButton: UIButton, EFCountAdapter {
             return nil
         }
     }
-
+    
     deinit {
         counter.invalidate()
     }
@@ -107,7 +115,7 @@ open class EFCountingButton: UIButton, EFCountAdapter {
 
 open class EFCountingLabel: UILabel, EFCountAdapter {
     public private(set) var counter = EFCounter()
-
+    
     open var formatBlock: ((CGFloat) -> String)? {
         set {
             if let formatBlock = newValue {
@@ -147,7 +155,7 @@ open class EFCountingLabel: UILabel, EFCountAdapter {
             return nil
         }
     }
-
+    
     deinit {
         counter.invalidate()
     }
