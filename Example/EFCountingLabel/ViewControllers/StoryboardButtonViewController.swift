@@ -34,7 +34,8 @@ class StoryboardButtonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        //stoppableButton
         let textAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 14, weight: .bold),
             .foregroundColor: UIColor.darkText
@@ -44,7 +45,7 @@ class StoryboardButtonViewController: UIViewController {
             .font: UIFont.systemFont(ofSize: 18, weight: .ultraLight),
             .foregroundColor: UIColor.red
         ]
-        
+
         stoppableButton.setUpdateBlock { value, button in
             button.setTitle("\(value)", for: .normal)
             let attributed = NSMutableAttributedString()
@@ -57,10 +58,12 @@ class StoryboardButtonViewController: UIViewController {
             button.counter.reset()
             button.setTitle("Press to Start", for: .normal)
         }
-        
-        countDownButton.setUpdateBlock { value, button in
-            button.setTitle("\(Int(value))", for: .normal)
-        }
+
+        //countDownButton
+        //Default format: "%d", no need to set
+        //countDownButton.setUpdateBlock { value, button in
+        //    button.setTitle("\(Int(value))", for: .normal)
+        //}
         
         countDownButton.setCompletionBlock { button in
             button.setTitle("Count Down", for: .normal)

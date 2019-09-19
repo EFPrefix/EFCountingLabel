@@ -68,7 +68,7 @@ You can also add it to your `xib` or `storyboard` , just make sure you set the c
 
 ### Use
 
-Set the format of your label. This will be filled with string (depending on how you format it) when it updates, you can provide a `formatBlock`, which permits greate control over how the text is formatted:
+Set the format of your label. This will be filled with string (depending on how you format it) when it updates, you can provide a `formatBlock`, which permits greate control over how the text is formatted. If not provided, the default format will be `"%d"`:
 
 ```swift
 myLabel.setUpdateBlock { value, label in

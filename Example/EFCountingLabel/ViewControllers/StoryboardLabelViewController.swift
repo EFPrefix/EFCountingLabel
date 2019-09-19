@@ -39,9 +39,10 @@ class StoryboardLabelViewController: UIViewController {
         super.viewDidLoad()
         
         //simple label setup
-        simpleCounterLabel.setUpdateBlock { value, label in
-            label.text = String(format: "%d", Int(value))
-        }
+        //Default format: "%d", no need to set
+        //simpleCounterLabel.setUpdateBlock { value, label in
+        //    label.text = String(, Int(value))
+        //}
         
         //attributed label setup
         let highlightAttributes: [NSAttributedString.Key: Any] = [

@@ -107,7 +107,26 @@ open class EFCountingButton: UIButton, EFCountAdapter {
             return nil
         }
     }
-    
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        customInit()
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        customInit()
+    }
+
+    func customInit() {
+        setUpdateBlock { [weak self] (value, _) in
+            guard let self = self else { return }
+            self.setTitle("\(Int(value))", for: UIControl.State.normal)
+        }
+    }
+
     deinit {
         counter.invalidate()
     }
@@ -153,6 +172,25 @@ open class EFCountingLabel: UILabel, EFCountAdapter {
         @available(*, unavailable)
         get {
             return nil
+        }
+    }
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        customInit()
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        customInit()
+    }
+
+    func customInit() {
+        setUpdateBlock { [weak self] (value, _) in
+            guard let self = self else { return }
+            self.text = "\(Int(value))"
         }
     }
     

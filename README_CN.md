@@ -85,7 +85,7 @@ self.view.addSubview(myLabel)
 
 ### 使用
 
-设置标签格式. 设置标签格式后，标签会在更新数值的时候以你设置的方式填充，你可以使用 `formatBlock`，这个可以对显示的文本格式进行高度的自定义：
+设置标签格式. 设置标签格式后，标签会在更新数值的时候以你设置的方式填充，你可以使用 `formatBlock`，这个可以对显示的文本格式进行高度的自定义。如果不提供，默认的样式是 `"%d"`：
 
 ```swift
 myLabel.setUpdateBlock { value, label in
