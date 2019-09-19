@@ -1,5 +1,5 @@
 PODS:
-  - EFCountingLabel (5.1.0)
+  - EFCountingLabel (5.1.1)
 
 DEPENDENCIES:
   - EFCountingLabel (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EFCountingLabel: 3e09aca0716023c0cf50d0e4032ebbc07f921352
+  EFCountingLabel: 605358591a67a3c92feb7ec32486bfab4a30e2c9
 
 PODFILE CHECKSUM: 18006cf8308f1ddc4db21317a6cf556416d587b1
 

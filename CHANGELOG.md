@@ -2,6 +2,13 @@
 
 -----
 
+## [5.1.1](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.1) (2019-09-19)
+
+- Add default format `"%d"`;
+- Fix default duration to `2.0`.
+
+---
+
 ## [5.1.0](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.0) (2019-07-27)
 
 - Refactoring.

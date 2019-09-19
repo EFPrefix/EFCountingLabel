@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CC468D5BDEC9EAA4783B2833844C16C /* EFCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0098ADDE8D6A6C862B93F479FB1C52 /* EFCount.swift */; };
 		2030C0BD04C6FE221FB08A14D029E097 /* Pods-EFCountingLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AD160971F8E453D87B755BE0C3C73F /* Pods-EFCountingLabel_Example-dummy.m */; };
 		24970E61EFC148F124B13DA21200E44B /* Pods-EFCountingLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B87957D051F840B09E442BD2872E46A8 /* Pods-EFCountingLabel_Tests-dummy.m */; };
-		2A2AC199E504660604EDA6DAB86EBF9E /* EFCountingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE910C2B97E4852C942B947FAC1F4A /* EFCountingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E9F70E53DF558816F8EF5794BD8A39E /* EFCountAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DF3BCAAE7A3F89BF3A894393FF77FD /* EFCountAdapter.swift */; };
+		2A2AC199E504660604EDA6DAB86EBF9E /* EFCountingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB35733C62B6EAEFFFA98A672C4DBAEE /* EFCountingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F1116A617E6B4AC325A142835ECECEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		46E4C58B2F4A507735F280036130D20A /* EFTimingMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472D3235BDBC3BF3188A31F0DEEDBD6 /* EFTimingMethod.swift */; };
 		4DBBD6C29C515FBD9D693A99F640B2BF /* Pods-EFCountingLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1653CDC9D6E3900BEBD4B6FE574D6FC6 /* Pods-EFCountingLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DC54E51ECD6D08BC366578BA4E7982A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		4F334D216196E032FB47C2E3A5872704 /* EFCountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6344AA5AB8530F79D6D6764111030 /* EFCountingLabel-dummy.m */; };
+		4F334D216196E032FB47C2E3A5872704 /* EFCountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F89F3B336F0A8DFC1F195E7AE25525A8 /* EFCountingLabel-dummy.m */; };
+		80D80F83B6B48AC874579ECAB0AF470A /* EFTimingMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D7DD08E4EC734267DAE4F035F1DACD /* EFTimingMethod.swift */; };
 		820EFD1568A1189BFF89BF65933CBE9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		F1A867186CB8C80A13D6C7DEF75697A5 /* EFCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3BA4587F159B32F6842390E030C25F /* EFCount.swift */; };
+		B0B01BF9248C17F961CFD2AA033A6CBD /* EFCountAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B6BA029F57D0B54A3F553EB773B34F /* EFCountAdapter.swift */; };
 		F7AB21C08B052A19B47DB09B36ADDB26 /* Pods-EFCountingLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB60A8A0636D3156E365D8E97630977 /* Pods-EFCountingLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -39,39 +39,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		035B5B24E4B4BDAC986E778349A49F1D /* EFCountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFCountingLabel-prefix.pch"; sourceTree = "<group>"; };
+		038B6957C324CA4FF316E5B1B38B28CB /* EFCountingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFCountingLabel.modulemap; sourceTree = "<group>"; };
 		03AD160971F8E453D87B755BE0C3C73F /* Pods-EFCountingLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFCountingLabel_Example-dummy.m"; sourceTree = "<group>"; };
+		059AE6B57BFB628A9F4F6FCE0580ECDC /* EFCountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFCountingLabel-prefix.pch"; sourceTree = "<group>"; };
 		142068632B15BAAE714CA329C7635DB3 /* Pods-EFCountingLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		1472D3235BDBC3BF3188A31F0DEEDBD6 /* EFTimingMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFTimingMethod.swift; path = EFCountingLabel/Classes/EFTimingMethod.swift; sourceTree = "<group>"; };
 		1653CDC9D6E3900BEBD4B6FE574D6FC6 /* Pods-EFCountingLabel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFCountingLabel_Tests-umbrella.h"; sourceTree = "<group>"; };
-		16859F231D652A22FD63E01AED630A4E /* EFCountingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFCountingLabel.modulemap; sourceTree = "<group>"; };
-		1AAE910C2B97E4852C942B947FAC1F4A /* EFCountingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFCountingLabel-umbrella.h"; sourceTree = "<group>"; };
 		1EFBE3A78B27DC1330FC7FF43C8F2BC0 /* Pods-EFCountingLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F0411083E85C71D5D998AC56976420E /* Pods-EFCountingLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1F5F6BE4D33F3E5559CC8331C8CC9694 /* EFCountingLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EFCountingLabel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		38147FE581C08350930DCDC6884202DA /* Pods-EFCountingLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFCountingLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4AA26DDA8FF36EE3034003B8A38591F5 /* EFCountingLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EFCountingLabel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		53D7DD08E4EC734267DAE4F035F1DACD /* EFTimingMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFTimingMethod.swift; path = EFCountingLabel/EFTimingMethod.swift; sourceTree = "<group>"; };
 		5EBFFBCF9E56DA4AF71E6A1981521E28 /* EFCountingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFCountingLabel.framework; path = EFCountingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCB0AD06832AF841C3D5A06093D29D3 /* Pods-EFCountingLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFCountingLabel_Example.modulemap"; sourceTree = "<group>"; };
 		64484A7ECC99C41AA0499383F4DC8157 /* Pods_EFCountingLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFCountingLabel_Tests.framework; path = "Pods-EFCountingLabel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F9DADB329292DCDA3696F5EFB1FE08 /* Pods_EFCountingLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EFCountingLabel_Example.framework; path = "Pods-EFCountingLabel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7656696EF20F921F44EAA42B0E19A86E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		7C3BA4587F159B32F6842390E030C25F /* EFCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFCount.swift; path = EFCountingLabel/Classes/EFCount.swift; sourceTree = "<group>"; };
-		7C5CC72CC53F6EDCEB7844FB8B8C0085 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		7CD6344AA5AB8530F79D6D6764111030 /* EFCountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFCountingLabel-dummy.m"; sourceTree = "<group>"; };
+		89EDCC583C736E2C5862C59DBEFB4892 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		8DAABB9D4A38993386557314B8D79AE8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DA46C96BE700DB0F28176A04E66BE38 /* EFCountingLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EFCountingLabel-Info.plist"; sourceTree = "<group>"; };
+		A4B6BA029F57D0B54A3F553EB773B34F /* EFCountAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFCountAdapter.swift; path = EFCountingLabel/EFCountAdapter.swift; sourceTree = "<group>"; };
 		B72AE3A853FF2ABD2F3FF343E8BCD815 /* Pods-EFCountingLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EFCountingLabel_Tests.modulemap"; sourceTree = "<group>"; };
 		B87957D051F840B09E442BD2872E46A8 /* Pods-EFCountingLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFCountingLabel_Tests-dummy.m"; sourceTree = "<group>"; };
-		C7873A1764BC773CAABCE0CBD1CE77B0 /* EFCountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFCountingLabel.xcconfig; sourceTree = "<group>"; };
+		BB35733C62B6EAEFFFA98A672C4DBAEE /* EFCountingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFCountingLabel-umbrella.h"; sourceTree = "<group>"; };
 		C81588BB56B75D425E8D9A36FF3EC746 /* Pods-EFCountingLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CFB60A8A0636D3156E365D8E97630977 /* Pods-EFCountingLabel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFCountingLabel_Example-umbrella.h"; sourceTree = "<group>"; };
 		D46920A2A233186B849F4501385856F4 /* Pods-EFCountingLabel_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Example-Info.plist"; sourceTree = "<group>"; };
 		D4C904E22C241ABEA5B95A1C4F23E579 /* Pods-EFCountingLabel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFCountingLabel_Example-frameworks.sh"; sourceTree = "<group>"; };
-		D5DF3BCAAE7A3F89BF3A894393FF77FD /* EFCountAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFCountAdapter.swift; path = EFCountingLabel/Classes/EFCountAdapter.swift; sourceTree = "<group>"; };
-		D6A7650342CE2560923B86209AA719A6 /* EFCountingLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EFCountingLabel-Info.plist"; sourceTree = "<group>"; };
 		D8CDAA9A313CCF8FBB622265D33E9F24 /* Pods-EFCountingLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DF2074EE70CB95C393990BEEC4DCA8C9 /* Pods-EFCountingLabel_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFCountingLabel_Tests-Info.plist"; sourceTree = "<group>"; };
 		E32EAA07EF62BE689744A554DA909CB1 /* Pods-EFCountingLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFCountingLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EA0098ADDE8D6A6C862B93F479FB1C52 /* EFCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFCount.swift; path = EFCountingLabel/EFCount.swift; sourceTree = "<group>"; };
+		F0D323ED077BEA2116F3C211A939ACB4 /* EFCountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFCountingLabel.xcconfig; sourceTree = "<group>"; };
+		F89F3B336F0A8DFC1F195E7AE25525A8 /* EFCountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFCountingLabel-dummy.m"; sourceTree = "<group>"; };
 		FF5C152FC56C4D532DFA882CD1ED0E99 /* Pods-EFCountingLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFCountingLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,17 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04168E15C87C7561421AC5158BC64E24 /* EFCountingLabel */ = {
+		0CE9AA8A4B5D32C3BB2764C8C58C5B19 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				7C3BA4587F159B32F6842390E030C25F /* EFCount.swift */,
-				D5DF3BCAAE7A3F89BF3A894393FF77FD /* EFCountAdapter.swift */,
-				1472D3235BDBC3BF3188A31F0DEEDBD6 /* EFTimingMethod.swift */,
-				B7C1AD7E057198786242AE0D47621C2B /* Pod */,
-				9CE91D4C99064084005CFCE49B0BA2C4 /* Support Files */,
+				1F5F6BE4D33F3E5559CC8331C8CC9694 /* EFCountingLabel.podspec */,
+				89EDCC583C736E2C5862C59DBEFB4892 /* LICENSE */,
+				8DAABB9D4A38993386557314B8D79AE8 /* README.md */,
 			);
-			name = EFCountingLabel;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		156973888CE476B70F71711E9CD3A1E4 /* Pods-EFCountingLabel_Example */ = {
@@ -152,7 +149,7 @@
 		5832B98A0A7D272F3B6413F124921C79 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				04168E15C87C7561421AC5158BC64E24 /* EFCountingLabel */,
+				D7B0E69A2BA8ACD6E4749E83EE108664 /* EFCountingLabel */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -167,28 +164,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9CE91D4C99064084005CFCE49B0BA2C4 /* Support Files */ = {
+		633642C5DD93337A11223DD065A43640 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				16859F231D652A22FD63E01AED630A4E /* EFCountingLabel.modulemap */,
-				C7873A1764BC773CAABCE0CBD1CE77B0 /* EFCountingLabel.xcconfig */,
-				7CD6344AA5AB8530F79D6D6764111030 /* EFCountingLabel-dummy.m */,
-				D6A7650342CE2560923B86209AA719A6 /* EFCountingLabel-Info.plist */,
-				035B5B24E4B4BDAC986E778349A49F1D /* EFCountingLabel-prefix.pch */,
-				1AAE910C2B97E4852C942B947FAC1F4A /* EFCountingLabel-umbrella.h */,
+				038B6957C324CA4FF316E5B1B38B28CB /* EFCountingLabel.modulemap */,
+				F0D323ED077BEA2116F3C211A939ACB4 /* EFCountingLabel.xcconfig */,
+				F89F3B336F0A8DFC1F195E7AE25525A8 /* EFCountingLabel-dummy.m */,
+				9DA46C96BE700DB0F28176A04E66BE38 /* EFCountingLabel-Info.plist */,
+				059AE6B57BFB628A9F4F6FCE0580ECDC /* EFCountingLabel-prefix.pch */,
+				BB35733C62B6EAEFFFA98A672C4DBAEE /* EFCountingLabel-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/EFCountingLabel";
-			sourceTree = "<group>";
-		};
-		B7C1AD7E057198786242AE0D47621C2B /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				4AA26DDA8FF36EE3034003B8A38591F5 /* EFCountingLabel.podspec */,
-				7C5CC72CC53F6EDCEB7844FB8B8C0085 /* LICENSE */,
-				7656696EF20F921F44EAA42B0E19A86E /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -216,6 +203,19 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7B0E69A2BA8ACD6E4749E83EE108664 /* EFCountingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				EA0098ADDE8D6A6C862B93F479FB1C52 /* EFCount.swift */,
+				A4B6BA029F57D0B54A3F553EB773B34F /* EFCountAdapter.swift */,
+				53D7DD08E4EC734267DAE4F035F1DACD /* EFTimingMethod.swift */,
+				0CE9AA8A4B5D32C3BB2764C8C58C5B19 /* Pod */,
+				633642C5DD93337A11223DD065A43640 /* Support Files */,
+			);
+			name = EFCountingLabel;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		E703129639FE169B330B18BCB1BD5E38 /* Targets Support Files */ = {
@@ -386,10 +386,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1A867186CB8C80A13D6C7DEF75697A5 /* EFCount.swift in Sources */,
-				2E9F70E53DF558816F8EF5794BD8A39E /* EFCountAdapter.swift in Sources */,
+				0CC468D5BDEC9EAA4783B2833844C16C /* EFCount.swift in Sources */,
+				B0B01BF9248C17F961CFD2AA033A6CBD /* EFCountAdapter.swift in Sources */,
 				4F334D216196E032FB47C2E3A5872704 /* EFCountingLabel-dummy.m in Sources */,
-				46E4C58B2F4A507735F280036130D20A /* EFTimingMethod.swift in Sources */,
+				80D80F83B6B48AC874579ECAB0AF470A /* EFTimingMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +506,7 @@
 		};
 		7D91F06BB64DE78C4ECDB94ED32F1DF9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7873A1764BC773CAABCE0CBD1CE77B0 /* EFCountingLabel.xcconfig */;
+			baseConfigurationReference = F0D323ED077BEA2116F3C211A939ACB4 /* EFCountingLabel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -669,7 +669,7 @@
 		};
 		E1855C02B62E07FAD9C2F20A5EE66EA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7873A1764BC773CAABCE0CBD1CE77B0 /* EFCountingLabel.xcconfig */;
+			baseConfigurationReference = F0D323ED077BEA2116F3C211A939ACB4 /* EFCountingLabel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
