@@ -43,15 +43,15 @@ extension EFCount {
     }
     
     public func countFrom(_ startValue: CGFloat, to endValue: CGFloat) {
-        countFrom(startValue, to: endValue, withDuration: 0)
+        countFrom(startValue, to: endValue, withDuration: 2)
     }
     
     public func countFromCurrentValueTo(_ endValue: CGFloat) {
-        countFromCurrentValueTo(endValue, withDuration: 0)
+        countFromCurrentValueTo(endValue, withDuration: 2)
     }
     
     public func countFromZeroTo(_ endValue: CGFloat) {
-        countFromZeroTo(endValue, withDuration: 0)
+        countFromZeroTo(endValue, withDuration: 2)
     }
 }
 
