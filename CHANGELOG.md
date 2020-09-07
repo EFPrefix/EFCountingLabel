@@ -2,6 +2,12 @@
 
 -----
 
+## [5.1.2](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.2) (2020-09-07)
+
+- Add `swift_version` in podspec.
+
+---
+
 ## [5.1.1](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.1) (2019-09-19)
 
 - Add default format `"%d"`;
