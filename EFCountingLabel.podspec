@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'EFCountingLabel'
-    s.version          = '5.1.2'
+    s.version          = '5.1.3'
     s.summary          = 'A label which can show number change animated.'
 
     s.description      = <<-DESC

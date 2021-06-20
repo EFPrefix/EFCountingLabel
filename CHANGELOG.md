@@ -2,6 +2,12 @@
 
 -----
 
+## [5.1.3](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.3) (2021-06-20)
+
+* Compiler error "Ambiguous use of 'pow'" in xCode beta. [#32](https://github.com/EFPrefix/EFCountingLabel/pull/32)
+
+---
+
 ## [5.1.2](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.2) (2020-09-07)
 
 - Add `swift_version` in podspec.
