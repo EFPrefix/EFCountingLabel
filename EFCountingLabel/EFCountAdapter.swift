@@ -26,7 +26,7 @@
 
 import UIKit
 
-public protocol EFCountAdapter: class, EFCount {
+public protocol EFCountAdapter: AnyObject, EFCount {
     var counter: EFCounter { get }
 }
 
