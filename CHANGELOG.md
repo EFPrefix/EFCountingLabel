@@ -2,6 +2,12 @@
 
 -----
 
+## [5.1.4](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.4) (2021-06-30)
+
+* Support SPM.
+
+---
+
 ## [5.1.3](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.3) (2021-06-20)
 
 * Compiler error "Ambiguous use of 'pow'" in xCode beta. [#32](https://github.com/EFPrefix/EFCountingLabel/pull/32)

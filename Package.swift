@@ -1,10 +1,10 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.0
 import PackageDescription
 
 let package = Package(
     name: "EFCountingLabel",
     platforms: [
-        .iOS(.v10),
+        .iOS(.v8),
     ],
     products: [
         .library(name: "EFCountingLabel", targets: ["EFCountingLabel"]),

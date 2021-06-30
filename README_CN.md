@@ -4,6 +4,9 @@
     <a href="https://travis-ci.org/EFPrefix/EFCountingLabel">
     	<img src="https://img.shields.io/travis/EFPrefix/EFCountingLabel.svg">
     </a>
+    <a href="https://swiftpackageindex.com/EFPrefix/EFCountingLabel">
+        <img src="https://img.shields.io/badge/SPM-ready-orange.svg">
+    </a>
     <a href="https://cocoapods.org/pods/EFCountingLabel">
     	<img src="https://img.shields.io/cocoapods/v/EFCountingLabel.svg?style=flat">
     </a>
@@ -58,6 +61,8 @@ git clone git@github.com:EFPrefix/EFCountingLabel.git; cd EFCountingLabel/Exampl
 
 ## 安装
 
+### CocoaPods
+
 EFCountingLabel 可以通过 [CocoaPods](https://cocoapods.org) 进行获取。只需要在你的 Podfile 中添加如下代码就能实现引入：
 
 ```ruby
@@ -68,6 +73,18 @@ pod 'EFCountingLabel'
 
 ```bash
 pod install
+```
+
+### Swift Package Manager
+
+[Swift Package Manager](https://swift.org/package-manager/) 是一个集成在 Swift 编译器中的用来进行 Swift 代码自动化发布的工具。
+
+如果你已经建立了你的 Swift 包，将 EFCountingLabel 加入依赖是十分容易的，只需要将其添加到你的 `Package.swift` 文件的 `dependencies` 项中即可：
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/EFPrefix/EFCountingLabel.git", .upToNextMinor(from: "5.1.4"))
+]
 ```
 
 ## 设置
