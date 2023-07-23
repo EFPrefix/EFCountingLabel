@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "EFCountingLabel",
     platforms: [
-        .iOS(.v8),
+        .iOS(.v11),
     ],
     products: [
         .library(name: "EFCountingLabel", targets: ["EFCountingLabel"]),

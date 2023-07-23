@@ -19,13 +19,6 @@
     <a href="https://raw.githubusercontent.com/EFPrefix/EFCountingLabel/master/LICENSE">
     	<img src="https://img.shields.io/cocoapods/l/EFCountingLabel.svg?style=flat">
     </a>
-    <a href="https://twitter.com/EyreFree777">
-    	<img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat">
-    </a>
-    <a href="https://www.weibo.com/eyrefree777">
-    	<img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat">
-    </a>
-    <img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
 </p>
 
 A label which can show number change animated in Swift, inspired by [UICountingLabel](https://github.com/dataxpress/UICountingLabel).
@@ -67,7 +60,7 @@ Once you have your Swift package set up, adding EFCountingLabel as a dependency 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/EFPrefix/EFCountingLabel.git", .upToNextMinor(from: "5.1.4"))
+    .package(url: "https://github.com/EFPrefix/EFCountingLabel.git", .upToNextMinor(from: "5.1.5"))
 ]
 ```
 
@@ -149,49 +142,6 @@ There are currently four modes of counting.
 - EFTimingFunction.easeInOut: Ease In/Out starts out slow, speeds up towards the middle, and then slows down as it approaches the destination. It is a nice, smooth curve that looks great, and is the default method;
 - EFTimingFunction.easeInBounce;
 - EFTimingFunction.easeOutBounce.
-
-## Apps using EFCountingLabel
-
-<table>
-    <tr>
-        <td><a href='https://www.appsight.io/app/toss-%ED%86%A0%EC%8A%A4' title='토스'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/263/485/media/small.png?1530945069'></a></td>
-        <td><a href='https://www.appsight.io/app/%EC%87%BC%ED%95%91%EC%9D%84-%EB%9A%9D%EB%94%B1-%ED%8B%B0%EB%AA%AC' title='티몬 - 오늘은 또 어떤 딜?'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/286/380/media/small.png?1534301992'></a></td>
-        <td><a href='https://www.appsight.io/app/%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C' title='뱅크샐러드'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/282/332/media/small.png?1533591669'></a></td>
-        <td><a href='https://www.appsight.io/app/buxi' title='BUXI'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/380/152/media/small.png?1555732632'></a></td>
-        <td><a href='https://www.appsight.io/app/climendo-basic' title='Climendo Basic'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/000/304/533/media/small.png?1481531280'></a></td>
-        <td><a href='https://www.appsight.io/app/dunkin-donuts' title='Dunkin'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/396/991/media/small.png?1613316630'> </a> </td> <td><a href='https://www.appsight.io/app/flights-by-studentuniverse' title='Flights by StudentUniverse'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/376/480/media/small.png?1555350669'></a></td>
-        <td><a href='https://www.appsight.io/app/get-help-app' title='Get Help App'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/142/904/media/small.png?1522690431'></a></td>
-        <td><a href='https://www.appsight.io/app/golden-full-adan-%D8%A7%D9%84%D9%85%D8%A4%D8%B0%D9%86-%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A' title='Golden Full Adan|المؤذن الذهبي'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/112/855/media/small.png?1519607778'></a></td>
-        <td><a href='https://www.appsight.io/app/hoteltonight' title='HotelTonight - Great Deals on Last Minut'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/000/273/459/media/small.png?1479256441'></a></td>
-    </tr>
-    <tr>
-        <td><a href='https://www.appsight.io/app/how-much-fun-question-game' title='How Much? Fun Question Game!'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/000/733/135/media/small.png?1500948444'></a></td>
-        <td><a href='https://www.appsight.io/app/liven' title='Liven - Eat, Pay &amp; Earn'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/328/804/media/small.png?1548126411'></a></td>
-        <td><a href='https://www.appsight.io/app/my-pulse-heart-rate-monitor' title='My Pulse-Heart Rate Monitor'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/394/837/media/small.png?1612985440'></a></td>
-        <td><a href='https://www.appsight.io/app/nokia-mobile-tribe' title='Nokia mobile Tribe'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/365/336/media/small.png?1554343173'></a></td>
-        <td><a href='https://www.appsight.io/app/piano-rush' title='Piano Rush - Piano Games'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/372/226/media/small.png?1555017024'></a></td>
-        <td><a href='https://www.appsight.io/app/pixel-plex' title='Pixel Plex'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/154/867/media/small.png?1523055553'></a></td>
-        <td><a href='https://www.appsight.io/app/press-app-sports' title='Press Sports'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/342/478/media/small.png?1551806101'></a></td>
-        <td><a href='https://www.appsight.io/app/pro-football-quiz' title='Pro Football Quiz'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/352/466/media/small.png?1552411434'></a></td>
-        <td><a href='https://www.appsight.io/app/quigle' title='Quigle - Feud for Google'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/164/030/media/small.png?1523391205'></a></td>
-        <td><a href='https://www.appsight.io/app/santander' title='Santander'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/352/254/media/small.png?1552404876'></a></td>
-    </tr>
-    <tr>
-        <td><a href='https://www.appsight.io/app/shapeapp-just-shape-it' title='ShapeApp — Just shape it!'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/103/691/media/small.png?1519090064'></a></td>
-        <td><a href='https://www.appsight.io/app/skl-united' title='SKL United'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/174/614/media/small.png?1523680530'></a></td>
-        <td><a href='https://www.appsight.io/app/sports-fan-quiz' title='Sports Fan Quiz'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/366/043/media/small.png?1554388634'></a></td>
-        <td><a href='https://www.appsight.io/app/subway-app' title='SUBWAY®'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/396/937/media/small.png?1613313659'></a></td>
-        <td><a href='https://www.appsight.io/app/swiftshift' title='SwiftShift'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/371/447/media/small.png?1554993873'></a></td>
-        <td><a href='https://www.appsight.io/app/that-s-right-gameshow' title='That' s Right Live Gameshow'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/288/204/media/small.png?1534618310'></a></td>
-        <td><a href='https://www.appsight.io/app/x-scavenger-hunt-weekly' title='The X – Scavenger Hunt Weekly'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/391/784/media/small.png?1580442344'></a></td>
-        <td><a href='https://www.appsight.io/app/808425' title='Turbo: Scores-Income &amp; Credit'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/391/594/media/small.png?1580417909'></a></td>
-        <td><a href='https://www.appsight.io/app/unmute' title='Unmute - Live Talk Shows'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/000/517/671/media/small.png?1490936474'></a></td>
-        <td><a href='https://www.appsight.io/app/%E5%8D%81%E7%82%B9%E8%AF%BB%E4%B9%A6-%E6%9C%89%E5%A3%B0%E5%90%AC%E4%B9%A6%E9%98%85%E8%AF%BB%E5%9B%BE%E4%B9%A6%E9%A6%86' title='十点读书 - 有声听书精品课程'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/334/858/media/small.png?1550728341'></a></td>
-    </tr>
-    <tr>
-        <td><a href='https://www.appsight.io/app/%E8%87%BA%E7%81%A3%E8%B6%85%E5%A8%81%E7%9A%84' title='臺灣超威的'><img src='https://d3ixtyf8ei2pcx.cloudfront.net/icons/001/251/232/media/small.png?1530205300'></a></td>
-    </tr>
-</table>
 
 ## Author
 

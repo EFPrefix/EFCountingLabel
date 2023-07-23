@@ -4,6 +4,6 @@ if ! command -v pod > /dev/null; then
 	exit 1
 fi
 cd Example;
-pod repo update;
+#pod repo update;
 pod install;
 cd ..;

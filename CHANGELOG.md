@@ -2,6 +2,12 @@
 
 -----
 
+## [5.1.5](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.5) (2023-07-23)
+
+- Update minimum ios version.
+
+---
+
 ## [5.1.4](https://github.com/EFPrefix/EFCountingLabel/releases/tag/5.1.4) (2021-06-30)
 
 * Support SPM.
