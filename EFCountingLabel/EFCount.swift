@@ -31,6 +31,7 @@ public protocol EFTiming {
     func update(_ time: CGFloat) -> CGFloat
 }
 
+@MainActor
 public protocol EFCount {
     func countFrom(_ startValue: CGFloat, to endValue: CGFloat, withDuration duration: TimeInterval)
     func countFromCurrentValueTo(_ endValue: CGFloat, withDuration duration: TimeInterval)
@@ -92,7 +93,7 @@ public class EFCounter {
     }
     
     // CADisplayLink callback
-    @objc public func updateValue(_ timer: Timer) {
+    @objc public func updateValue(_ timer: CADisplayLink) {
         let now = CACurrentMediaTime()
         currentDuration += now - lastUpdate
         lastUpdate = now
@@ -124,6 +125,10 @@ public class EFCounter {
         currentDuration = 0
         lastUpdate = 0
         totalDuration = 1
+    }
+    
+    deinit {
+        self.invalidate()
     }
     
     public func invalidate() {

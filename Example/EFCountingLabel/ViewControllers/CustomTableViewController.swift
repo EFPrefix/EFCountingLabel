@@ -28,7 +28,8 @@ import Foundation
 import UIKit
 import EFCountingLabel
 
-struct CounterCellModel {
+@MainActor
+class CounterCellModel {
     let counter: EFCounter
     
     init(from: CGFloat, to: CGFloat, duration: TimeInterval, function: EFTiming = EFTimingFunction.linear) {
@@ -54,7 +55,8 @@ class CountingTableViewCell: UITableViewCell {
         }
         
         //bind new counter
-        model.counter.updateBlock = { [unowned self] value in
+        model.counter.updateBlock = { [weak self] value in
+            guard let self else { return }
             self.detailTextLabel?.text = formatter.string(from: NSNumber(value: Int(value)))
         }
         

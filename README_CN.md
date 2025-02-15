@@ -40,11 +40,8 @@ git clone git@github.com:EFPrefix/EFCountingLabel.git; cd EFCountingLabel/Exampl
 
 ## 环境
 
-| 版本 | 需求                                |
-|:--------|:-------------------------------------|
-| 1.x     | Xcode 8.0+<br>Swift 3.0+<br>iOS 8.0+ |
-| 4.x     | Xcode 9.0+<br>Swift 4.0+<br>iOS 8.0+ |
-| 5.x     | Xcode 10.0+<br>Swift 5.0+<br>iOS 8.0+ |
+- Xcode 16+
+- Swift 6.0+
 
 ## 安装
 
@@ -70,7 +67,7 @@ pod install
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/EFPrefix/EFCountingLabel.git", .upToNextMinor(from: "5.1.5"))
+    .package(url: "https://github.com/EFPrefix/EFCountingLabel.git", .upToNextMinor(from: "6.0.0.0"))
 ]
 ```
 

@@ -26,6 +26,7 @@
 
 import UIKit
 
+@MainActor
 public protocol EFCountAdapter: AnyObject, EFCount {
     var counter: EFCounter { get }
 }
@@ -33,7 +34,8 @@ public protocol EFCountAdapter: AnyObject, EFCount {
 extension EFCountAdapter {
     public func setUpdateBlock(_ update: ((_ value: CGFloat, _ sender: Self) -> Void)?) {
         if let update = update {
-            counter.updateBlock = { [unowned self] value in
+            counter.updateBlock = { [weak self] value in
+                guard let self else { return }
                 update(value, self)
             }
         } else {
@@ -43,7 +45,8 @@ extension EFCountAdapter {
     
     public func setCompletionBlock(_ completion: ((_ sender: Self) -> Void)?) {
         if let completion = completion {
-            counter.completionBlock = { [unowned self] in
+            counter.completionBlock = { [weak self] in
+                guard let self else { return }
                 completion(self)
             }
         } else {
@@ -64,6 +67,7 @@ extension EFCountAdapter {
     }
 }
 
+@MainActor
 open class EFCountingButton: UIButton, EFCountAdapter {
     public private(set) var counter = EFCounter()
     
@@ -127,10 +131,11 @@ open class EFCountingButton: UIButton, EFCountAdapter {
     }
 
     deinit {
-        counter.invalidate()
+        
     }
 }
 
+@MainActor
 open class EFCountingLabel: UILabel, EFCountAdapter {
     public private(set) var counter = EFCounter()
     
@@ -194,6 +199,6 @@ open class EFCountingLabel: UILabel, EFCountAdapter {
     }
     
     deinit {
-        counter.invalidate()
+        
     }
 }

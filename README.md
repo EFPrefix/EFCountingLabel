@@ -35,18 +35,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-| Version | Needs                                |
-|:--------|:-------------------------------------|
-| 1.x     | Xcode 8.0+<br>Swift 3.0+<br>iOS 8.0+ |
-| 4.x     | Xcode 9.0+<br>Swift 4.0+<br>iOS 8.0+ |
-| 5.x     | Xcode 10.0+<br>Swift 5.0+<br>iOS 8.0+ |
+- Xcode 16+
+- Swift 6.0+
 
 ## Installation
 
 ### CocoaPods
 
-EFCountingLabel is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+EFCountingLabel is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'EFCountingLabel'
@@ -60,7 +56,7 @@ Once you have your Swift package set up, adding EFCountingLabel as a dependency 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/EFPrefix/EFCountingLabel.git", .upToNextMinor(from: "5.1.5"))
+    .package(url: "https://github.com/EFPrefix/EFCountingLabel.git", .upToNextMinor(from: "6.0.0.0"))
 ]
 ```
 
