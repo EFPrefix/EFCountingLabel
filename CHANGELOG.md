@@ -2,6 +2,12 @@
 
 -----
 
+## [6.0.0.1](https://github.com/EFPrefix/EFCountingLabel/releases/tag/6.0.0.1) (2025-02-17)
+
+- Adapt to Swift 6.0.
+
+---
+
 ## [6.0.0.0](https://github.com/EFPrefix/EFCountingLabel/releases/tag/6.0.0.0) (2025-02-16)
 
 - Adapt to Swift 6.0.
