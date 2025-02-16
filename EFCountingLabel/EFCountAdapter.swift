@@ -131,7 +131,7 @@ open class EFCountingButton: UIButton, EFCountAdapter {
     }
 
     deinit {
-        
+        self.counter.nonisolatedInvalidate()
     }
 }
 
@@ -199,6 +199,6 @@ open class EFCountingLabel: UILabel, EFCountAdapter {
     }
     
     deinit {
-        
+        self.counter.nonisolatedInvalidate()
     }
 }

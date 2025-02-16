@@ -56,6 +56,7 @@ extension EFCount {
     }
 }
 
+@MainActor
 public class EFCounter {
     public var timingFunction: EFTiming = EFTimingFunction.linear
     
@@ -127,13 +128,16 @@ public class EFCounter {
         totalDuration = 1
     }
     
-    deinit {
-        self.invalidate()
-    }
-    
     public func invalidate() {
         timer?.invalidate()
         timer = nil
+    }
+    
+    nonisolated public func nonisolatedInvalidate() {
+        DispatchQueue.main.async { [weak self] in
+            self?.timer?.invalidate()
+            self?.timer = nil
+        }
     }
 }
 

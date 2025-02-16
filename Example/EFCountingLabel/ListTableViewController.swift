@@ -70,9 +70,8 @@ class ListTableViewController: UITableViewController {
         }
         
         //do not retain to release label immediately after pop viewController
-        refreshLabelBlock = { [weak self] in
-            guard let self else { return }
-            label.countFromZeroTo(100, withDuration: 10)
+        refreshLabelBlock = { [weak label] in
+            label?.countFromZeroTo(100, withDuration: 10)
         }
         
         let controller = present(countingView: label)

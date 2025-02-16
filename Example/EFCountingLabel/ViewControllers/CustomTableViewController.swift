@@ -104,7 +104,7 @@ class CustomTableViewController: UIViewController {
     }
     
     deinit {
-        dataSource.forEach({ $0.counter.invalidate() })
+        dataSource.forEach({ $0.counter.nonisolatedInvalidate() })
     }
 }
 
