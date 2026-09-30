@@ -2,6 +2,12 @@
 
 -----
 
+## [6.0.1](https://github.com/EFPrefix/EFCountingLabel/releases/tag/6.0.1)
+
+- Use a SemVer-compliant version number so Swift Package Manager can resolve the Swift 6 release (`6.0.0.1` has 4 components and is ignored by SPM).
+
+---
+
 ## [6.0.0.1](https://github.com/EFPrefix/EFCountingLabel/releases/tag/6.0.0.1) (2025-02-17)
 
 - Adapt to Swift 6.0.
